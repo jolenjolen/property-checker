@@ -1,4 +1,4 @@
-import appLogo from '/logoGradient.png'
+import appLogo from '/logo.png'
 import '../App.css'
 
 export default function Nav() {
@@ -7,7 +7,7 @@ export default function Nav() {
       <header>
         <nav className="navbar navbar-expand-sm navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand" href=""><img src={appLogo} alt="Jolen's Property Checker Logo"/></a>
+                <a className="navbar-brand shadow-sm rounded-pill" href=""><img src={appLogo} alt="Jolen's Property Checker Logo"/></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span className="navbar-toggler-icon"></span>
                 </button>
@@ -18,9 +18,6 @@ export default function Nav() {
                     </li>
                     <li className="nav-item">
                     <a className="nav-link" href="">Contact&nbsp;Us</a>
-                    </li>
-                    <li className="nav-item">
-                    <a className="nav-link" href="">Link</a>
                     </li>
                 </ul>
                 <form className="d-flex">
