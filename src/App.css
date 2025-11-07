@@ -2,7 +2,7 @@
 
 .julius-sans-one-regular {
   font-family: "Julius Sans One", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
   color: #38b8f8;
 }
@@ -12,25 +12,11 @@
   margin: 0;
 }
 
-.navbar-brand{
-  transition: all 0.3s ease-in-out;
-}
-
 .navbar-brand img{
   width: 48px;
   height: 48px;
-  transition: all 0.3s ease-in-out;
 }
 
-.navbar-brand h3{
-  line-height: 1;
-  transition: all 0.3s ease-in-out;
-}
-
-.navbar-brand:hover img{
-  transform: scale(0.9);
-}
-.navbar-brand:hover h3{
-  transform: scale(1.1);
-  font-weight: 500;
+.navbar-brand span{
+  font-size: larger;
 }
