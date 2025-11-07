@@ -5,9 +5,9 @@ export default function Nav() {
   return (
     <>
       <header>
-        <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
+        <nav className="navbar navbar-expand-sm navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand d-flex align-items-center" href=""><img src={appLogo} alt="Jolen's Property Checker Logo"/>&nbsp;&nbsp;<h3 className="julius-sans-one-regular m-0">PROP80</h3></a>
+                <a className="navbar-brand d-flex align-items-center" href=""><img src={appLogo} alt="Jolen's Property Checker Logo"/>&nbsp;<h3 className="julius-sans-one-regular m-0">PROP80</h3></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span className="navbar-toggler-icon"></span>
                 </button>

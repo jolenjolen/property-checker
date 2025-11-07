@@ -12,6 +12,10 @@
   margin: 0;
 }
 
+.navbar-brand{
+  transition: all 0.3s ease-in-out;
+}
+
 .navbar-brand img{
   width: 48px;
   height: 48px;
@@ -19,4 +23,11 @@
 
 .navbar-brand h3{
   line-height: 1;
+}
+
+.navbar-brand:hover img{
+  transform: scale(0.9);
+}
+.navbar-brand:hover h3{
+  transform: scale(1.1);
 }
