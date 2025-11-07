@@ -13,10 +13,6 @@
 }
 
 .navbar-brand img{
-  width: 48px;
-  height: 48px;
-}
-
-.navbar-brand span{
-  font-size: x-large;
+  width: auto;
+  height: 50px;
 }

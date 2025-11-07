@@ -7,7 +7,7 @@ export default function Nav() {
       <header>
         <nav className="navbar navbar-expand-sm navbar-light bg-light">
             <div className="container-fluid">
-                <a className="navbar-brand d-flex align-items-center" href=""><img src={appLogo} alt="Jolen's Property Checker Logo"/>&nbsp;<span className="julius-sans-one-regular">PROP80</span></a>
+                <a className="navbar-brand" href=""><img src={appLogo} alt="Jolen's Property Checker Logo"/></a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
                 <span className="navbar-toggler-icon"></span>
                 </button>
