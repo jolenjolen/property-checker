@@ -1,5 +1,5 @@
 import appLogo from '/logo.png'
-import './App.css'
+import '../App.css'
 
 export default function Nav() {
   return (
