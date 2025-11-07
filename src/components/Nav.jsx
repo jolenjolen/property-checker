@@ -1,4 +1,4 @@
-import appLogo from '/logo.png'
+import appLogo from '/logoGradient.png'
 import '../App.css'
 
 export default function Nav() {
