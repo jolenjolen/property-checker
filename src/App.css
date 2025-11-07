@@ -19,7 +19,6 @@
 }
 .navbar-brand img:hover{
   transform: scale(1.1);
-  box-shadow: 0 2px 8px #ddd;
 }
 .nav-link{
   font-weight: 500;
