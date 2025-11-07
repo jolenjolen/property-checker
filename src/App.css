@@ -11,7 +11,9 @@
   padding: 0;
   margin: 0;
 }
-
+.navbar-brand{
+  height: 50px;
+}
 .navbar-brand img{
   width: 48px;
   height: 48px;
