@@ -2,7 +2,7 @@
 
 .julius-sans-one-regular {
   font-family: "Julius Sans One", sans-serif;
-  font-weight: 500;
+  font-weight: 400;
   font-style: normal;
   color: #38b8f8;
 }
@@ -18,5 +18,5 @@
 }
 
 .navbar-brand span{
-  font-size: larger;
+  font-size: x-large;
 }
