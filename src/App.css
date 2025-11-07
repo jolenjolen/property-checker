@@ -16,3 +16,7 @@
   width: auto;
   height: 60px;
 }
+
+.nav-link:hover{
+  color: #38b8f8;
+}

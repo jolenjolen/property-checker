@@ -14,10 +14,10 @@ export default function Nav() {
                 <div className="collapse navbar-collapse" id="mynavbar">
                 <ul className="navbar-nav me-auto">
                     <li className="nav-item">
-                    <a className="nav-link" href="">Link</a>
+                    <a className="nav-link" href="">Home</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="">Link</a>
+                    <a className="nav-link" href="">Contact&nbsp;Us</a>
                     </li>
                     <li className="nav-item">
                     <a className="nav-link" href="">Link</a>
