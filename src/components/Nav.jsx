@@ -5,9 +5,8 @@ import { useTheme } from "../ThemeContext";
 export default function Nav() {
   const { theme, toggleTheme } = useTheme();
 
-  const navbarTheme =
-    theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark";
-
+  const navbarTheme = theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark";
+  const inverseTheme = theme === "light" ? "dark" : "light";
   return (
     <header>
       <nav className={`navbar navbar-expand-sm ${navbarTheme}`}>
@@ -34,10 +33,7 @@ export default function Nav() {
             </li>
           </ul>
 
-          <button
-            onClick={toggleTheme}
-            className="btn btn-outline-secondary"
-          >
+          <button onClick={toggleTheme} className={`btn btn-outline-${inverseTheme}`}>
             Toggle Theme
           </button>
         </div>
