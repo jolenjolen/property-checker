@@ -1,24 +1,10 @@
-import { useState, useEffect } from "react";
 import appLogo from "/logo.png";
 import "../App.css";
+import { useTheme } from "../ThemeContext";
 
 export default function Nav() {
-  // 1️⃣ Initialize theme from localStorage (if available)
-  const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "light";
-  });
+  const { theme, toggleTheme } = useTheme();
 
-  // 2️⃣ When theme changes, update localStorage
-  useEffect(() => {
-    localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  // 3️⃣ Toggle function
-  const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
-  };
-
-  // 4️⃣ Set navbar classes dynamically
   const navbarTheme =
     theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark";
 
@@ -44,11 +30,6 @@ export default function Nav() {
             <li className="nav-item">
               <a className="nav-link" href="#">
                 Another Link
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#">
-                Disabled
               </a>
             </li>
           </ul>
