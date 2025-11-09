@@ -34,7 +34,7 @@ export default function Nav() {
           </ul>
 
           <button onClick={toggleTheme} className={`btn btn-outline-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
-            <span className="material-symbols-outlined">
+            <span className="material-symbols-rounded">
               {theme === "light" ? "dark_mode" : "light_mode"}
             </span>
           </button>
