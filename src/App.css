@@ -1,3 +1,8 @@
 body,nav {
   transition: all 0.3s ease;
 }
+.themeToogle{
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
