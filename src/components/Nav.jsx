@@ -33,8 +33,10 @@ export default function Nav() {
             </li>
           </ul>
 
-          <button onClick={toggleTheme} className={`btn btn-outline-${inverseTheme}`}>
-            Toggle Theme
+          <button onClick={toggleTheme} className={`btn btn-outline-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
+            <span className="material-symbols-outlined">
+              {theme === "light" ? "dark_mode" : "light_mode"}
+            </span>
           </button>
         </div>
       </nav>
