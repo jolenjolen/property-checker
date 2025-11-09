@@ -4,5 +4,5 @@ body,nav {
 .themeToggle{
   width: 45px;
   height: 45px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
