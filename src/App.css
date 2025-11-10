@@ -5,6 +5,9 @@ body,nav {
   width: 45px;
   height: 45px;
 }
+.favouriteBtn{
+  transition: all 0.3s ease-in-out !important;
+}
 .favouriteBtn span:first-child{
   font-weight: 500;
 }
