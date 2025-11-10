@@ -19,11 +19,14 @@ body,nav {
   white-space: nowrap;
 }
 
-.favouriteBtn:hover span.label {
-  opacity: 1;
-  width: 110px;
-  /*margin-right: 6px;*/
+@media (min-width: 1024px) {
+  .favouriteBtn:hover span.label {
+    opacity: 1;
+    width: 110px;
+    /*margin-right: 6px;*/
+  }
 }
+
 .navbar-brand span{
   color: #38b8f8;
   font-weight: 500;
