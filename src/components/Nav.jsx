@@ -8,18 +8,18 @@ export default function Nav() {
   const navbarTheme = theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark";
   const inverseTheme = theme === "light" ? "dark" : "light";
   return (
-    <header>
+    <header className="sticky-top">
       <nav className={`navbar navbar-expand-sm ${navbarTheme}`}>
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            <img src={appLogo} alt="Logo" width="30" height="30" />
+          <a className="navbar-brand d-flex justify-content-center align-items-center" href="#" height="50">
+            <img className="rounded-pill" src={appLogo} alt="Logo" width="45" height="45" />
+            &nbsp;&nbsp;
+            <h5>PROP80</h5>
           </a>
 
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <a className="nav-link active" href="#">
-                Active
-              </a>
+              <button className="nav-link"></button>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">

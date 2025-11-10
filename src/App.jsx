@@ -8,10 +8,7 @@ export default function App() {
     <>
       <ThemeProvider>
         <Nav />
-        <main className="container mt-4">
-          <h1>Welcome to My Themed App</h1>
-          <p>This area also responds to theme changes.</p>
-        </main>
+        
       </ThemeProvider>
     </>
   )
