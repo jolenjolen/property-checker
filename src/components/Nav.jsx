@@ -11,10 +11,10 @@ export default function Nav() {
     <header className="sticky-top">
       <nav className={`navbar navbar-expand-sm ${navbarTheme}`}>
         <div className="container-fluid">
-          <a className="navbar-brand d-flex justify-content-center align-items-center" href="#" height="50">
+          <a className="navbar-brand d-flex justify-content-center align-items-center" href="" height="50">
             <img className="rounded-pill" src={appLogo} alt="Logo" width="45" height="45" />
             &nbsp;
-            <h5>PROP80</h5>
+            <span>PROP80</span>
           </a>
 
           <ul className="navbar-nav me-auto">

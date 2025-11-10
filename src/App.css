@@ -5,7 +5,7 @@ body,nav {
   width: 45px;
   height: 45px;
 }
-.navbar-brand h5{
-  line-height: 0;
+.navbar-brand span{
   color: #38b8f8;
+  font-weight: 500;
 }
