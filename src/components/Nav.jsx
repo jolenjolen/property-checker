@@ -32,13 +32,15 @@ export default function Nav() {
               </a>
             </li>
           </ul>
-          <button className={`m-1 favouritesTab d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
+          <button className={`mx-1 p-1 favouritesTab d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
+            <span>My&nbsp;Favourites</span>
+            &nbsp;
             <span className="material-symbols-rounded">
               favorite
             </span>
-            <span>My&nbsp;Favourites</span>
+            
           </button>
-          <button onClick={toggleTheme} className={`m-1 themeToggle d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
+          <button onClick={toggleTheme} className={`mx-1 p-1 themeToggle d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
             <span className="material-symbols-rounded">
               {theme === "light" ? "dark_mode" : "light_mode"}
             </span>
