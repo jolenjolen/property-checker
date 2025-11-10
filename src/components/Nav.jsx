@@ -13,7 +13,7 @@ export default function Nav() {
         <div className="container-fluid">
           <a className="navbar-brand d-flex justify-content-center align-items-center" href="#" height="50">
             <img className="rounded-pill" src={appLogo} alt="Logo" width="45" height="45" />
-            &nbsp;&nbsp;
+            &nbsp;
             <h5>PROP80</h5>
           </a>
 
