@@ -1,11 +1,13 @@
 body,nav {
   transition: all 0.3s ease;
 }
-.themeToggle, .favouriteHeart{
+.themeToggle, .favouriteBtn span:last-child{
   width: 45px;
   height: 45px;
 }
-
+.favouriteBtn span:first-child{
+  font-weight: 400;
+}
 .navbar-brand span{
   color: #38b8f8;
   font-weight: 500;
