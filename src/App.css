@@ -15,12 +15,13 @@ body,nav {
   opacity: 0;
   width: 0;
   overflow: hidden;
-  transition: all 0.3s ease-in-out !important;
+  transition: all 0.5s ease-in-out !important;
   white-space: nowrap;
 }
 
 .favouriteBtn:hover span.label {
   opacity: 1;
+  max-width: 200px;
   /*margin-right: 6px;*/
 }
 .navbar-brand span{
