@@ -32,7 +32,7 @@ export default function Nav() {
               </a>
             </li>
           </ul>
-          <button className={`favouriteBtn mx-1 p-1 border-2 d-flex justify-content-center align-items-center rounded-pill btn btn-outline-danger`} title="View Your Favourites">
+          <button data-bs-toggle="offcanvas" data-bs-target="#favourites" className={`favouriteBtn mx-1 p-1 border-2 d-flex justify-content-center align-items-center rounded-pill btn btn-outline-danger`} title="View Your Favourites">
             <span className="label">&nbsp;&nbsp;My&nbsp;Favourites&nbsp;&nbsp;</span>
             <span className="m-0 material-symbols-rounded bg-danger text-white rounded-pill d-flex justify-content-center align-items-center">
               favorite
@@ -47,5 +47,14 @@ export default function Nav() {
         </div>
       </nav>
     </header>
+    <div class="offcanvas offcanvas-start" id="favourites">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title">Heading</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+      </div>
+      <div class="offcanvas-body">
+
+      </div>
+    </div>
   );
 }
