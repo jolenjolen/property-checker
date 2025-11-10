@@ -32,7 +32,7 @@ export default function Nav() {
               </a>
             </li>
           </ul>
-          <button className={`mx-1 p-1 favouritesTab d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
+          <button className={`mx-1 p-1 px-2 favouritesTab d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
             <span>My&nbsp;Favourites</span>
             &nbsp;
             <span className="material-symbols-rounded">
