@@ -6,7 +6,7 @@ body,nav {
   height: 45px;
 }
 .favouriteBtn span:first-child{
-  font-weight: 400;
+  font-weight: 500;
 }
 .navbar-brand span{
   color: #38b8f8;
