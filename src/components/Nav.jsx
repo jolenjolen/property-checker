@@ -49,7 +49,8 @@ export default function Nav() {
       <div className={`offcanvas offcanvas-end bg-${theme} text-${inverseTheme}`} id="favourites">
         <div className="offcanvas-header">
           <h1 className="offcanvas-title">Heading</h1>
-          <button type="button" className="btn-close" data-bs-dismiss="offcanvas"></button>
+          <button data-bs-dismiss="offcanvas"><span className="material-symbols-rounded">close</span></button>
+          
         </div>
         <div className="offcanvas-body">
 
