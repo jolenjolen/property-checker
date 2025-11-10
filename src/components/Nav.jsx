@@ -46,15 +46,16 @@ export default function Nav() {
           </button>
         </div>
       </nav>
-    </header>
-    <div class="offcanvas offcanvas-start" id="favourites">
-      <div class="offcanvas-header">
-        <h1 class="offcanvas-title">Heading</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-      </div>
-      <div class="offcanvas-body">
+      <div class="offcanvas offcanvas-start" id="favourites">
+        <div class="offcanvas-header">
+          <h1 class="offcanvas-title">Heading</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
 
+        </div>
       </div>
-    </div>
+    </header>
+    
   );
 }
