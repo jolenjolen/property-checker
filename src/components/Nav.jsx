@@ -47,10 +47,9 @@ export default function Nav() {
         </div>
       </nav>
       <div className={`offcanvas offcanvas-end bg-${theme} text-${inverseTheme}`} id="favourites">
-        <div className="offcanvas-header">
-          <h1 className="offcanvas-title">Heading</h1>
+        <div className="offcanvas-header d-flex justify-content-between align-items-center">
+          <h4 className="offcanvas-title">Heading</h4>
           <button data-bs-dismiss="offcanvas" className={`mx-1 closeFavourites d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title="Close Favourites"><span className="material-symbols-rounded">close</span></button>
-          
         </div>
         <div className="offcanvas-body">
 
