@@ -21,7 +21,6 @@ body,nav {
 
 .favouriteBtn:hover span.label {
   opacity: 1;
-  width: auto;
   /*margin-right: 6px;*/
 }
 .navbar-brand span{
