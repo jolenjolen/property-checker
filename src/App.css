@@ -5,6 +5,9 @@ body,nav {
   width: 45px;
   height: 45px;
 }
+.themeToggle:hover{
+  color: #38b8f8;
+}
 .navbar-brand span{
   color: #38b8f8;
   font-weight: 500;
