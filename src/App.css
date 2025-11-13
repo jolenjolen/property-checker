@@ -34,7 +34,11 @@ body,nav {
 }
 /*Closing UTILS*/
 
-.searchBarSection{
+.searchBarSection-light{
   background: inherit;
   background: linear-gradient(120deg,rgba(255, 255, 255, 1) 0%, rgba(164, 210, 235, 1) 50%, rgba(255, 255, 255, 1) 100%);
+}
+.searchBarSection-dark{
+  background: inherit;
+  background: linear-gradient(120deg,rgba(0, 0, 0, 1) 0%, rgba(107, 140, 150, 1) 50%, rgba(0, 0, 0, 1) 100%);
 }
