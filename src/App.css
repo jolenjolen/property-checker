@@ -21,11 +21,11 @@ body,nav {
   background-color: #333;
 }
 .bg-light{
-  background-color: #f1f1f190 !important;
+  background-color: #f1f1f1cc !important;
   backdrop-filter: blur(8px);
 }
 .bg-dark{
-  background-color: #41414190 !important;
+  background-color: #414141cc !important;
   backdrop-filter: blur(8px);
 }
 .temp{
