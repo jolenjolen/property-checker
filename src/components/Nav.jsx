@@ -12,7 +12,7 @@ export default function Nav() {
     <header className="sticky-top p-2">
       <nav className={`rounded-pill p-1 shadow-sm navbar navbar-expand-sm ${navbarTheme}`}>
         <div className="container-fluid">
-          <a className="navbar-brand d-flex justify-content-center align-items-center" href="" height="50">
+          <a className="navbar-brand d-flex justify-content-start align-items-center" href="" height="50">
             <img className="rounded-pill" src={appLogo} alt="Logo" width="45" height="45" />
             &nbsp;
             <span>PROP80</span>
