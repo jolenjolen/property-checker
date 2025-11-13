@@ -10,7 +10,7 @@ export default function Nav() {
   const inverseTheme = theme === "light" ? "dark" : "light";
   return (
     <header className="sticky-top p-2">
-      <nav className={`border border-1 rounded-pill shadow-sm navbar navbar-expand-sm ${navbarTheme}`}>
+      <nav className={`border border-1 border-secondary rounded-pill shadow-sm navbar navbar-expand-sm ${navbarTheme}`}>
         <div className="container-fluid">
           <a className="navbar-brand d-flex justify-content-start align-items-center" href="" height="50">
             <img className="rounded-pill" src={appLogo} alt="Logo" width="45" height="45" />
@@ -33,12 +33,10 @@ export default function Nav() {
               </a>
             </li>
           </ul>
-          <button data-bs-toggle="offcanvas" data-bs-target="#favourites" className={`favouriteBtn mx-1 p-1 border-2 d-flex justify-content-center align-items-center rounded-pill btn btn-outline-danger`} title="View Your Favourites">
-            <span className="label">&nbsp;&nbsp;My&nbsp;Favourites&nbsp;&nbsp;</span>
-            <span className="m-0 material-symbols-rounded bg-danger text-white rounded-pill d-flex justify-content-center align-items-center">
+          <button data-bs-toggle="offcanvas" data-bs-target="#favourites" className={`favouriteBtn mx-2 d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
+            <span className="material-symbols-rounded">
               favorite
             </span>
-            
           </button>
           <button onClick={toggleTheme} className={`themeToggle d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
             <span className="material-symbols-rounded">

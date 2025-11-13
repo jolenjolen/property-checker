@@ -1,36 +1,19 @@
 body,nav {
   transition: all 0.3s ease;
 }
-.themeToggle, .favouriteBtn span:last-child, .closeFavourites{
+.themeToggle, .favouriteBtn, .closeFavourites{
   width: 45px;
   height: 45px;
 }
 .favouriteBtn{
   transition: all 0.3s ease-in-out !important;
 }
-.favouriteBtn span:first-child{
-  font-weight: 500;
-}
-.favouriteBtn span.label {
-  opacity: 0;
-  width: 0;
-  overflow: hidden;
-  transition: all 0.5s ease-in-out !important;
-  white-space: nowrap;
-}
-
-@media (min-width: 1024px) {
-  .favouriteBtn:hover span.label {
-    opacity: 1;
-    width: 110px;
-    /*margin-right: 6px;*/
-  }
-}
 
 .navbar-brand span{
   color: #38b8f8;
   font-weight: 500;
 }
+
 .bg-light-0{
   background-color: #fff;
 }
