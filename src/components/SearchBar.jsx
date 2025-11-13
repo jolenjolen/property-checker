@@ -2,6 +2,7 @@ import "../App.css";
 import { useTheme } from "../ThemeContext";
 
 export default function SearchBar() {
+    const { theme, toggleTheme } = useTheme();
 
     return(
         <div className={`searchBarSection-${theme} container-fluid p-5 text-center`}>
