@@ -1,7 +1,6 @@
 import appLogo from "/logo.png";
 import "../App.css";
 import { useTheme } from "../ThemeContext";
-import Contact from "../pages/contact";
 
 
 export default function Nav() {
@@ -21,7 +20,7 @@ export default function Nav() {
 
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <button className="nav-link" onClick={<Contact/>}></button>
+              <button className="nav-link"></button>
             </li>
             <li className="nav-item">
               <a className="nav-link" to="/pages/contact">
