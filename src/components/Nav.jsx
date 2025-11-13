@@ -9,8 +9,8 @@ export default function Nav() {
   const navbarTheme = theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark";
   const inverseTheme = theme === "light" ? "dark" : "light";
   return (
-    <header className="sticky-top p-2">
-      <nav className={`rounded-pill p-1 shadow-sm navbar navbar-expand-sm ${navbarTheme}`}>
+    <header className="sticky-top">
+      <nav className={`border-1 rounded-pill p-1 shadow-sm navbar navbar-expand-sm ${navbarTheme}`}>
         <div className="container-fluid">
           <a className="navbar-brand d-flex justify-content-start align-items-center" href="" height="50">
             <img className="rounded-pill" src={appLogo} alt="Logo" width="45" height="45" />
@@ -40,7 +40,7 @@ export default function Nav() {
             </span>
             
           </button>
-          <button onClick={toggleTheme} className={`mx-1 themeToggle d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
+          <button onClick={toggleTheme} className={`themeToggle d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
             <span className="material-symbols-rounded">
               {theme === "light" ? "dark_mode" : "light_mode"}
             </span>
