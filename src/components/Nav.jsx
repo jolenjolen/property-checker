@@ -24,22 +24,22 @@ export default function Nav() {
             </li>
             <li className="nav-item">
               <a className="nav-link" >
-                BUY
+                Buy
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link">
-                RENT
+                Rent
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link">
-                MORTGAGE&nbsp;CALCULATOR
+                Agent
               </a>
             </li>
             <li className="nav-item">
               <a className="nav-link">
-                CONTACT&nbsp;US
+                Contact
               </a>
             </li>
           </ul>
