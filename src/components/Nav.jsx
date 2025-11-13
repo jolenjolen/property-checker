@@ -23,13 +23,23 @@ export default function Nav() {
               <button className="nav-link"></button>
             </li>
             <li className="nav-item">
-              <a className="nav-link" to="/pages/contact">
-                
+              <a className="nav-link" >
+                BUY
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
-                Another Link
+              <a className="nav-link">
+                RENT
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">
+                MORTGAGE&nbsp;CALCULATOR
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link">
+                CONTACT&nbsp;US
               </a>
             </li>
           </ul>
