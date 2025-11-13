@@ -1,34 +1,33 @@
 body,nav {
   transition: all 0.3s ease;
 }
-.themeToggle, .favouriteBtn, .closeFavourites{
+
+/*UTILS*/
+
+.bg-light-0{
+  background-color: #fff; /*specifically used for body bg color*/
+}
+.bg-dark-0{
+  background-color: #333; /*specifically used for body bg color*/
+}
+.bg-light-blur{
+  background-color: rgba(241, 241, 241, 0.7) !important; /*blur glass effect for elements that I select*/
+  backdrop-filter: blur(6px);
+}
+.bg-dark-blur{
+  background-color: rgba(65, 65, 65, 0.7) !important; /*blur glass effect for elements that I select*/
+  backdrop-filter: blur(6px);
+}
+
+.themeToggle, .favouriteBtn, .closeFavourites{ /*Generic button sizes 45 by 45 for consistency*/
   width: 45px;
   height: 45px;
 }
-.favouriteBtn{
-  transition: all 0.3s ease-in-out !important;
-}
 
-.navbar-brand span{
+.navbar-brand span{ /*Logo and Brand Text on the Nav Bar*/
   color: #38b8f8;
   font-weight: 500;
 }
 
-.bg-light-0{
-  background-color: #fff;
-}
-.bg-dark-0{
-  background-color: #333;
-}
-.bg-light{
-  background-color: rgba(241, 241, 241, 0.7) !important;
-  backdrop-filter: blur(8px);
-}
-.bg-dark{
-  background-color: rgba(65, 65, 65, 0.7) !important;
-  backdrop-filter: blur(8px);
-}
-.temp{
-  height: 200vh;
-  background-image: url("https://winblogs.thesourcemediaassets.com/sites/2/2021/10/Windows-11-Bloom-Screensaver-Dark-scaled.jpg");
-}
+/*Closing UTILS*/
+
