@@ -11,9 +11,9 @@ export function ThemeProvider({ children }) {
   // 2️⃣ Update <body> and localStorage when theme changes
   useEffect(() => {
     localStorage.setItem("theme", theme);
-    document.body.classList.remove("bg-light","text-dark", "bg-dark","text-light");
+    document.body.classList.remove("bg-light-0","text-dark", "bg-dark-0","text-light");
     const inverseTheme = theme === "light" ? "dark" : "light";
-    document.body.classList.add(`bg-${theme}`,`text-${inverseTheme}`);
+    document.body.classList.add(`bg-${theme}-0`,`text-${inverseTheme}`);
   }, [theme]);
 
   // 3️⃣ Function to toggle theme

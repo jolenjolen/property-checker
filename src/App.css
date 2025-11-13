@@ -31,3 +31,9 @@ body,nav {
   color: #38b8f8;
   font-weight: 500;
 }
+.bg-light-0{
+  background-color: #fff;
+}
+.bg-dark-0{
+  background-color: #333;
+}
