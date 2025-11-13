@@ -29,5 +29,8 @@ body,nav {
   font-weight: 500;
 }
 
+.space{ /*simple height space (Reusable)*/
+  height: 45px;
+}
 /*Closing UTILS*/
 
