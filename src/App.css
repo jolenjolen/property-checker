@@ -34,7 +34,11 @@ body,nav {
 }
 /*Closing UTILS*/
 
-.searchBarSection{
+.searchBarSection-light{
   background: inherit;
-  background: linear-gradient(120deg,rgba(255, 255, 255, 1) 0%, rgba(164, 210, 235, 1) 50%, rgba(255, 255, 255, 1) 100%);
+  background-image: url('assets/hero-light.png');
+}
+.searchBarSection-dark{
+  background: inherit;
+  background-image: url('assets/hero-dark.png');
 }
