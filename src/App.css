@@ -91,7 +91,7 @@ form {
 
 .search-btn {
   background-color: white;
-  color: #38b8f8 !important;
+  color: #38b8f8;
   transition: all ease-in-out 0.3s;
   border: 2px transparent;
 }
