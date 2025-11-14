@@ -7,7 +7,7 @@ export default function SearchBar() {
     return(
         <>
             <div className={`hero hero-${theme} rounded-4 m-2 d-flex flex-column justify-content-center align-items-center`}>
-                <h2 className={`text-${inverseTheme}`}>Find Your Next Home</h2>
+                <h2 className={`text-${inverseTheme}`}><span className="heroFirstText">Find</span> Your Next Home</h2>
                 <p className={`text-${inverseTheme}`}>Believe in finding it with the UK's largest choice of homes</p>
                 <form className="search-form rounded-pill">
                     <div className="input-group">
