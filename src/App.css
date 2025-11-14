@@ -93,6 +93,7 @@ form {
   background-color: white !important;
   color: #38b8f8 !important;
   transition: all ease-in-out 0.3s !important;
+  border: 1px transparent !important;
 }
 
 .search-btn:hover {
@@ -104,10 +105,12 @@ form {
   background-color: #38b8f8;
   text-decoration: none;
   color: white;
+  border: 1px solid #38b8f8;
   transition: all ease-in-out 0.3s;
+  
 }
 
 .open-map:hover {
-  background-color: #00aaff;
-  color: white;
+  background-color: #fff;
+  color: #38b8f8;
 }
