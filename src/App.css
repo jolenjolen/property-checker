@@ -34,17 +34,74 @@ body,nav {
 }
 /*Closing UTILS*/
 
-.searchBarSection-light{
-  background: inherit;
-  background-image: url('assets/hero-light.png');
-  background-position: center;
+/*Search Bar*/
+.hero {
+  background:
+    linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.1),
+      rgba(0, 0, 0, 0.9),
+      rgba(255, 255, 255, 0.1)),
+    url("assets/hero-light.png");
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
+  padding: 50px 10px 50px 10px;
 }
-.searchBarSection-dark{
-  background: inherit;
-  background-image: url('assets/hero-dark.png');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+
+.hero h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #fff;
+}
+
+.hero p {
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.input-group-text {
+  border-radius: 25px 0 0 25px !important;
+  border: none !important;
+  background-color: transparent !important;
+  border-right: 1px solid #ddd !important;
+}
+
+form {
+  background-color: #fff;
+}
+
+.search-form .input-group .form-control {
+  border: none;
+}
+
+.search-form .input-group .form-control:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.search-btn {
+  width: 54px;
+  height: 54px;
+  background-color: white !important;
+  color: rgb(0, 110, 255) !important;
+  transition: all ease-in-out 0.3s !important;
+}
+
+.search-btn:hover {
+  background-color: rgb(0, 110, 255) !important;
+  color: #fff !important;
+}
+
+.open-map {
+  background-color: rgb(0, 110, 255);
+  width: 54px;
+  height: 54px;
+  text-decoration: none;
+  color: white;
+  transition: all ease-in-out 0.3s;
+}
+
+.open-map:hover {
+  background-color: rgb(110, 117, 255);
+  color: white;
 }
