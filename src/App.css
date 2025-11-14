@@ -37,8 +37,14 @@ body,nav {
 .searchBarSection-light{
   background: inherit;
   background-image: url('assets/hero-light.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .searchBarSection-dark{
   background: inherit;
   background-image: url('assets/hero-dark.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
