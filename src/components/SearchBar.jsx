@@ -6,7 +6,7 @@ export default function SearchBar() {
     const inverseTheme = theme === "light" ? "dark" : "light";
     return(
         <>
-            <div className={`hero hero-${theme} rounded-4 m-2 d-flex flex-column justify-content-center align-items-center`}>
+            <div className={`hero hero-${theme} rounded-4 m-2 p-5 d-flex flex-column justify-content-center align-items-center`}>
                 <h2 className={`text-${inverseTheme}`}><span className="heroFirstText">Find</span> Your Next Home</h2>
                 <p className={`text-${inverseTheme}`}>Believe in finding it with the UK's largest choice of homes</p>
                 <form className="search-form rounded-pill">
