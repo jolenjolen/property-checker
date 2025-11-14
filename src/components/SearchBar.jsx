@@ -8,7 +8,6 @@ export default function SearchBar() {
         <>
             
             <div className={`hero hero-${theme} rounded-4 m-2 d-flex flex-column justify-content-center align-items-center text-${inverseTheme}`}>
-                <div className="space"></div>
                 <h2>Find The Perfect Destination</h2>
                 <p>Explore the vibrant beaches and embrace the serene countryside</p>
                 <form className="search-form rounded-pill">

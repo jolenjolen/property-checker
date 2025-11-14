@@ -9,7 +9,7 @@ export default function Nav() {
   const navbarTheme = theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark";
   const inverseTheme = theme === "light" ? "dark" : "light";
   return (
-    <header className="fixed-top p-2">
+    <header className="sticky-top p-2">
       <nav className={`border border-1 border-secondary rounded-pill shadow-sm navbar navbar-expand-sm ${navbarTheme} bg-${theme}-blur`}>
         <div className="container-fluid">
           <a className="navbar-brand d-flex justify-content-start align-items-center" href="" height="50">
