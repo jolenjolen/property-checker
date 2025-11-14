@@ -8,7 +8,7 @@ body,nav {
   background-color: #fff; /*specifically used for body bg color*/
 }
 .bg-dark-0{
-  background-color: #333; /*specifically used for body bg color*/
+  background-color: #131313; /*specifically used for body bg color*/
 }
 .bg-light-blur{
   background-color: rgba(241, 241, 241, 0.5) !important; /*blur glass effect for elements that I select*/
@@ -36,19 +36,32 @@ body,nav {
 
 /*Search Bar*/
 .hero {
-  background:
-    linear-gradient(to bottom,
-      rgba(255, 255, 255, 0.1),
-      rgba(0, 0, 0, 0.9),
-      rgba(255, 255, 255, 0.1)),
-    url("assets/hero-light.png");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  padding: 50px 10px 50px 10px;
+  padding: 50px 10px;
 }
 
+/* Light Theme Hero */
+.hero-light {
+  background:
+    linear-gradient(to bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.7)),
+    url("assets/herobg.jpg");
+}
+
+/* Dark Theme Hero */
+.hero-dark {
+  background:
+    linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.7)),
+    url("assets/herobg.jpg");
+}
 .hero h2 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #fff;
@@ -68,6 +81,7 @@ body,nav {
 
 form {
   background-color: #fff;
+  width: 100%;
 }
 
 .search-form .input-group .form-control {
