@@ -11,8 +11,8 @@ export default function SearchBar() {
                 <p className={`text-${inverseTheme}`}>Believe in finding it with the UK's largest choice of homes</p>
                 <form className="search-form rounded-pill">
                     <div className="input-group">
-                        <span className="m-1 input-group-text material-symbols-rounded">apartment</span>
-                        <input type="text" className=" m-1 form-control" placeholder="e.g. Bath, UB3, or Leeds Station" />
+                        <span className="m-1 input-group-text material-symbols-rounded">cottage</span>
+                        <input type="text" className=" m-1 form-control" placeholder="e.g. Bath, UB3, or Leeds" />
                         <button type="submit" className="m-1 rounded-pill btn search-btn d-flex justify-content-center align-items-center">
                             <span className="material-symbols-rounded">search</span>
                         </button>
