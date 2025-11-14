@@ -19,7 +19,7 @@ body,nav {
   backdrop-filter: blur(6px);
 }
 
-.themeToggle, .favouriteBtn, .closeFavourites{ /*Generic button sizes 45 by 45 for consistency*/
+.themeToggle, .favouriteBtn, .closeFavourites, .search-btn, .open-map{ /*Generic button sizes 45 by 45 for consistency*/
   width: 45px;
   height: 45px;
 }
@@ -90,28 +90,24 @@ form {
 }
 
 .search-btn {
-  width: 54px;
-  height: 54px;
   background-color: white !important;
-  color: rgb(0, 110, 255) !important;
+  color: #38b8f8 !important;
   transition: all ease-in-out 0.3s !important;
 }
 
 .search-btn:hover {
-  background-color: rgb(0, 110, 255) !important;
+  background-color: #38b8f8 !important;
   color: #fff !important;
 }
 
 .open-map {
-  background-color: rgb(0, 110, 255);
-  width: 54px;
-  height: 54px;
+  background-color: #38b8f8;
   text-decoration: none;
   color: white;
   transition: all ease-in-out 0.3s;
 }
 
 .open-map:hover {
-  background-color: rgb(110, 117, 255);
+  background-color: #00aaff;
   color: white;
 }
