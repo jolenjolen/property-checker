@@ -38,6 +38,7 @@ body,nav {
   background-attachment: fixed;
   background-repeat: no-repeat;
   padding: 50px 10px;
+  transform: scale(2);
 }
 
 /* Light Theme Hero */
