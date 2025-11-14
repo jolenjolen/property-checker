@@ -11,12 +11,12 @@ body,nav {
   background-color: #333; /*specifically used for body bg color*/
 }
 .bg-light-blur{
-  background-color: rgba(241, 241, 241, 0.7) !important; /*blur glass effect for elements that I select*/
-  backdrop-filter: blur(6px);
+  background-color: rgba(241, 241, 241, 0.5) !important; /*blur glass effect for elements that I select*/
+  backdrop-filter: blur(4px);
 }
 .bg-dark-blur{
-  background-color: rgba(65, 65, 65, 0.7) !important; /*blur glass effect for elements that I select*/
-  backdrop-filter: blur(6px);
+  background-color: rgba(65, 65, 65, 0.5) !important; /*blur glass effect for elements that I select*/
+  backdrop-filter: blur(4px);
 }
 
 .themeToggle, .favouriteBtn, .closeFavourites{ /*Generic button sizes 45 by 45 for consistency*/
@@ -30,7 +30,7 @@ body,nav {
 }
 
 .space{ /*simple height space (Reusable)*/
-  height: 50px;
+  height: 100px;
 }
 /*Closing UTILS*/
 
