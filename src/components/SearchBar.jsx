@@ -1,5 +1,6 @@
 import "../App.css";
 import { useTheme } from "../ThemeContext";
+import { useState } from "react";
 
 export default function SearchBar() {
     const { theme, toggleTheme } = useTheme();
