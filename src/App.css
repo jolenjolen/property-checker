@@ -59,7 +59,8 @@ body,nav {
       rgba(0, 0, 0, 0.7)),
     url("assets/herobg.jpeg");
 }
-.hero h2 {
+
+.hero h1 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #fff;
   
