@@ -39,7 +39,7 @@ body,nav {
   background-repeat: no-repeat;
   padding: 50px 10px;
 }
-.hero:nth-child(){
+.hero-searchbar-group, .hero-text-slogan, .hero-text-heading {
   transform: scale(1.2);
 }
 /* Light Theme Hero */
