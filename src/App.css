@@ -39,15 +39,7 @@ body,nav {
   background-repeat: no-repeat;
   padding: 50px 10px;
 }
-.hero-text-heading {
-  transform: scale(1.4);
-}
-.hero-text-slogan {
-  
-}
-.hero-searchbar-group {
-  transform: scale(1.2);
-}
+
 /* Light Theme Hero */
 .hero-light {
   background:
@@ -83,7 +75,6 @@ body,nav {
   border: none !important;
   background-color: transparent !important;
   border-right: 1px solid #ddd !important;
-  transform: scale(1.2) !important;
 }
 
 form {
