@@ -3,8 +3,9 @@ import { useTheme } from "../ThemeContext";
 
 export default function SearchBar() {
     const { theme, toggleTheme } = useTheme();
-    const [isRounded, setIsRounded] = useState(true);
     const inverseTheme = theme === "light" ? "dark" : "light";
+    
+    const [isRounded, setIsRounded] = useState(true);
     const toggleRounded = () => {
         setIsRounded((prev) => !prev);
     };
