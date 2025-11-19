@@ -99,9 +99,7 @@ form {
 }
 
 .search-btn:hover {
-  border-color: #38b8f8;
-  background-color: #38b8f8;
-  color: #fff;
+  background-color: #ddd;
 }
 
 .open-map {
@@ -114,8 +112,7 @@ form {
 }
 
 .open-map:hover {
-  background-color: #fff;
-  color: #38b8f8;
+  transform: scale(1.1);
 }
 
 .heroFirstText{
