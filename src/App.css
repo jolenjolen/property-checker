@@ -21,7 +21,7 @@ a{
   backdrop-filter: blur(6px);
 }
 
-.themeToggle, .favouriteBtn, .closeFavourites, .search-btn, .open-map{ /*Generic button sizes 45 by 45 for consistency*/
+.themeToggle, .favouriteBtn, .closeFavourites, .search-btn, .open-map, .expand-search-bar{ /*Generic button sizes 45 by 45 for consistency*/
   width: 45px;
   height: 45px;
 }
