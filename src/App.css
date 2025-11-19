@@ -83,6 +83,7 @@ body,nav {
   border: none !important;
   background-color: transparent !important;
   border-right: 1px solid #ddd !important;
+  transform: scale(1.1) !important;
 }
 
 form {
