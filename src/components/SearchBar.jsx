@@ -17,6 +17,12 @@ export default function SearchBar() {
                             <span className="material-symbols-rounded">search</span>
                         </button>
                         <a className="open-map rounded-pill m-1 d-flex justify-content-center align-items-center" href="http://"><span className="material-symbols-rounded">map</span></a>
+                        <button className="m-1 rounded-pill btn d-flex justify-content-center align-items-center" data-bs-toggle="collapse" data-bs-target="#expand-search-bar"><span className="material-symbols-rounded">keyboard_arrow_down</span></button>
+                    </div>
+                    <div id="expand-search-bar" class="collapse">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
                 </form>
             </div>
