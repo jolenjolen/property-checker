@@ -3,7 +3,9 @@ body,nav {
 }
 
 /*UTILS*/
-
+a{
+  text-decoration: none;
+}
 .bg-light-0{
   background-color: #fff; /*specifically used for body bg color*/
 }
