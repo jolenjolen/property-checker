@@ -39,7 +39,9 @@ body,nav {
   background-repeat: no-repeat;
   padding: 50px 10px;
 }
-
+.hero:nth-child(){
+  transform: scale(1.2);
+}
 /* Light Theme Hero */
 .hero-light {
   background:
