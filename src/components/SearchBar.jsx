@@ -34,6 +34,7 @@ export default function SearchBar() {
                     </div>
                 </form>
             </div>
+            <h1 style="height:100vh;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates excepturi hic, labore quidem consectetur perspiciatis impedit maxime. Velit, nesciunt esse libero aliquam est, dolor voluptatem minima possimus dignissimos eaque quisquam.</h1>
         </>
     );
 }
