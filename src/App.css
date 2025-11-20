@@ -83,7 +83,7 @@ a{
 
 form {
   background-color: #fff;
-  transition: all ease-in-out 0.1s;
+  transition: all ease-in-out 0.3s;
 }
 
 .search-form .input-group .form-control {
@@ -121,11 +121,13 @@ form {
   background-color: #38b8f8;
   color: #fff;
 }
-
+#pand-search-bar{
+  transition: all ease-in 0.1s;
+}
 .expand-search-bar{
   background-color: #38b8f8;
   color: #fff;
-  transition: all ease-in-out 0.5s;
+  transition: all ease-in-out 0.3s;
   border: 2px #38b8f8;
 }
 .expand-search-bar:hover{
