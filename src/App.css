@@ -82,7 +82,7 @@ a{
 
 form {
   background-color: #fff;
-  transition: all ease-in-out 0.3s;
+  transition: all ease-in-out 0.1s;
 }
 
 .search-form .input-group .form-control {
