@@ -82,6 +82,7 @@ a{
 
 form {
   background-color: #fff;
+  transition: all ease-in-out 0.3s;
 }
 
 .search-form .input-group .form-control {
@@ -119,9 +120,7 @@ form {
   background-color: #38b8f8;
   color: #fff;
 }
-#expand-search-bar{
-  transition: all ease-in-out 0.3s;
-}
+
 .expand-search-bar{
   background-color: #38b8f8;
   color: #fff;
