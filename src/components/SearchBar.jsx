@@ -15,7 +15,7 @@ export default function SearchBar() {
             <div className={`hero hero-${theme} rounded-4 m-2 d-flex flex-column justify-content-center align-items-center`}>
                 <h1 className={`hero-text-heading text-${inverseTheme}`}><span className="heroFirstText">Find</span> Your Next Home</h1>
                 <p className={`hero-text-slogan text-${inverseTheme}`}>Believe in finding it with the UK's largest choice of homes</p>
-                <form className={`hero-searchbar-group search-form shadow-sm ${isRounded ? "rounded-pill" : "rounded"}`}>
+                <form className={`sticky-top hero-searchbar-group search-form shadow-sm ${isRounded ? "rounded-pill" : "rounded"}`}>
                     <div className="display-flex flex-column justify-content-center">
                         <div className="input-group">
                             <span className="m-1 input-group-text material-symbols-rounded">cottage</span>
