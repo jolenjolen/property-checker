@@ -29,8 +29,6 @@ export default function SearchBar() {
                         <div id="expand-search-bar" class="collapse">
                             <button>Search radius</button>
                             <button>Property types</button>
-                            <button>Added to site</button>
-                            <button>Price range (£)</button>
                             <button>No. of bedrooms</button>
                         </div>
                     </div>
