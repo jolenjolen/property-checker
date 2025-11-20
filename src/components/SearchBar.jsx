@@ -26,7 +26,7 @@ export default function SearchBar() {
                             <a className="open-map rounded-pill m-1 d-flex justify-content-center align-items-center" href="http://"><span className="material-symbols-rounded">map</span></a>
                             <button onClick={toggleRounded} type="button" className="m-1 rounded-pill d-flex justify-content-center align-items-center expand-search-bar" data-bs-toggle="collapse" data-bs-target="#expand-search-bar"><span className="material-symbols-rounded">{isRounded ? "keyboard_arrow_down" : "keyboard_arrow_up"}</span></button>
                         </div>
-                        <div id="expand-search-bar" class="collapse">
+                        <div id="expand-search-bar" className="collapse">
                             <button>Search radius</button>
                             <button>Property types</button>
                             <button>No. of bedrooms</button>
