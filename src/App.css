@@ -83,6 +83,7 @@ a{
 form {
   background-color: #fff;
   height: 80px;
+  top: 20px;
 }
 
 .search-form .input-group .form-control {
