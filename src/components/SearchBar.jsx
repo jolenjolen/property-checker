@@ -3,15 +3,46 @@ import { useTheme } from "../ThemeContext";
 import { useState } from "react";
 
 export default function SearchBar() {
-    const { theme, toggleTheme } = useTheme();
-    const inverseTheme = theme === "light" ? "dark" : "light";
-    
-    const [isRounded, setIsRounded] = useState(true);
-    const toggleRounded = () => {
-        setIsRounded((prev) => !prev);
-    };
-    return(
-        <>
+  const { theme } = useTheme();
+  const inverseTheme = theme === "light" ? "dark" : "light";
+
+  // Controlled form values
+  const [location, setLocation] = useState("");
+  const [radius, setRadius] = useState(null);
+  const [propertyType, setPropertyType] = useState(null);
+  const [bedrooms, setBedrooms] = useState(null);
+  const [minPrice, setMinPrice] = useState(null);
+  const [maxPrice, setMaxPrice] = useState(null);
+
+  // Dropdown options
+  const RADIUS_OPTIONS = ["1 mile", "3 miles", "5 miles", "10 miles", "15+ miles"];
+  const PROPERTY_OPTIONS = ["House", "Flat / Apartment", "Bungalow", "Terraced", "Semi-detached", "Detached"];
+  const BEDROOM_OPTIONS = ["Studio", "1 Bedroom", "2 Bedrooms", "3 Bedrooms", "4 Bedrooms", "5+ Bedrooms"];
+  const PRICE_OPTIONS = [
+    "£50,000","£75,000","£100,000","£150,000","£200,000",
+    "£250,000","£300,000","£350,000","£400,000","£450,000","£500,000"
+  ];
+
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // prevents reload
+    console.log({
+      location,
+      radius,
+      propertyType,
+      bedrooms,
+      minPrice,
+      maxPrice,
+    });
+  };
+
+  const selectOption = (setter, value) => {
+    setter(value);
+  };
+
+  return (
+    <>
       <div className={`hero hero-${theme} rounded-4 m-2 d-flex flex-column justify-content-center align-items-center`}>
         <h1 className={`hero-text-heading text-${inverseTheme}`}>
           <span className="heroFirstText">Find</span> Your Next Home
@@ -21,9 +52,10 @@ export default function SearchBar() {
           Believe in finding it with the UK's largest choice of homes
         </p>
 
-        <form className={`hero-searchbar-group search-form shadow-sm ${isRounded ? "rounded-4" : "rounded-4"}`}>
+        <form onSubmit={handleSubmit} className="hero-searchbar-group search-form shadow-sm rounded-4">
           <div className="d-flex flex-column justify-content-center">
 
+            {/* MAIN SEARCH BAR */}
             <div className="input-group">
               <span className="m-1 input-group-text material-symbols-rounded">cottage</span>
 
@@ -31,134 +63,69 @@ export default function SearchBar() {
                 type="text"
                 className="m-1 form-control"
                 placeholder="e.g. Bath, UB3, or Leeds"
+                value={location}
+                onChange={(e) => setLocation(e.target.value)}
               />
 
-              <button type="submit" className="m-1 rounded-pill btn search-btn d-flex justify-content-center align-items-center">
+              <button
+                type="submit"
+                className="m-1 rounded-pill btn search-btn d-flex justify-content-center align-items-center"
+              >
                 <span className="material-symbols-rounded">search</span>
               </button>
 
-              <a className="open-map rounded-pill m-1 d-flex justify-content-center align-items-center">
+              <button
+                type="button"
+                className="open-map rounded-pill m-1 d-flex justify-content-center align-items-center"
+              >
                 <span className="material-symbols-rounded">map</span>
-              </a>
+              </button>
 
               <button
-                onClick={toggleRounded}
+                onClick={() => setIsExpanded((prev) => !prev)}
                 type="button"
                 className="m-1 rounded-pill d-flex justify-content-center align-items-center expand-search-bar"
                 data-bs-toggle="collapse"
                 data-bs-target="#expand-search-bar"
               >
                 <span className="material-symbols-rounded">
-                  {isRounded ? "keyboard_arrow_down" : "keyboard_arrow_up"}
+                  {isExpanded ? "keyboard_arrow_up" : "keyboard_arrow_down"}
                 </span>
               </button>
             </div>
 
-            <div id="expand-search-bar" className="collapse">
-                <div className="extra-search-options d-flex justify-content-center gap-2 mt-2">
-                
-                <div className="dropdown">
-                    <button
-                    className="btn btn-light rounded p-2 dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    >
-                    Search Radius
-                    </button>
-                    <ul className="dropdown-menu">
-                    <li><button className="dropdown-item">1 mile</button></li>
-                    <li><button className="dropdown-item">3 miles</button></li>
-                    <li><button className="dropdown-item">5 miles</button></li>
-                    <li><button className="dropdown-item">10 miles</button></li>
-                    <li><button className="dropdown-item">15+ miles</button></li>
-                    </ul>
-                </div>
+            {/* DROPDOWN SECTION */}
+            <div id="expand-search-bar" className={`collapse ${isExpanded ? "show" : ""}`}>
+              
+              <div className="extra-search-options d-flex justify-content-center gap-2 mt-2 flex-wrap">
 
-                
-                <div className="dropdown">
-                    <button
-                    className="btn btn-light rounded p-2 dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    >
-                    Property Types
-                    </button>
-                    <ul className="dropdown-menu">
-                    <li><button className="dropdown-item">House</button></li>
-                    <li><button className="dropdown-item">Flat / Apartment</button></li>
-                    <li><button className="dropdown-item">Bungalow</button></li>
-                    <li><button className="dropdown-item">Terraced</button></li>
-                    <li><button className="dropdown-item">Semi-detached</button></li>
-                    <li><button className="dropdown-item">Detached</button></li>
-                    </ul>
-                </div>
+                {/* RADIUS */}
+                <Dropdown label="Search Radius" selected={radius} options={RADIUS_OPTIONS}
+                  onSelect={(value) => selectOption(setRadius, value)} />
 
-                
-                <div className="dropdown">
-                    <button
-                    className="btn btn-light rounded p-2 dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    >
-                    Bedrooms
-                    </button>
-                    <ul className="dropdown-menu">
-                    <li><button className="dropdown-item">Studio</button></li>
-                    <li><button className="dropdown-item">1 Bedroom</button></li>
-                    <li><button className="dropdown-item">2 Bedrooms</button></li>
-                    <li><button className="dropdown-item">3 Bedrooms</button></li>
-                    <li><button className="dropdown-item">4 Bedrooms</button></li>
-                    <li><button className="dropdown-item">5+ Bedrooms</button></li>
-                    </ul>
-                </div>
-                </div>
-                <div className="extra-search-options d-flex justify-content-center align-items-center gap-2 m-2">
-                    <div className="dropdown">
-                        <button
-                        className="btn btn-light rounded p-2 dropdown-toggle"
-                        data-bs-toggle="dropdown"
-                        >
-                        Minimum
-                        </button>
-                        <ul className="dropdown-menu">
-                        <li><button className="dropdown-item">Minimum</button></li>
-                        <li><button className="dropdown-item">£50000</button></li>
-                        <li><button className="dropdown-item">£75000</button></li>
-                        <li><button className="dropdown-item">£100000</button></li>
-                        <li><button className="dropdown-item">£150000</button></li>
-                        <li><button className="dropdown-item">£200000</button></li>
-                        <li><button className="dropdown-item">£250000</button></li>
-                        <li><button className="dropdown-item">£300000</button></li>
-                        <li><button className="dropdown-item">£350000</button></li>
-                        <li><button className="dropdown-item">£400000</button></li>
-                        <li><button className="dropdown-item">£450000</button></li>
-                        <li><button className="dropdown-item">£500000</button></li>
-                        </ul>
-                    </div>
-                    <span class="text-dark">-</span>
-                    <div className="dropdown">
-                        <button
-                        className="btn btn-light rounded p-2 dropdown-toggle"
-                        data-bs-toggle="dropdown"
-                        >
-                        Maximum
-                        </button>
-                        <ul className="dropdown-menu">
-                        <li><button className="dropdown-item">Maximum</button></li>
-                        <li><button className="dropdown-item">£50000</button></li>
-                        <li><button className="dropdown-item">£75000</button></li>
-                        <li><button className="dropdown-item">£100000</button></li>
-                        <li><button className="dropdown-item">£150000</button></li>
-                        <li><button className="dropdown-item">£200000</button></li>
-                        <li><button className="dropdown-item">£250000</button></li>
-                        <li><button className="dropdown-item">£300000</button></li>
-                        <li><button className="dropdown-item">£350000</button></li>
-                        <li><button className="dropdown-item">£400000</button></li>
-                        <li><button className="dropdown-item">£450000</button></li>
-                        <li><button className="dropdown-item">£500000</button></li>
-                        </ul>
-                    </div>
-                </div>
+                {/* PROPERTY TYPE */}
+                <Dropdown label="Property Types" selected={propertyType} options={PROPERTY_OPTIONS}
+                  onSelect={(value) => selectOption(setPropertyType, value)} />
+
+                {/* BEDROOMS */}
+                <Dropdown label="Bedrooms" selected={bedrooms} options={BEDROOM_OPTIONS}
+                  onSelect={(value) => selectOption(setBedrooms, value)} />
+
+              </div>
+
+              {/* PRICE RANGE */}
+              <div className="extra-search-options d-flex justify-content-center align-items-center gap-2 m-2 flex-wrap">
+
+                <Dropdown label="Minimum" selected={minPrice} options={PRICE_OPTIONS}
+                  onSelect={(value) => selectOption(setMinPrice, value)} />
+
+                <span className="text-dark">-</span>
+
+                <Dropdown label="Maximum" selected={maxPrice} options={PRICE_OPTIONS}
+                  onSelect={(value) => selectOption(setMaxPrice, value)} />
+
+              </div>
             </div>
-
-
           </div>
         </form>
       </div>
@@ -167,5 +134,34 @@ export default function SearchBar() {
         Lorem ipsum dolor sit amet consectetur adipisicing elit…
       </h1>
     </>
-    );
+  );
+}
+
+
+/* REUSABLE DROPDOWN COMPONENT */
+function Dropdown({ label, selected, options, onSelect }) {
+  return (
+    <div className="dropdown">
+      <button className="btn btn-light rounded p-2 dropdown-toggle" data-bs-toggle="dropdown">
+        {selected || label}
+      </button>
+
+      <ul className="dropdown-menu">
+        {options.map((item) => (
+          <li key={item}>
+            <button
+              className="dropdown-item"
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                onSelect(item);
+              }}
+            >
+              {item}
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
