@@ -92,6 +92,7 @@ a{
 
 form {
   background-color: #fff;
+  min-width: 160px;
 }
 
 .search-form .form-control {
