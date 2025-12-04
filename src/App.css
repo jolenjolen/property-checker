@@ -131,7 +131,7 @@ form {
 .expand-search-bar:hover {
   background-color: #fff;
   color: #38b8f8;
-  border-color: #38b8f8;
+  border: 2px #38b8f8;
 }
 
 /* Accent text */
