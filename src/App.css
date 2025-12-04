@@ -126,12 +126,10 @@ form {
   color: #fff;
   transition: 0.3s ease;
   border: 2px #38b8f8;
-  
 }
 
 .expand-search-bar:hover {
-  background-color: #fff;
-  color: #38b8f8;
+  background-color: #56c6fdee;
 }
 
 /* Accent text */
@@ -174,4 +172,8 @@ form {
 
 .extra-search-options {
   flex-wrap: wrap;
+}
+
+.material-symbols-rounded {
+  font-size: 24px;
 }
