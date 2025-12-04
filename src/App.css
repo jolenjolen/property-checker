@@ -139,6 +139,10 @@ form {
 .extra-search-options .dropdown .dropdown-toggle{
   
 }
+.dropdown-menu {
+  position: absolute;
+  z-index: 9999 !important;
+}
 
 .lol {
   height: 100vh;
