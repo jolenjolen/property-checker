@@ -139,7 +139,7 @@ form {
   
 }
 .dropdown-menu{
-  z-index: 9;
+  z-index: 999;
 }
 .lol {
   height: 100vh;
