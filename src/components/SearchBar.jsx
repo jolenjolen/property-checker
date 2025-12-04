@@ -97,7 +97,7 @@ export default function SearchBar() {
             </div>
 
             {/* DROPDOWN SECTION */}
-            <div id="expand-search-bar" className={`collapse ${isExpanded ? "show" : ""}`}>
+            <div id="expand-search-bar" className={`collapse ${/*isExpanded ? "show" : ""*/""}`}>
               
               <div className="extra-search-options d-flex justify-content-center gap-2 mt-2 flex-wrap">
 
