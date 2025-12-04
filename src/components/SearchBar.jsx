@@ -109,7 +109,53 @@ export default function SearchBar() {
                     </ul>
                 </div>
                 </div>
-
+                <div className="extra-search-options d-flex justify-content-center gap-2 mt-2">
+                    <div className="dropdown">
+                        <button
+                        className="btn btn-light rounded p-2 dropdown-toggle w-100"
+                        data-bs-toggle="dropdown"
+                        >
+                        Minimum
+                        </button>
+                        <ul className="dropdown-menu">
+                        <li><button className="dropdown-item">Minimum</button></li>
+                        <li><button className="dropdown-item">£50000</button></li>
+                        <li><button className="dropdown-item">£75000</button></li>
+                        <li><button className="dropdown-item">£100000</button></li>
+                        <li><button className="dropdown-item">£150000</button></li>
+                        <li><button className="dropdown-item">£200000</button></li>
+                        <li><button className="dropdown-item">£250000</button></li>
+                        <li><button className="dropdown-item">£300000</button></li>
+                        <li><button className="dropdown-item">£350000</button></li>
+                        <li><button className="dropdown-item">£400000</button></li>
+                        <li><button className="dropdown-item">£450000</button></li>
+                        <li><button className="dropdown-item">£500000</button></li>
+                        </ul>
+                    </div>
+                    <span>-</span>
+                    <div className="dropdown">
+                        <button
+                        className="btn btn-light rounded p-2 dropdown-toggle w-100"
+                        data-bs-toggle="dropdown"
+                        >
+                        Maximum
+                        </button>
+                        <ul className="dropdown-menu">
+                        <li><button className="dropdown-item">Maximum</button></li>
+                        <li><button className="dropdown-item">£50000</button></li>
+                        <li><button className="dropdown-item">£75000</button></li>
+                        <li><button className="dropdown-item">£100000</button></li>
+                        <li><button className="dropdown-item">£150000</button></li>
+                        <li><button className="dropdown-item">£200000</button></li>
+                        <li><button className="dropdown-item">£250000</button></li>
+                        <li><button className="dropdown-item">£300000</button></li>
+                        <li><button className="dropdown-item">£350000</button></li>
+                        <li><button className="dropdown-item">£400000</button></li>
+                        <li><button className="dropdown-item">£450000</button></li>
+                        <li><button className="dropdown-item">£500000</button></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
 
