@@ -56,60 +56,60 @@ export default function SearchBar() {
 
             <div id="expand-search-bar" className="collapse extra-search-options d-flex gap-2 mt-2">
 
-  {/* Search Radius */}
-  <div className="dropdown">
-    <button
-      className="btn btn-light rounded p-2 dropdown-toggle"
-      data-bs-toggle="dropdown"
-    >
-      Search radius
-    </button>
-    <ul className="dropdown-menu">
-      <li><button className="dropdown-item">1 mile</button></li>
-      <li><button className="dropdown-item">3 miles</button></li>
-      <li><button className="dropdown-item">5 miles</button></li>
-      <li><button className="dropdown-item">10 miles</button></li>
-      <li><button className="dropdown-item">15+ miles</button></li>
-    </ul>
-  </div>
+                
+                <div className="dropdown">
+                    <button
+                    className="btn btn-light rounded p-2 dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    >
+                    Search radius
+                    </button>
+                    <ul className="dropdown-menu">
+                    <li><button className="dropdown-item">1 mile</button></li>
+                    <li><button className="dropdown-item">3 miles</button></li>
+                    <li><button className="dropdown-item">5 miles</button></li>
+                    <li><button className="dropdown-item">10 miles</button></li>
+                    <li><button className="dropdown-item">15+ miles</button></li>
+                    </ul>
+                </div>
 
-  {/* Property Types */}
-  <div className="dropdown">
-    <button
-      className="btn btn-light rounded p-2 dropdown-toggle"
-      data-bs-toggle="dropdown"
-    >
-      Property types
-    </button>
-    <ul className="dropdown-menu">
-      <li><button className="dropdown-item">House</button></li>
-      <li><button className="dropdown-item">Flat / Apartment</button></li>
-      <li><button className="dropdown-item">Bungalow</button></li>
-      <li><button className="dropdown-item">Terraced</button></li>
-      <li><button className="dropdown-item">Semi-detached</button></li>
-      <li><button className="dropdown-item">Detached</button></li>
-    </ul>
-  </div>
+                
+                <div className="dropdown">
+                    <button
+                    className="btn btn-light rounded p-2 dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    >
+                    Property types
+                    </button>
+                    <ul className="dropdown-menu">
+                    <li><button className="dropdown-item">House</button></li>
+                    <li><button className="dropdown-item">Flat / Apartment</button></li>
+                    <li><button className="dropdown-item">Bungalow</button></li>
+                    <li><button className="dropdown-item">Terraced</button></li>
+                    <li><button className="dropdown-item">Semi-detached</button></li>
+                    <li><button className="dropdown-item">Detached</button></li>
+                    </ul>
+                </div>
 
-  {/* Bedrooms */}
-  <div className="dropdown">
-    <button
-      className="btn btn-light rounded p-2 dropdown-toggle"
-      data-bs-toggle="dropdown"
-    >
-      No. of bedrooms
-    </button>
-    <ul className="dropdown-menu">
-      <li><button className="dropdown-item">Studio</button></li>
-      <li><button className="dropdown-item">1 Bedroom</button></li>
-      <li><button className="dropdown-item">2 Bedrooms</button></li>
-      <li><button className="dropdown-item">3 Bedrooms</button></li>
-      <li><button className="dropdown-item">4 Bedrooms</button></li>
-      <li><button className="dropdown-item">5+ Bedrooms</button></li>
-    </ul>
-  </div>
+                
+                <div className="dropdown">
+                    <button
+                    className="btn btn-light rounded p-2 dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    >
+                    No. of bedrooms
+                    </button>
+                    <ul className="dropdown-menu">
+                    <li><button className="dropdown-item">Studio</button></li>
+                    <li><button className="dropdown-item">1 Bedroom</button></li>
+                    <li><button className="dropdown-item">2 Bedrooms</button></li>
+                    <li><button className="dropdown-item">3 Bedrooms</button></li>
+                    <li><button className="dropdown-item">4 Bedrooms</button></li>
+                    <li><button className="dropdown-item">5+ Bedrooms</button></li>
+                    </ul>
+                </div>
 
-</div>
+            </div>
 
 
           </div>
