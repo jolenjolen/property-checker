@@ -109,7 +109,7 @@ export default function SearchBar() {
                     </ul>
                 </div>
                 </div>
-                <div className="extra-search-options d-flex justify-content-center gap-2 m-2">
+                <div className="extra-search-options d-flex justify-content-center align-items-center gap-2 m-2">
                     <div className="dropdown">
                         <button
                         className="btn btn-light rounded p-2 dropdown-toggle"
