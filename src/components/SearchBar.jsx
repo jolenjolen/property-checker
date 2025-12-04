@@ -109,10 +109,10 @@ export default function SearchBar() {
                     </ul>
                 </div>
                 </div>
-                <div className="extra-search-options d-flex justify-content-center gap-2 mt-2">
+                <div className="extra-search-options d-flex justify-content-center gap-2 m-2">
                     <div className="dropdown">
                         <button
-                        className="btn btn-light rounded p-2 dropdown-toggle w-100"
+                        className="btn btn-light rounded p-2 dropdown-toggle"
                         data-bs-toggle="dropdown"
                         >
                         Minimum
@@ -132,10 +132,10 @@ export default function SearchBar() {
                         <li><button className="dropdown-item">£500000</button></li>
                         </ul>
                     </div>
-                    <span>-</span>
+                    <span><h1>-</h1></span>
                     <div className="dropdown">
                         <button
-                        className="btn btn-light rounded p-2 dropdown-toggle w-100"
+                        className="btn btn-light rounded p-2 dropdown-toggle"
                         data-bs-toggle="dropdown"
                         >
                         Maximum
