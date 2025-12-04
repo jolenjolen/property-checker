@@ -33,19 +33,27 @@ a{
 
 /*Closing UTILS*/
 
-/*Search Bar*/
+/* HERO PARALLAX WRAPPER */
 .hero {
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  padding: 50px 10px;
-  z-index: -9;
+  position: relative;
+  padding: 80px 20px;
+  overflow: hidden;
 }
 
-/* Light Theme Hero */
-.hero-light {
-  background:
+/* Parallax background layer */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* true parallax */
+  z-index: -1;
+}
+
+/* Light Theme */
+.hero-light::before {
+  background-image:
     linear-gradient(120deg,
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.9),
@@ -53,9 +61,9 @@ a{
     url("assets/herobg.jpeg");
 }
 
-/* Dark Theme Hero */
-.hero-dark {
-  background:
+/* Dark Theme */
+.hero-dark::before {
+  background-image:
     linear-gradient(120deg,
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.9),
@@ -63,10 +71,10 @@ a{
     url("assets/herobg.jpeg");
 }
 
+/* Typography */
 .hero h1 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
   color: #fff;
-  
 }
 
 .hero p {
@@ -74,10 +82,11 @@ a{
   color: #fff;
 }
 
+/* Search bar styling */
 .input-group-text {
   border-radius: 25px 0 0 25px !important;
   border: none !important;
-  background-color: transparent !important;
+  background: transparent !important;
   border-right: 1px solid #ddd !important;
 }
 
@@ -85,57 +94,47 @@ form {
   background-color: #fff;
 }
 
-.search-form .input-group .form-control {
+.search-form .form-control {
   border: none;
 }
 
-.search-form .input-group .form-control:focus {
+.search-form .form-control:focus {
   outline: none;
   box-shadow: none;
 }
 
-.search-btn {
-  background-color: white;
-  color: #38b8f8;
-  transition: all ease-in-out 0.3s;
-  border: 2px transparent;
-}
-
-.search-btn:hover {
-  border-color: #38b8f8;
-  background-color: #38b8f8;
-  color: #fff;
-}
-
+.search-btn,
 .open-map {
   background-color: white;
   color: #38b8f8;
-  transition: all ease-in-out 0.3s;
+  transition: 0.3s ease;
   border: 2px transparent;
-  
 }
 
+.search-btn:hover,
 .open-map:hover {
   border-color: #38b8f8;
   background-color: #38b8f8;
   color: #fff;
 }
 
-.expand-search-bar{
+/* Expand Button */
+.expand-search-bar {
   background-color: #38b8f8;
   color: #fff;
-  transition: all ease-in-out 0.3s;
+  transition: 0.3s ease;
   border: 2px #38b8f8;
 }
-.expand-search-bar:hover{
-  border-color: #38b8f8;
+
+.expand-search-bar:hover {
   background-color: #38b8f8ee;
-  color: #fff;
 }
 
-.heroFirstText{
+/* Accent text */
+.heroFirstText {
   color: #38b8f8;
 }
-.lol{
+
+.lol {
   height: 100vh;
 }
