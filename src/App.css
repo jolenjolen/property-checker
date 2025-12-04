@@ -92,7 +92,6 @@ a{
 
 form {
   background-color: #fff;
-  width: 480px;
 }
 
 .search-form .form-control {
@@ -137,7 +136,7 @@ form {
 }
 
 .extra-search-options .dropdown .dropdown-toggle{
-  min-width:150px;
+  
 }
 .lol {
   height: 100vh;
