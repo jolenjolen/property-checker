@@ -54,7 +54,7 @@ export default function SearchBar() {
           Believe in finding it with the UK's largest choice of homes
         </p>
 
-        <form onSubmit={handleSubmit} className="hero-searchbar-group search-form shadow-sm rounded-4">
+        <form onSubmit={handleSubmit} className={`${isExpanded ? "rounded-pill" : "rounded-4"} hero-searchbar-group search-form shadow-sm`}>
           <div className="d-flex flex-column justify-content-center">
 
             {/* MAIN SEARCH BAR */}
