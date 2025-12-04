@@ -1,79 +1,100 @@
-body,nav {
+/* ============================
+   GLOBAL TRANSITIONS & UTILITIES
+   ============================ */
+body,
+nav {
   transition: all 0.3s ease;
 }
 
-/*UTILS*/
-a{
+a {
   text-decoration: none;
 }
-.bg-light-0{
-  background-color: #fff; /*specifically used for body bg color*/
+
+/* Theme base background colors */
+.bg-light-0 {
+  background-color: #fff;
 }
-.bg-dark-0{
-  background-color: #131313; /*specifically used for body bg color*/
+
+.bg-dark-0 {
+  background-color: #131313;
 }
-.bg-light-blur{
-  background-color: rgba(241, 241, 241, 0.5) !important; /*blur glass effect for elements that I select*/
-  backdrop-filter: blur(6px);
-}
-.bg-dark-blur{
-  background-color: rgba(65, 65, 65, 0.5) !important; /*blur glass effect for elements that I select*/
+
+/* Glass blur backgrounds */
+.bg-light-blur,
+.bg-dark-blur {
   backdrop-filter: blur(6px);
 }
 
-.themeToggle, .favouriteBtn, .closeFavourites, .search-btn, .open-map, .expand-search-bar{ /*Generic button sizes 45 by 45 for consistency*/
+.bg-light-blur {
+  background-color: rgba(241, 241, 241, 0.5);
+}
+
+.bg-dark-blur {
+  background-color: rgba(65, 65, 65, 0.5);
+}
+
+/* Uniform 45×45 icon buttons */
+.themeToggle,
+.favouriteBtn,
+.closeFavourites,
+.search-btn,
+.open-map,
+.expand-search-bar {
   width: 45px;
   height: 45px;
 }
 
-.navbar-brand span{ /*Logo and Brand Text on the Nav Bar*/
+/* Navbar brand highlight */
+.navbar-brand span {
   color: #38b8f8;
   font-weight: 500;
 }
 
-/*Closing UTILS*/
-
-/* HERO PARALLAX WRAPPER */
+/* ============================
+   HERO / PARALLAX
+   ============================ */
 .hero {
   position: relative;
   padding: 80px 20px;
   overflow: hidden;
 }
 
-/* Parallax background layer */
+/* Parallax background */
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* true parallax */
+  background-attachment: fixed;
   z-index: -1;
 }
 
 /* Light Theme */
 .hero-light::before {
-  background-image:
-    linear-gradient(120deg,
+  background-image: linear-gradient(
+      120deg,
       rgba(255, 255, 255, 0.7),
       rgba(255, 255, 255, 0.9),
-      rgba(255, 255, 255, 0.7)),
+      rgba(255, 255, 255, 0.7)
+    ),
     url("assets/herobg.jpeg");
 }
 
 /* Dark Theme */
 .hero-dark::before {
-  background-image:
-    linear-gradient(120deg,
+  background-image: linear-gradient(
+      120deg,
       rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.7)),
+      rgba(0, 0, 0, 0.7)
+    ),
     url("assets/herobg.jpeg");
 }
 
 /* Typography */
 .hero h1 {
-  font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", Arial, sans-serif;
   color: #fff;
 }
 
@@ -82,17 +103,25 @@ a{
   color: #fff;
 }
 
-/* Search bar styling */
+.heroFirstText {
+  color: #38b8f8;
+}
+
+/* ============================
+   SEARCH BAR
+   ============================ */
+.search-form {
+  background: white;
+  border-radius: 20px;
+  padding: 10px;
+  z-index: 1;
+}
+
 .input-group-text {
   border-radius: 25px 0 0 25px !important;
   border: none !important;
   background: transparent !important;
   border-right: 1px solid #ddd !important;
-}
-
-form {
-  background-color: #fff;
-  z-index: 1;
 }
 
 .search-form .form-control {
@@ -104,56 +133,40 @@ form {
   box-shadow: none;
 }
 
+/* Search / Map buttons */
 .search-btn,
 .open-map {
   background-color: white;
   color: #38b8f8;
+  border: 2px solid transparent;
   transition: 0.3s ease;
-  border: 2px transparent;
 }
 
 .search-btn:hover,
 .open-map:hover {
-  border-color: #38b8f8;
   background-color: #38b8f8;
   color: #fff;
+  border-color: #38b8f8;
 }
 
-/* Expand Button */
+/* Expand button */
 .expand-search-bar {
   background-color: #38b8f8;
   color: #fff;
+  border: 2px solid #38b8f8;
   transition: 0.3s ease;
-  border: 2px #38b8f8;
+  cursor: pointer;
 }
 
 .expand-search-bar:hover {
   background-color: #38b8f8ee;
 }
 
-/* Accent text */
-.heroFirstText {
-  color: #38b8f8;
-}
-
-.extra-search-options .dropdown .dropdown-toggle{
-  
-}
+/* ============================
+   DROPDOWNS
+   ============================ */
 .dropdown-menu {
-  position: absolute;
-  z-index: 9999 !important;
-}
-.hero,
-.search-form,
-.input-group {
-  overflow: visible !important;
-}
-
-.lol {
-  height: 100vh;
-}
-.dropdown-menu {
-  z-index: 9999 !important;
+  z-index: 9999;
   max-height: 250px;
   overflow-y: auto;
 }
@@ -163,20 +176,23 @@ form {
   color: white;
 }
 
-.search-form {
-  background: white;
-  border-radius: 20px;
-  padding: 10px;
-}
-
 .extra-search-options {
   flex-wrap: wrap;
 }
 
-.expand-search-bar {
-  cursor: pointer;
+/* Ensure dropdowns sit above hero overflow */
+.hero,
+.search-form,
+.input-group {
+  overflow: visible;
 }
 
+/* Icon font size */
 .material-symbols-rounded {
   font-size: 24px;
+}
+
+/* Temp large filler section */
+.lol {
+  height: 100vh;
 }
