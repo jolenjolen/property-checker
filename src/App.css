@@ -129,7 +129,8 @@ form {
 }
 
 .expand-search-bar:hover {
-  background-color: #38b8f8ee;
+  background-color: #fff;
+  color: #38b8f8;
 }
 
 /* Accent text */
