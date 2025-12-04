@@ -136,10 +136,9 @@ form {
   color: #38b8f8;
 }
 
-.extra-search-options .dropdown .dropdown-toggle {
-  width: 460px;
+.extra-search-options .dropdown .dropdown-toggle{
+  min-width:160px;
 }
-
 .lol {
   height: 100vh;
 }
