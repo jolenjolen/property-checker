@@ -40,6 +40,7 @@ a{
   background-attachment: fixed;
   background-repeat: no-repeat;
   padding: 50px 10px;
+  z-index: -9;
 }
 
 /* Light Theme Hero */
