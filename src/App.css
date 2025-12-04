@@ -154,7 +154,7 @@ a {
   background-color: #38b8f8;
   color: #fff;
   border: 2px solid #38b8f8;
-  transition: 0.3s ease;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
