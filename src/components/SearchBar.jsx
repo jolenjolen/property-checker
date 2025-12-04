@@ -62,7 +62,7 @@ export default function SearchBar() {
                     className="btn btn-light rounded p-2 dropdown-toggle"
                     data-bs-toggle="dropdown"
                     >
-                    Search radius
+                    Search Radius
                     </button>
                     <ul className="dropdown-menu">
                     <li><button className="dropdown-item">1 mile</button></li>
@@ -79,7 +79,7 @@ export default function SearchBar() {
                     className="btn btn-light rounded p-2 dropdown-toggle"
                     data-bs-toggle="dropdown"
                     >
-                    Property types
+                    Property Types
                     </button>
                     <ul className="dropdown-menu">
                     <li><button className="dropdown-item">House</button></li>
@@ -97,7 +97,7 @@ export default function SearchBar() {
                     className="btn btn-light rounded p-2 dropdown-toggle"
                     data-bs-toggle="dropdown"
                     >
-                    No. of bedrooms
+                    Bedrooms
                     </button>
                     <ul className="dropdown-menu">
                     <li><button className="dropdown-item">Studio</button></li>
