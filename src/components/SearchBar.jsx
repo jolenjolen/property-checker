@@ -21,7 +21,7 @@ export default function SearchBar() {
           Believe in finding it with the UK's largest choice of homes
         </p>
 
-        <form className={`hero-searchbar-group search-form shadow-sm ${isRounded ? "rounded-pill" : "rounded-2"}`}>
+        <form className={`hero-searchbar-group search-form shadow-sm ${isRounded ? "rounded-pill" : "rounded-5"}`}>
           <div className="d-flex flex-column justify-content-center">
 
             <div className="input-group">
