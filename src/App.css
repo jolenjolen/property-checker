@@ -143,6 +143,11 @@ form {
   position: absolute;
   z-index: 9999 !important;
 }
+.hero,
+.search-form,
+.input-group {
+  overflow: visible !important;
+}
 
 .lol {
   height: 100vh;
