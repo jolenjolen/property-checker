@@ -19,11 +19,13 @@ export default function SearchBar() {
   const PROPERTY_OPTIONS = ["House", "Flat / Apartment", "Bungalow", "Terraced", "Semi-detached", "Detached"];
   const BEDROOM_OPTIONS = ["Studio", "1 Bedroom", "2 Bedrooms", "3 Bedrooms", "4 Bedrooms", "5+ Bedrooms"];
   const PRICE_OPTIONS = [
-    "£50,000","£75,000","£100,000","£150,000","£200,000",
-    "£250,000","£300,000","£350,000","£400,000","£450,000","£500,000"
+    50000, 75000, 100000, 150000, 200000,
+    250000, 300000, 350000, 400000, 450000, 500000
   ];
-
-  const [isExpanded, setIsExpanded] = useState(false);
+  const filteredMaxOptions = minPrice
+    ? PRICE_OPTIONS.filter(price => price > minPrice)
+    : PRICE_OPTIONS;
+    const [isExpanded, setIsExpanded] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault(); // prevents reload
@@ -116,13 +118,29 @@ export default function SearchBar() {
               {/* PRICE RANGE */}
               <div className="extra-search-options d-flex justify-content-center align-items-center gap-2 m-2 flex-wrap">
 
-                <Dropdown label="Minimum" selected={minPrice} options={PRICE_OPTIONS}
-                  onSelect={(value) => selectOption(setMinPrice, value)} />
+                <Dropdown
+                  label="Minimum"
+                  selected={minPrice ? `£${minPrice.toLocaleString()}` : null}
+                  options={PRICE_OPTIONS.map(p => `£${p.toLocaleString()}`)}
+                  onSelect={(value) => {
+                    const numeric = Number(value.replace(/[£,]/g, ""));
+                    setMinPrice(numeric);
+                    setMaxPrice(null); // reset max if min changes
+                  }}
+                />
 
                 <span className="text-dark">-</span>
 
-                <Dropdown label="Maximum" selected={maxPrice} options={PRICE_OPTIONS}
-                  onSelect={(value) => selectOption(setMaxPrice, value)} />
+                <Dropdown
+                  label="Maximum"
+                  selected={maxPrice ? `£${maxPrice.toLocaleString()}` : null}
+                  options={filteredMaxOptions.map(p => `£${p.toLocaleString()}`)}
+                  onSelect={(value) => {
+                    const numeric = Number(value.replace(/[£,]/g, ""));
+                    setMaxPrice(numeric);
+                  }}
+                />
+
 
               </div>
             </div>
