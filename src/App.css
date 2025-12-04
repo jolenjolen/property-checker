@@ -125,11 +125,12 @@ form {
   background-color: #38b8f8;
   color: #fff;
   transition: 0.3s ease;
-  border: 2px #38b8f8;
+  border: 2px #38b8f8 !important;
 }
 
 .expand-search-bar:hover {
-  background-color: #56c6fdee;
+  background-color: #fff;
+  color: #38b8f8;
 }
 
 /* Accent text */
