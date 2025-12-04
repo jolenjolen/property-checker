@@ -45,7 +45,7 @@ export default function SearchBar() {
 
   return (
     <>
-      <div className={`hero hero-${theme} rounded-4 m-2 d-flex flex-column justify-content-center align-items-center`}>
+      <div className={`hero hero-${theme} m-2 d-flex flex-column justify-content-center align-items-center`}>
         <h1 className={`hero-text-heading text-${inverseTheme}`}>
           <span className="heroFirstText">Find</span> Your Next Home
         </h1>

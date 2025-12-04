@@ -42,6 +42,7 @@ a{
 
 /* Parallax background layer */
 .hero::before {
+  border-radius: 20px;
   content: "";
   position: absolute;
   inset: 0;
