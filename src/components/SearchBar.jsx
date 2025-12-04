@@ -21,7 +21,7 @@ export default function SearchBar() {
           Believe in finding it with the UK's largest choice of homes
         </p>
 
-        <form className={`hero-searchbar-group search-form shadow-sm ${isRounded ? "rounded-pill" : "rounded-5"}`}>
+        <form className={`hero-searchbar-group search-form shadow-sm ${isRounded ? "rounded-pill" : "rounded-4"}`}>
           <div className="d-flex flex-column justify-content-center">
 
             <div className="input-group">
@@ -132,7 +132,7 @@ export default function SearchBar() {
                         <li><button className="dropdown-item">£500000</button></li>
                         </ul>
                     </div>
-                    <span><h1>-</h1></span>
+                    <span class="text-dark">-</span>
                     <div className="dropdown">
                         <button
                         className="btn btn-light rounded p-2 dropdown-toggle"
