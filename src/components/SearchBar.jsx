@@ -54,8 +54,8 @@ export default function SearchBar() {
               </button>
             </div>
 
-            <div id="expand-search-bar" className="collapse extra-search-options d-flex gap-2 mt-2">
-
+            <div id="expand-search-bar" className="collapse">
+                <div className="extra-search-options d-flex gap-2 mt-2">
                 
                 <div className="dropdown">
                     <button
@@ -107,6 +107,7 @@ export default function SearchBar() {
                     <li><button className="dropdown-item">4 Bedrooms</button></li>
                     <li><button className="dropdown-item">5+ Bedrooms</button></li>
                     </ul>
+                </div>
                 </div>
 
             </div>
