@@ -146,7 +146,7 @@ export default function Carousel({
         drag="x"
         {...dragProps}
         style={{
-          width: itemWidth,
+          width: '100%',
           gap: `${GAP}px`,
           perspective: 1000,
           perspectiveOrigin: `${currentIndex * trackItemOffset + itemWidth / 2}% 50%`,
@@ -167,7 +167,7 @@ export default function Carousel({
               key={index}
               className={`carouselX-item ${round ? 'round' : ''}`}
               style={{
-                width: {`{itemWidth}%`},
+                width: '100%',
                 height: round ? itemWidth : '100%',
                 rotateY: rotateY,
                 ...(round && { borderRadius: '50%' })
