@@ -11,21 +11,31 @@ import Contact from "./pages/Contact";
 import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
 
+import ClickSpark from './ReactBits/ClickSpark';
+
 export default function App() {
   return (
     <ThemeProvider>
-      <Nav />
+      <ClickSpark
+        sparkColor='#fff'
+        sparkSize={10}
+        sparkRadius={15}
+        sparkCount={8}
+        duration={400}
+      >
+        <Nav />
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/buy" element={<Buy />} />
-        <Route path="/rent" element={<Rent />} />
-        <Route path="/agent" element={<Agent />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/search" element={<Search />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-      
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/buy" element={<Buy />} />
+          <Route path="/rent" element={<Rent />} />
+          <Route path="/agent" element={<Agent />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/search" element={<Search />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </ClickSpark>
+
     </ThemeProvider>
   );
 }
