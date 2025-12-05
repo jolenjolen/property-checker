@@ -137,7 +137,7 @@ export default function Carousel({
       ref={containerRef}
       className={`carouselX-container ${round ? 'round' : ''}`}
       style={{
-        width: `${baseWidth}px`,
+        width: `${baseWidth}%`,
         ...(round && { height: `${baseWidth}px`, borderRadius: '50%' })
       }}
     >
