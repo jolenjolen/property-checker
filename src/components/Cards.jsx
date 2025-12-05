@@ -1,6 +1,6 @@
 import "../App.css";
 import { useTheme } from "../ThemeContext";
-import GlareHover from './GlareHover'
+import GlareHover from '../ReactBits/GlareHover'
 export default function Cards(){
     const { theme } = useTheme();
     const inverseTheme = theme === "light" ? "dark" : "light";

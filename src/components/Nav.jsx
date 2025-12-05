@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import appLogo from "/logo.png";
 import "../App.css";
 import { useTheme } from "../ThemeContext";
@@ -20,27 +21,16 @@ export default function Nav() {
 
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <button className="nav-link"></button>
+              <Link className="nav-link" to="/buy">Buy</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link" >
-                Buy
-              </a>
+              <Link className="nav-link" to="/rent">Rent</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
-                Rent
-              </a>
+              <Link className="nav-link" to="/agent">Agent</Link>
             </li>
             <li className="nav-item">
-              <a className="nav-link">
-                Agent
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link">
-                Contact
-              </a>
+              <Link className="nav-link" to="/contact">Contact</Link>
             </li>
           </ul>
           <button data-bs-toggle="offcanvas" data-bs-target="#favourites" className={`favouriteBtn mx-2 d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
