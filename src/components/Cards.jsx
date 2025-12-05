@@ -7,7 +7,7 @@ export default function Cards(){
 
     return(
         <>
-            <div style={{ height: '600px', position: 'relative' }} className="m-1">
+            <div style={{ height: '600px', position: 'relative' }} className="m-2 d-flex justify-content-center align-items-center">
                 <GlareHover
                     
                     glareOpacity={0.3}

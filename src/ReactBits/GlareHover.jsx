@@ -5,8 +5,7 @@ const GlareHover = ({
   width = "300px",
   height = "500px",
   background,
-  borderRadius = "10px",
-  borderColor = "#333",
+  borderColor = "#ddd",
   children,
   glareColor,
   glareOpacity = 0.5,
@@ -14,7 +13,7 @@ const GlareHover = ({
   glareSize = 250,
   transitionDuration = 650,
   playOnce = false,
-  className = "",
+  className = "shadow-sm rounded-2",
   style = {}
 }) => {
 
