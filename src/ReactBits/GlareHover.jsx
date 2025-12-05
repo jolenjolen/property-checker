@@ -1,13 +1,15 @@
 import './GlareHover.css';
-
+import { useTheme } from "../ThemeContext";
+const { theme, toggleTheme } = useTheme();
+const inverseTheme = theme === "light" ? "dark" : "light";
 const GlareHover = ({
-  width = '500px',
+  width = '300px',
   height = '500px',
-  background = '#000',
+  background = theme,
   borderRadius = '10px',
   borderColor = '#333',
   children,
-  glareColor = '#ffffff',
+  glareColor = inverseTheme,
   glareOpacity = 0.5,
   glareAngle = -45,
   glareSize = 250,
