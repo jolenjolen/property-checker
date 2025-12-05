@@ -137,7 +137,7 @@ export default function Carousel({
       ref={containerRef}
       className={`carouselX-container ${round ? 'round' : ''}`}
       style={{
-        width: `${baseWidth}%`,
+        width: `${baseWidth}px`,
         ...(round && { height: `${baseWidth}px`, borderRadius: '50%' })
       }}
     >
@@ -146,7 +146,7 @@ export default function Carousel({
         drag="x"
         {...dragProps}
         style={{
-          width: '100%',
+          width: itemWidth,
           gap: `${GAP}px`,
           perspective: 1000,
           perspectiveOrigin: `${currentIndex * trackItemOffset + itemWidth / 2}px 50%`,
@@ -167,7 +167,7 @@ export default function Carousel({
               key={index}
               className={`carouselX-item ${round ? 'round' : ''}`}
               style={{
-                width: '100%',
+                width: itemWidth,
                 height: round ? itemWidth : '100%',
                 rotateY: rotateY,
                 ...(round && { borderRadius: '50%' })
