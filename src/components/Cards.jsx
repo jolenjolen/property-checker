@@ -1,7 +1,6 @@
 import "../App.css";
 import { useTheme } from "../ThemeContext";
-import GlareHover from '../ReactBits/GlareHover'
-import Carousel from '../ReactBits/Carousel'
+import GlareHover from '../ReactBits/GlareHover';
 export default function Cards(){
     const { theme } = useTheme();
     const inverseTheme = theme === "light" ? "dark" : "light";
@@ -17,17 +16,6 @@ export default function Cards(){
                     transitionDuration={800}
                     playOnce={false}
                 >
-                
-                <div style={{ height: '600px', position: 'relative' }}>
-                <Carousel
-                    baseWidth={300}
-                    autoplay={true}
-                    autoplayDelay={3000}
-                    pauseOnHover={true}
-                    loop={true}
-                    round={false}
-                />
-                </div>
                 </GlareHover>
             </div>
 
