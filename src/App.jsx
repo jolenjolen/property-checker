@@ -23,9 +23,6 @@ export default function App() {
           </Routes>
 
         </BrowserRouter>
-        <Nav />
-        <SearchBar />
-        <Cards />
       </ThemeProvider>
     </>
   )
