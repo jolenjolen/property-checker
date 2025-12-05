@@ -14,7 +14,7 @@ export default function Cards(){
                     autoplayDelay={3000}
                     pauseOnHover={true}
                     loop={true}
-                    round={false}
+                    round={true}
                 />
             </div>
         </>
