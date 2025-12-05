@@ -6,7 +6,7 @@ const mainTheme = theme === "light" ? "#fff" : "#333";
 const GlareHover = ({
   width = '300px',
   height = '500px',
-  background = theme,
+  background = mainTheme,
   borderRadius = '10px',
   borderColor = '#333',
   children,
