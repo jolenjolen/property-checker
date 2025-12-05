@@ -9,7 +9,7 @@ export default function Cards(){
         <>
             <div style={{ height: '600px', position: 'relative' }}>
                 <Carousel
-                    baseWidth={600}
+                    baseWidth={100%}
                     autoplay={true}
                     autoplayDelay={3000}
                     pauseOnHover={true}
