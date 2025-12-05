@@ -132,26 +132,19 @@ const ClickSpark = ({
   };
 
   return (
-    <div
-      style={{
-        position: 'relative',
-        width: '100%',
-        height: '100%',
-        zIndex: 999999
-      }}
-      onClick={handleClick}
-    >
+    <div style={{ position: "relative", width: "100%", height: "100%" }} onClick={handleClick}>
       <canvas
         ref={canvasRef}
         style={{
-          width: '100%',
-          height: '100%',
-          display: 'block',
-          userSelect: 'none',
-          position: 'absolute',
+          position: "fixed",        // fixed to viewport
           top: 0,
           left: 0,
-          pointerEvents: 'none'
+          width: "100vw",
+          height: "100vh",
+          display: "block",
+          userSelect: "none",
+          pointerEvents: "none",   // lets clicks reach underlying UI
+          zIndex: 2147483647       // very large to outrank other stacking contexts
         }}
       />
       {children}
