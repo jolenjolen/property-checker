@@ -149,7 +149,7 @@ export default function Carousel({
           width: '100%',
           gap: `${GAP}px`,
           perspective: 1000,
-          perspectiveOrigin: `${currentIndex * trackItemOffset + itemWidth / 2}% 50%`,
+          perspectiveOrigin: `${currentIndex * trackItemOffset + itemWidth / 2}px 50%`,
           x
         }}
         onDragEnd={handleDragEnd}
