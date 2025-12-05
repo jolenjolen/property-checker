@@ -1,26 +1,36 @@
-import './GlareHover.css';
+import "./GlareHover.css";
 import { useTheme } from "../ThemeContext";
-const { theme, toggleTheme } = useTheme();
-const inverseTheme = theme === "light" ? "#333" : "#fff";
-const mainTheme = theme === "light" ? "#fff" : "#333";
+
 const GlareHover = ({
-  width = '300px',
-  height = '500px',
-  background = mainTheme,
-  borderRadius = '10px',
-  borderColor = '#333',
+  width = "300px",
+  height = "500px",
+  background,
+  borderRadius = "10px",
+  borderColor = "#333",
   children,
-  glareColor = inverseTheme,
+  glareColor,
   glareOpacity = 0.5,
   glareAngle = -45,
   glareSize = 250,
   transitionDuration = 650,
   playOnce = false,
-  className = '',
+  className = "",
   style = {}
 }) => {
-  const hex = glareColor.replace('#', '');
+
+  // ✅ theme MUST be inside the component
+  const { theme } = useTheme();
+  const inverseTheme = theme === "light" ? "#333" : "#fff";
+  const mainTheme = theme === "light" ? "#fff" : "#333";
+
+  // Apply theme defaults AFTER reading theme
+  background = background || mainTheme;
+  glareColor = glareColor || inverseTheme;
+
+  // Convert hex → rgba with opacity
+  const hex = glareColor.replace("#", "");
   let rgba = glareColor;
+
   if (/^[0-9A-Fa-f]{6}$/.test(hex)) {
     const r = parseInt(hex.slice(0, 2), 16);
     const g = parseInt(hex.slice(2, 4), 16);
@@ -33,21 +43,22 @@ const GlareHover = ({
     rgba = `rgba(${r}, ${g}, ${b}, ${glareOpacity})`;
   }
 
+  // CSS variables
   const vars = {
-    '--gh-width': width,
-    '--gh-height': height,
-    '--gh-bg': background,
-    '--gh-br': borderRadius,
-    '--gh-angle': `${glareAngle}deg`,
-    '--gh-duration': `${transitionDuration}ms`,
-    '--gh-size': `${glareSize}%`,
-    '--gh-rgba': rgba,
-    '--gh-border': borderColor
+    "--gh-width": width,
+    "--gh-height": height,
+    "--gh-bg": background,
+    "--gh-br": borderRadius,
+    "--gh-angle": `${glareAngle}deg`,
+    "--gh-duration": `${transitionDuration}ms`,
+    "--gh-size": `${glareSize}%`,
+    "--gh-rgba": rgba,
+    "--gh-border": borderColor
   };
 
   return (
     <div
-      className={`glare-hover ${playOnce ? 'glare-hover--play-once' : ''} ${className}`}
+      className={`glare-hover ${playOnce ? "glare-hover--play-once" : ""} ${className}`}
       style={{ ...vars, ...style }}
     >
       {children}
