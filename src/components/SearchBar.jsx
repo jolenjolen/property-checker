@@ -147,10 +147,6 @@ export default function SearchBar() {
           </div>
         </form>
       </div>
-
-      <h1 className="lol">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit…
-      </h1>
     </>
   );
 }

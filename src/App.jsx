@@ -2,6 +2,7 @@ import Nav from './components/Nav'
 import { ThemeProvider } from "./ThemeContext";
 import './App.css'
 import SearchBar from './components/SearchBar';
+import Cards from "./components/cards"
 export default function App() {
 
   return (
@@ -10,7 +11,7 @@ export default function App() {
 
         <Nav />
         <SearchBar />
-        
+        <Cards />
       </ThemeProvider>
     </>
   )

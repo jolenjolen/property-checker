@@ -151,10 +151,6 @@ form {
 .input-group {
   overflow: visible !important;
 }
-
-.lol {
-  height: 100vh;
-}
 .dropdown-menu {
   z-index: 9999 !important;
   max-height: 250px;
