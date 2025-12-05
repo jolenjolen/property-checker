@@ -167,7 +167,7 @@ export default function Carousel({
               key={index}
               className={`carouselX-item ${round ? 'round' : ''}`}
               style={{
-                width: itemWidth,
+                width: {`{itemWidth}%`},
                 height: round ? itemWidth : '100%',
                 rotateY: rotateY,
                 ...(round && { borderRadius: '50%' })
