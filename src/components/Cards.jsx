@@ -9,7 +9,6 @@ export default function Cards(){
         <>
             <div style={{ height: '600px', position: 'relative' }}>
                 <GlareHover
-                    glareColor={inverseTheme}
                     glareOpacity={0.3}
                     glareAngle={-30}
                     glareSize={300}
