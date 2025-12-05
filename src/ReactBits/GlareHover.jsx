@@ -1,7 +1,8 @@
 import './GlareHover.css';
 import { useTheme } from "../ThemeContext";
 const { theme, toggleTheme } = useTheme();
-const inverseTheme = theme === "light" ? "dark" : "light";
+const inverseTheme = theme === "light" ? "#333" : "#fff";
+const mainTheme = theme === "light" ? "#fff" : "#333";
 const GlareHover = ({
   width = '300px',
   height = '500px',
