@@ -7,15 +7,16 @@ export default function Cards(){
 
     return(
         <>
-            <div style={{ height: '600px', position: 'relative' }}>
+            <div style={{ height: '600px', position: 'relative' }} className="m-1">
                 <GlareHover
+                    glareColor={inverseTheme}
                     glareOpacity={0.3}
                     glareAngle={-30}
                     glareSize={300}
                     transitionDuration={800}
                     playOnce={false}
                 >
-                    <h2 style={{ fontSize: '3rem', fontWeight: '900', color: '#333', margin: 0 }}>
+                    <h2 style={{ fontSize: '3rem', fontWeight: '900', margin: 0 }} className={`text-${inverseTheme}`}>
                     Hover Me
                     </h2>
                 </GlareHover>
