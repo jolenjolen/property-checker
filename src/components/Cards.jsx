@@ -12,7 +12,7 @@ export default function Cards(){
                     
                     glareOpacity={0.3}
                     glareAngle={-30}
-                    glareSize={300}
+                    glareSize={600}
                     transitionDuration={800}
                     playOnce={false}
                 >
