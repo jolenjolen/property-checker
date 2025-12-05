@@ -1,4 +1,4 @@
-import './GlareHover.css';
+import '../GlareHover.css';
 
 const GlareHover = ({
   width = '500px',
