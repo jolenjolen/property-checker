@@ -1,6 +1,7 @@
 import "../App.css";
 import { useTheme } from "../ThemeContext";
 import GlareHover from '../ReactBits/GlareHover'
+import Carousel from '../ReactBits/Carousel'
 export default function Cards(){
     const { theme } = useTheme();
     const inverseTheme = theme === "light" ? "dark" : "light";
@@ -16,9 +17,17 @@ export default function Cards(){
                     transitionDuration={800}
                     playOnce={false}
                 >
-                    <h2 style={{ fontSize: '3rem', fontWeight: '900', margin: 0 }} className={`text-${inverseTheme}`}>
-                    Hover Me
-                    </h2>
+                
+                <div style={{ height: '600px', position: 'relative' }}>
+                <Carousel
+                    baseWidth={300}
+                    autoplay={true}
+                    autoplayDelay={3000}
+                    pauseOnHover={true}
+                    loop={true}
+                    round={false}
+                />
+                </div>
                 </GlareHover>
             </div>
 
