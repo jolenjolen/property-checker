@@ -136,7 +136,8 @@ const ClickSpark = ({
       style={{
         position: 'relative',
         width: '100%',
-        height: '100%'
+        height: '100%',
+        zIndex: 9999
       }}
       onClick={handleClick}
     >
