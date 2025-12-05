@@ -1,4 +1,4 @@
-.carousel-container {
+.carouselX-container {
   position: relative;
   overflow: hidden;
   border: 1px solid #555;
@@ -8,11 +8,11 @@
   --p-distance: 12px;
 }
 
-.carousel-track {
+.carouselX-track {
   display: flex;
 }
 
-.carousel-item {
+.carouselX-item {
   position: relative;
   display: flex;
   flex-shrink: 0;
@@ -26,15 +26,15 @@
   cursor: grab;
 }
 
-.carousel-item:active {
+.carouselX-item:active {
   cursor: grabbing;
 }
 
-.carousel-container.round {
+.carouselX-container.round {
   border: 1px solid #555;
 }
 
-.carousel-item.round {
+.carouselX-item.round {
   background-color: #0d0716;
   position: relative;
   bottom: 0.1em;
@@ -44,12 +44,12 @@
   text-align: center;
 }
 
-.carousel-item-header.round {
+.carouselX-item-header.round {
   padding: 0;
   margin: 0;
 }
 
-.carousel-indicators-container.round {
+.carouselX-indicators-container.round {
   position: absolute;
   z-index: 2;
   bottom: 3em;
@@ -57,21 +57,21 @@
   transform: translateX(-50%);
 }
 
-.carousel-indicator.active {
+.carouselX-indicator.active {
   background-color: #333333;
 }
 
-.carousel-indicator.inactive {
+.carouselX-indicator.inactive {
   background-color: rgba(51, 51, 51, 0.4);
 }
 
-.carousel-item-header {
+.carouselX-item-header {
   margin-bottom: 16px;
   padding: 20px;
   padding-top: 20px;
 }
 
-.carousel-icon-container {
+.carouselX-icon-container {
   display: flex;
   height: 28px;
   width: 28px;
@@ -81,36 +81,36 @@
   background-color: #fff;
 }
 
-.carousel-icon {
+.carouselX-icon {
   height: 16px;
   width: 16px;
   color: #060010;
 }
 
-.carousel-item-content {
+.carouselX-item-content {
   padding: 20px;
   padding-bottom: 20px;
 }
 
-.carousel-item-title {
+.carouselX-item-title {
   margin-bottom: 4px;
   font-weight: 900;
   font-size: 18px;
   color: #fff;
 }
 
-.carousel-item-description {
+.carouselX-item-description {
   font-size: 14px;
   color: #fff;
 }
 
-.carousel-indicators-container {
+.carouselX-indicators-container {
   display: flex;
   width: 100%;
   justify-content: center;
 }
 
-.carousel-indicators {
+.carouselX-indicators {
   margin-top: 16px;
   display: flex;
   width: 150px;
@@ -118,7 +118,7 @@
   padding: 0 32px;
 }
 
-.carousel-indicator {
+.carouselX-indicator {
   height: 8px;
   width: 8px;
   border-radius: 50%;
@@ -126,10 +126,10 @@
   transition: background-color 150ms;
 }
 
-.carousel-indicator.active {
+.carouselX-indicator.active {
   background-color: #fff;
 }
 
-.carousel-indicator.inactive {
+.carouselX-indicator.inactive {
   background-color: #555;
 }
