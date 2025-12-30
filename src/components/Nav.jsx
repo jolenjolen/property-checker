@@ -33,26 +33,30 @@ export default function Nav() {
               <Link className="nav-link" to="/contact">Contact</Link>
             </li>
           </ul>
-          <button data-bs-toggle="offcanvas" data-bs-target="#favourites" className={`favouriteBtn mx-2 d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
-            <span className="material-symbols-rounded">
-              favorite
-            </span>
-          </button>
-          <button onClick={toggleTheme} className={`themeToggle d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
-            <span className="material-symbols-rounded">
-              {theme === "light" ? "dark_mode" : "light_mode"}
-            </span>
-          </button>
-          <button
-            data-bs-toggle="offcanvas"
-            data-bs-target="#menuCanvas"
-            className="menuToggle mx-2 d-flex d-md-none justify-content-center align-items-center rounded-pill btn btn-warning"
-            title="Open the Hamburger menu"
-          >
-            <span className="material-symbols-rounded">
-              menu
-            </span>
-          </button>
+          <div className="d-flex justify-content-end">
+            <button data-bs-toggle="offcanvas" data-bs-target="#favourites" className={`favouriteBtn mx-2 d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
+              <span className="material-symbols-rounded">
+                favorite
+              </span>
+            </button>
+            <button onClick={toggleTheme} className={`themeToggle d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
+              <span className="material-symbols-rounded">
+                {theme === "light" ? "dark_mode" : "light_mode"}
+              </span>
+            </button>
+            <button
+              data-bs-toggle="offcanvas"
+              data-bs-target="#menuCanvas"
+              className="menuToggle mx-2 d-flex d-md-none justify-content-center align-items-center rounded-pill btn btn-warning"
+              title="Open the Hamburger menu"
+            >
+              <span className="material-symbols-rounded">
+                menu
+              </span>
+            </button>
+          </div>
+          
+
         </div>
       </nav>
       <div className={`offcanvas offcanvas-end bg-${theme} text-${inverseTheme}`} id="favourites">
