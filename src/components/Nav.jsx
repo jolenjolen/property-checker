@@ -19,7 +19,7 @@ export default function Nav() {
             <span>PROP80</span>
           </Link>
 
-          <ul className="navbar-nav me-auto">
+          <ul className="navbar-nav me-auto d-none d-md-flex">
             <li className="nav-item">
               <Link className="nav-link" to="/buy">Buy</Link>
             </li>
@@ -43,6 +43,16 @@ export default function Nav() {
               {theme === "light" ? "dark_mode" : "light_mode"}
             </span>
           </button>
+          <button
+            data-bs-toggle="offcanvas"
+            data-bs-target="#menuCanvas"
+            className="menuToggle mx-2 d-flex d-md-none justify-content-center align-items-center rounded-pill btn btn-danger"
+            title="Open the Hamburger menu"
+          >
+            <span className="material-symbols-rounded">
+              menu
+            </span>
+          </button>
         </div>
       </nav>
       <div className={`offcanvas offcanvas-end bg-${theme} text-${inverseTheme}`} id="favourites">
@@ -52,6 +62,28 @@ export default function Nav() {
         </div>
         <div className="offcanvas-body">
 
+        </div>
+      </div>
+      <div className={`offcanvas offcanvas-end bg-${theme} text-${inverseTheme}`} id="menuCanvas">
+        <div className="offcanvas-header d-flex justify-content-between align-items-center">
+          
+          <button data-bs-dismiss="offcanvas" className={`mx-1 closeMenu d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title="Close Hamburger Menu"><span className="material-symbols-rounded">close</span></button>
+        </div>
+        <div className="offcanvas-body">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link className="nav-link" to="/buy" data-bs-dismiss="offcanvas">Buy</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/rent" data-bs-dismiss="offcanvas">Rent</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/agent" data-bs-dismiss="offcanvas">Agent</Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact" data-bs-dismiss="offcanvas">Contact</Link>
+            </li>
+          </ul>
         </div>
       </div>
     </header>
