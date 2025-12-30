@@ -2,7 +2,7 @@ import "../App.css";
 import { useTheme } from "../ThemeContext";
 import { useState } from "react";
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar() {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
 
@@ -28,9 +28,8 @@ export default function SearchBar({ onSearch }) {
     const [isExpanded, setIsExpanded] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-
-    onSearch({
+    e.preventDefault(); // prevents reload
+    console.log({
       location,
       radius,
       propertyType,
