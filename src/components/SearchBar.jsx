@@ -2,7 +2,7 @@ import "../App.css";
 import { useTheme } from "../ThemeContext";
 import { useState } from "react";
 
-export default function SearchBar() {
+export default function SearchBar({ onSearch }) {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
 
@@ -28,15 +28,22 @@ export default function SearchBar() {
     const [isExpanded, setIsExpanded] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault(); // prevents reload
-    console.log({
+    e.preventDefault();
+
+    const filters = {
       location,
       radius,
       propertyType,
       bedrooms,
       minPrice,
       maxPrice,
-    });
+    };
+
+    if (typeof onSearch === "function") {
+      onSearch(filters);
+    } else {
+      console.log(filters); // fallback for Home page
+    }
   };
 
   const selectOption = (setter, value) => {
