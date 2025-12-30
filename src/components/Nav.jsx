@@ -2,9 +2,15 @@ import { Link } from "react-router-dom";
 import appLogo from "/logo.png";
 import "../App.css";
 import { useTheme } from "../ThemeContext";
-
+import propertiesData from "../data/properties.json";
+import { useFavourites } from "../useFavourites";
 
 export default function Nav() {
+  const { favourites, removeFavourite } = useFavourites();
+
+  const favProperties = propertiesData.properties.filter((p) =>
+    favourites.includes(p.id)
+  );
   const { theme, toggleTheme } = useTheme();
 
   const navbarTheme = theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark";
@@ -66,6 +72,50 @@ export default function Nav() {
         </div>
         <div className="offcanvas-body">
 
+          {/* DROP ZONE (desktop) */}
+          <div
+            className="remove-zone text-center p-3 mb-3 border border-danger rounded"
+            onDragOver={(e) => e.preventDefault()}
+            onDrop={(e) => {
+              const id = e.dataTransfer.getData("propertyId");
+              removeFavourite(id);
+            }}
+          >
+            Drag here to remove
+          </div>
+
+          {favProperties.length === 0 && (
+            <p className="text-muted">No favourites yet</p>
+          )}
+
+          {favProperties.map((property) => (
+            <div
+              key={property.id}
+              className="d-flex align-items-center mb-3"
+            >
+              <img
+                src={property.picture}
+                width="60"
+                className="rounded me-2"
+              />
+
+              <div className="flex-grow-1">
+                <div className="fw-semibold">
+                  £{property.price.toLocaleString()}
+                </div>
+                <small>{property.location}</small>
+              </div>
+
+              {/* MOBILE REMOVE BUTTON */}
+              <button
+                className="btn btn-sm btn-outline-danger"
+                onClick={() => removeFavourite(property.id)}
+                aria-label="Remove favourite"
+              >
+                ✕
+              </button>
+            </div>
+          ))}
         </div>
       </div>
       <div className={`offcanvas offcanvas-end bg-${theme} text-${inverseTheme}`} id="menuCanvas">
