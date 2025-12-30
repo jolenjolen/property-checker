@@ -9,7 +9,7 @@ export default function Cards({ properties }) {
     <div className="container">
       <div className="row g-4">
         {properties.map((property) => (
-          <div className="col-md-4" key={property.id}>
+          <div className="col-md-4 m-1" key={property.id}>
             <GlareHover
               glareOpacity={0.3}
               glareAngle={-30}
