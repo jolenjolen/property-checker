@@ -1,4 +1,7 @@
 import { useFavourites } from "../useFavourites";
+import "../App.css";
+import { useTheme } from "../ThemeContext";
+import GlareHover from '../ReactBits/GlareHover';
 
 export default function Cards({ properties }) {
   const { addFavourite, removeFavourite, isFavourite } = useFavourites();
