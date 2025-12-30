@@ -4,26 +4,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function SearchBar() {
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const params = new URLSearchParams();
-
-    if (location) params.set("location", location);
-    if (propertyType) params.set("type", propertyType);
-    if (bedrooms) params.set("bedrooms", bedrooms);
-    if (minPrice) params.set("minPrice", minPrice);
-    if (maxPrice) params.set("maxPrice", maxPrice);
-
-    navigate(`/search?${params.toString()}`);
-  };
-}
-export function SearchBarX({ onSearch }) {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
-
+  const navigate = useNavigate();
   // Controlled form values
   const [location, setLocation] = useState("");
   const [radius, setRadius] = useState(null);
@@ -48,20 +31,15 @@ export function SearchBarX({ onSearch }) {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const filters = {
-      location,
-      radius,
-      propertyType,
-      bedrooms,
-      minPrice,
-      maxPrice,
-    };
+    const params = new URLSearchParams();
 
-    if (typeof onSearch === "function") {
-      onSearch(filters);
-    } else {
-      console.log(filters); // fallback for Home page
-    }
+    if (location) params.set("location", location);
+    if (propertyType) params.set("type", propertyType);
+    if (bedrooms) params.set("bedrooms", bedrooms);
+    if (minPrice) params.set("minPrice", minPrice);
+    if (maxPrice) params.set("maxPrice", maxPrice);
+
+    navigate(`/search?${params.toString()}`);
   };
 
   const selectOption = (setter, value) => {
