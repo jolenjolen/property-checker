@@ -1,8 +1,26 @@
 import "../App.css";
 import { useTheme } from "../ThemeContext";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-export default function SearchBar({ onSearch }) {
+export default function SearchBar() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const params = new URLSearchParams();
+
+    if (location) params.set("location", location);
+    if (propertyType) params.set("type", propertyType);
+    if (bedrooms) params.set("bedrooms", bedrooms);
+    if (minPrice) params.set("minPrice", minPrice);
+    if (maxPrice) params.set("maxPrice", maxPrice);
+
+    navigate(`/search?${params.toString()}`);
+  };
+}
+export function SearchBarX({ onSearch }) {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
 
