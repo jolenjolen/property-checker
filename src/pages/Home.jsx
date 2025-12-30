@@ -1,12 +1,12 @@
 import SearchBar from "../components/SearchBar";
 import Cards from "../components/Cards";
-import Slideshow from "../components/Slideshow";
+import propertiesData from "../data/properties.json";
+
 export default function Home() {
   return (
     <>
       <SearchBar />
-      
-      <Cards />
+      <Cards properties={propertiesData.properties} />
     </>
   );
 }
