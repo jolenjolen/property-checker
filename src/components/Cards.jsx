@@ -9,13 +9,14 @@ export default function Cards({ properties }) {
     <div className="container">
       <div className="row g-4">
         {properties.map((property) => (
-          <div className="col-md-4" key={property.id} style={{ position: 'relative' }}>
+          <div className="col-md-4" key={property.id}>
             <GlareHover
               glareOpacity={0.3}
               glareAngle={-30}
               glareSize={300}
               transitionDuration={800}
               playOnce={false}
+              style={{ position: 'relative' }}
             >
               <div className="card h-100 border-0">
                 <img
