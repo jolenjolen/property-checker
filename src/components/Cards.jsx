@@ -17,7 +17,7 @@ export default function Cards({ properties }) {
               transitionDuration={800}
               playOnce={false}
             >
-              <div className="card h-100 shadow-sm">
+              <div className="card h-100 border-0">
                 <img
                   src={property.picture}
                   className="card-img-top"
