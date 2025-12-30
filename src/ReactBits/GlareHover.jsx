@@ -2,7 +2,7 @@ import "./GlareHover.css";
 import { useTheme } from "../ThemeContext";
 
 const GlareHover = ({
-  width = "300px",
+  width = "100%",
   height = "100%",
   background,
   borderRadius = "15px",

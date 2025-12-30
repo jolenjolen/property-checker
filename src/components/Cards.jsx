@@ -16,7 +16,6 @@ export default function Cards({ properties }) {
               glareSize={300}
               transitionDuration={800}
               playOnce={false}
-              style={{ position: 'relative' }}
             >
               <div className="card h-100 border-0">
                 <img
