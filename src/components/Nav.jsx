@@ -70,18 +70,23 @@ export default function Nav() {
           <h4 className="offcanvas-title">My Favourites</h4>
           <button data-bs-dismiss="offcanvas" className={`mx-1 closeFavourites d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title="Close Favourites"><span className="material-symbols-rounded">close</span></button>
         </div>
-        <div
-          className="offcanvas-body"
-          onDragOver={(e) => e.preventDefault()}
-          onDrop={(e) => {
-            const id = e.dataTransfer.getData("propertyId");
-            if (id) removeFavourite(id);
-          }}
-        >
+        <div className="offcanvas-body">
+
+          {/* DELETE DROP ZONE */}
+          <div
+            className="fav-delete-zone mb-3"
+            onDragOver={(e) => e.preventDefault()}
+            onDrop={(e) => {
+              const id = e.dataTransfer.getData("propertyId");
+              if (id) removeFavourite(id);
+            }}
+          >
+            🗑 Drag here to remove
+          </div>
+
           {favProperties.length === 0 && (
             <p className="text-muted text-center mt-4">
-              No favourites yet.<br />
-              Tap ❤️ on a property to add one.
+              No favourites yet.
             </p>
           )}
 
@@ -95,17 +100,15 @@ export default function Nav() {
                 e.dataTransfer.effectAllowed = "move";
               }}
             >
-              {/* IMAGE */}
               <img
                 src={property.picture}
                 width="60"
                 height="60"
                 className="rounded me-2 object-fit-cover"
-                alt={property.type}
                 draggable={false}
+                alt={property.type}
               />
 
-              {/* INFO */}
               <div className="flex-grow-1 overflow-hidden">
                 <div className="fw-semibold text-truncate">
                   £{property.price.toLocaleString()}
@@ -115,18 +118,18 @@ export default function Nav() {
                 </small>
               </div>
 
-              {/* REMOVE BUTTON (MOBILE + ACCESSIBILITY) */}
+              {/* MOBILE / ACCESSIBLE REMOVE */}
               <button
                 className="btn btn-sm btn-outline-danger ms-2"
                 onClick={() => removeFavourite(property.id)}
                 aria-label="Remove favourite"
-                title="Remove from favourites"
               >
                 ✕
               </button>
             </div>
           ))}
         </div>
+
       </div>
       <div className={`offcanvas offcanvas-end bg-${theme} text-${inverseTheme}`} id="menuCanvas">
         <div className="offcanvas-header d-flex justify-content-between align-items-center">

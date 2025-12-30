@@ -1,19 +1,15 @@
 import { useEffect, useState } from "react";
-
-const FAV_KEY = "favouriteProperties";
+import propertiesData from "./data/properties.json";
 
 export function useFavourites() {
-  const [favourites, setFavourites] = useState([]);
+  const [favourites, setFavourites] = useState(() => {
+    const saved = localStorage.getItem("favourites");
+    return saved ? JSON.parse(saved) : [];
+  });
 
-  // Load once
+  // Persist to localStorage
   useEffect(() => {
-    const stored = JSON.parse(localStorage.getItem(FAV_KEY)) || [];
-    setFavourites(stored);
-  }, []);
-
-  // Persist
-  useEffect(() => {
-    localStorage.setItem(FAV_KEY, JSON.stringify(favourites));
+    localStorage.setItem("favourites", JSON.stringify(favourites));
   }, [favourites]);
 
   const addFavourite = (id) => {
@@ -23,13 +19,20 @@ export function useFavourites() {
   };
 
   const removeFavourite = (id) => {
-    setFavourites((prev) => prev.filter((fav) => fav !== id));
+    setFavourites((prev) =>
+      prev.filter((favId) => favId !== id)
+    );
   };
 
   const isFavourite = (id) => favourites.includes(id);
 
+  const favProperties = propertiesData.properties.filter((p) =>
+    favourites.includes(p.id)
+  );
+
   return {
     favourites,
+    favProperties,
     addFavourite,
     removeFavourite,
     isFavourite,

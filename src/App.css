@@ -176,11 +176,14 @@ form {
   font-size: 24px;
 }
 
-.fav-dropzone {
-  position: fixed;
-  inset: 0;
-  z-index: 1040;
-  pointer-events: none;
+.fav-delete-zone {
+  border: 2px dashed #dc3545;
+  color: #dc3545;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: 500;
+  background: rgba(220, 53, 69, 0.05);
 }
 
 .fav-item {
@@ -190,3 +193,4 @@ form {
 .fav-item:active {
   cursor: grabbing;
 }
+
