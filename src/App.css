@@ -175,3 +175,7 @@ form {
 .material-symbols-rounded {
   font-size: 24px;
 }
+
+.card{
+  background-color: transparent !important;
+}
