@@ -3,7 +3,7 @@ import { useTheme } from "../ThemeContext";
 
 const GlareHover = ({
   width = "300px",
-  height = "500px",
+  height = "100%",
   background,
   borderRadius = "15px",
   borderColor = "#ddd",
