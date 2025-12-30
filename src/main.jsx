@@ -8,9 +8,7 @@ import { FavouritesProvider } from "./FavouritesContext";
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <FavouritesProvider>
-        <App />
-      </FavouritesProvider>
+      <App />
     </BrowserRouter>
   </StrictMode>,
 )
