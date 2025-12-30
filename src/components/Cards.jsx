@@ -10,7 +10,7 @@ export default function Cards({ properties }) {
       <div className="row g-4">
         {properties.map((property) => (
           <div className="col-md-4" key={property.id}>
-            <div style={{ position: 'relative' }} className="m-2 d-flex justify-content-center align-items-center card h-100">
+            <div className="m-2 d-flex justify-content-center align-items-center card h-100">
                 <GlareHover
                     
                     glareOpacity={0.3}
