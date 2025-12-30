@@ -1,4 +1,4 @@
-import { useFavourites } from "../hooks/useFavourites";
+import { useFavourites } from "../useFavourites";
 
 export default function Cards({ properties }) {
   const { addFavourite, removeFavourite, isFavourite } = useFavourites();
