@@ -57,7 +57,7 @@ export function CardsX(){
 
     return(
         <>
-            <div style={{ height: '600px', position: 'relative' }} className="m-2 d-flex justify-content-center align-items-center">
+            <div style={{ position: 'relative' }} className="m-2 d-flex justify-content-center align-items-center">
                 <GlareHover
                     
                     glareOpacity={0.3}
