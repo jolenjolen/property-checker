@@ -14,7 +14,13 @@ export default function Cards({ properties }) {
 
           return (
             <div className="col-md-4" key={property.id}>
-              <GlareHover {...glareProps}>
+              <GlareHover {
+                glareOpacity={0.3}
+                glareAngle={-30}
+                glareSize={300}
+                transitionDuration={800}
+                playOnce={false}
+              }>
                 <div
                   className="card h-100 border-0"
                   draggable
@@ -57,3 +63,4 @@ export default function Cards({ properties }) {
     </div>
   );
 }
+
