@@ -176,6 +176,17 @@ form {
   font-size: 24px;
 }
 
-.card{
-  background-color: transparent !important;
+.fav-dropzone {
+  position: fixed;
+  inset: 0;
+  z-index: 1040;
+  pointer-events: none;
+}
+
+.fav-item {
+  cursor: grab;
+}
+
+.fav-item:active {
+  cursor: grabbing;
 }

@@ -70,47 +70,57 @@ export default function Nav() {
           <h4 className="offcanvas-title">My Favourites</h4>
           <button data-bs-dismiss="offcanvas" className={`mx-1 closeFavourites d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title="Close Favourites"><span className="material-symbols-rounded">close</span></button>
         </div>
-        <div className="offcanvas-body">
-
-          {/* DROP ZONE (desktop) */}
-          <div
-            className="remove-zone text-center p-3 mb-3 border border-danger rounded"
-            onDragOver={(e) => e.preventDefault()}
-            onDrop={(e) => {
-              const id = e.dataTransfer.getData("propertyId");
-              removeFavourite(id);
-            }}
-          >
-            Drag here to remove
-          </div>
-
+        <div
+          className="offcanvas-body"
+          onDragOver={(e) => e.preventDefault()}
+          onDrop={(e) => {
+            const id = e.dataTransfer.getData("propertyId");
+            if (id) removeFavourite(id);
+          }}
+        >
           {favProperties.length === 0 && (
-            <p className="text-muted">No favourites yet</p>
+            <p className="text-muted text-center mt-4">
+              No favourites yet.<br />
+              Tap ❤️ on a property to add one.
+            </p>
           )}
 
           {favProperties.map((property) => (
             <div
               key={property.id}
-              className="d-flex align-items-center mb-3"
+              className="d-flex align-items-center mb-3 p-2 rounded border fav-item"
+              draggable
+              onDragStart={(e) => {
+                e.dataTransfer.setData("propertyId", property.id);
+                e.dataTransfer.effectAllowed = "move";
+              }}
             >
+              {/* IMAGE */}
               <img
                 src={property.picture}
                 width="60"
-                className="rounded me-2"
+                height="60"
+                className="rounded me-2 object-fit-cover"
+                alt={property.type}
+                draggable={false}
               />
 
-              <div className="flex-grow-1">
-                <div className="fw-semibold">
+              {/* INFO */}
+              <div className="flex-grow-1 overflow-hidden">
+                <div className="fw-semibold text-truncate">
                   £{property.price.toLocaleString()}
                 </div>
-                <small>{property.location}</small>
+                <small className="text-muted text-truncate d-block">
+                  {property.location}
+                </small>
               </div>
 
-              {/* MOBILE REMOVE BUTTON */}
+              {/* REMOVE BUTTON (MOBILE + ACCESSIBILITY) */}
               <button
-                className="btn btn-sm btn-outline-danger"
+                className="btn btn-sm btn-outline-danger ms-2"
                 onClick={() => removeFavourite(property.id)}
                 aria-label="Remove favourite"
+                title="Remove from favourites"
               >
                 ✕
               </button>
