@@ -66,9 +66,9 @@ export default function Search() {
 
   return (
     <div className="container py-4">
-      <h2 className="mt-4">
+      <h4 className="mt-4">
         Search Results ({results.length})
-      </h2>
+      </h4>
       <Cards properties={results} />
     </div>
   );
