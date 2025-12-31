@@ -8,6 +8,11 @@ export default function Search() {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
+    const dateFromParam = searchParams.get("dateFrom");
+    const dateToParam = searchParams.get("dateTo");
+
+    const dateFrom = dateFromParam ? new Date(dateFromParam) : null;
+    const dateTo = dateToParam ? new Date(dateToParam) : null;
     const textQuery = searchParams.get("location");
     const type = searchParams.get("type");
     const bedroomsParam = searchParams.get("bedrooms");
@@ -52,7 +57,15 @@ export default function Search() {
           return false;
         }
       }
+      /* ================= DATE ADDED ================= */
+      if (dateFrom || dateTo) {
+        const propertyDate = new Date(
+          `${p.added.month} ${p.added.day}, ${p.added.year}`
+        );
 
+        if (dateFrom && propertyDate < dateFrom) return false;
+        if (dateTo && propertyDate > dateTo) return false;
+      }
       /* ================= FREE TEXT ================= */
       if (tokens.length > 0) {
         const searchableText = `

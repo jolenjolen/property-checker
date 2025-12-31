@@ -17,6 +17,8 @@ export default function SearchBar() {
   const [minPrice, setMinPrice] = useState(null);
   const [maxPrice, setMaxPrice] = useState(null);
   const [postcode, setPostcode] = useState("");
+  const [dateFrom, setDateFrom] = useState("");
+  const [dateTo, setDateTo] = useState("");
   /* ================= OPTIONS ================= */
 
   
@@ -63,6 +65,9 @@ export default function SearchBar() {
     if (minPrice) params.set("minPrice", minPrice);
     if (maxPrice) params.set("maxPrice", maxPrice);
     if (postcode) params.set("postcode", postcode);
+    if (dateFrom) params.set("dateFrom", dateFrom);
+    if (dateTo) params.set("dateTo", dateTo);
+
     navigate(`/search?${params.toString()}`);
   };
 
@@ -184,6 +189,25 @@ export default function SearchBar() {
                   }}
                 />
               </div>
+              {/* DATE ADDED */}
+              <div className="extra-search-options d-flex justify-content-center gap-2 m-2 flex-wrap">
+                <input
+                  type="date"
+                  className="form-control rounded p-2 border"
+                  value={dateFrom}
+                  onChange={(e) => setDateFrom(e.target.value)}
+                />
+
+                <span className="text-dark">to</span>
+
+                <input
+                  type="date"
+                  className="form-control rounded p-2 border"
+                  value={dateTo}
+                  onChange={(e) => setDateTo(e.target.value)}
+                />
+              </div>
+
             </div>
           </div>
         </form>
