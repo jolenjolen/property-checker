@@ -99,12 +99,12 @@ export default function Cards({ properties }) {
                   </p>
 
                   <div className="mt-auto d-flex justify-content-between align-items-center">
-                    <a
+                    <Link
                       to={`/properties/${property.id}`}
                       className={`btn btn-outline-${inverseTheme} btn-sm`}
                     >
                       View More
-                    </a>
+                    </Link>
 
                     <button
                       className={`favouriteBtn btn btn-sm rounded-pill d-flex justify-content-center align-items-center ${
