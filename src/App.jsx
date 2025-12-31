@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./ThemeContext";
 
 import Nav from "./components/Nav";
-
+import Details from "./pages/Details";
 import Home from "./pages/Home";
 import Buy from "./pages/Buy";
 import Rent from "./pages/Rent";
@@ -25,6 +25,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/properties/:id" element={<Details />} />
         </Routes>
 
     </ThemeProvider>

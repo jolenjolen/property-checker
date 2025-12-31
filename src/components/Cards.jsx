@@ -2,6 +2,7 @@ import "../App.css";
 import { useFavourites } from "../FavouritesContext";
 import { useTheme } from "../ThemeContext";
 import { useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 
 /* -----------------------------
    Lazy Image Component
@@ -99,7 +100,7 @@ export default function Cards({ properties }) {
 
                   <div className="mt-auto d-flex justify-content-between align-items-center">
                     <a
-                      href={property.url}
+                      to={`/properties/${property.id}`}
                       className={`btn btn-outline-${inverseTheme} btn-sm`}
                     >
                       View More
