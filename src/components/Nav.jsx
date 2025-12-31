@@ -125,7 +125,7 @@ export default function Nav() {
 
               {/* MOBILE / ACCESSIBLE REMOVE */}
               <button
-                className="btn closeMenu btn-outline-danger ms-2 rounded-pill d-flex justify-content-center align-items-center"
+                className="btn closeSmall btn-outline-danger ms-2 rounded-pill d-flex justify-content-center align-items-center"
                 onClick={() => removeFavourite(property.id)}
                 aria-label="Remove favourite"
               >

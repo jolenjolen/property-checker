@@ -25,7 +25,10 @@ a{
   width: 45px;
   height: 45px;
 }
-
+.closeSmall{
+  width:36px;
+  height:36px;
+}
 .navbar-brand span{ /*Logo and Brand Text on the Nav Bar*/
   color: #38b8f8;
   font-weight: 500;
