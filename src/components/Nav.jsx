@@ -46,7 +46,7 @@ export default function Nav() {
                 favorite
               </span>
             </button>
-            <button onClick={toggleTheme} className={`themeToggle d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
+            <button onClick={toggleTheme} className={`themeToggle d-flex mx-2 justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title={theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}>
               <span className="material-symbols-rounded">
                 {theme === "light" ? "dark_mode" : "light_mode"}
               </span>
@@ -54,7 +54,7 @@ export default function Nav() {
             <button
               data-bs-toggle="offcanvas"
               data-bs-target="#menuCanvas"
-              className={`menuToggle mx-2 d-flex d-md-none justify-content-center align-items-center rounded-pill btn btn-outline-${inverseTheme}`}
+              className={`menuToggle d-flex d-md-none justify-content-center align-items-center rounded-pill btn btn-outline-${inverseTheme}`}
               title="Open the Hamburger menu"
             >
               <span className="material-symbols-rounded">
