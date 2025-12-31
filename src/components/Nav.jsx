@@ -71,9 +71,7 @@ export default function Nav() {
           <h4 className="offcanvas-title">My Favourites</h4>
           <button data-bs-dismiss="offcanvas" className={`mx-1 closeFavourites d-flex justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`} title="Close Favourites"><span className="material-symbols-rounded">close</span></button>
         </div>
-        <div className="offcanvas-body">
-
-          {/* DELETE DROP ZONE */}
+        {/* DELETE DROP ZONE */}
           <div
             className={`bg-${theme} sticky-top fav-delete-zone mb-3 d-flex justify-content-center align-items-center`}
             onDragOver={(e) => e.preventDefault()}
@@ -88,6 +86,9 @@ export default function Nav() {
             &nbsp;
             Drag here to remove
           </div>
+        <div className="offcanvas-body">
+
+          
 
           {favProperties.length === 0 && (
             <p className="text-muted text-center mt-4">
