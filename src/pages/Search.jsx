@@ -8,54 +8,58 @@ export default function Search() {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    const textQuery = searchParams.get("location");
+    const q = searchParams.get("q")?.toLowerCase() || "";
     const type = searchParams.get("type");
-    const bedroomsParam = searchParams.get("bedrooms");
 
-    const minPriceParam = searchParams.get("minPrice");
-    const maxPriceParam = searchParams.get("maxPrice");
+    const minPrice = Number(searchParams.get("minPrice"));
+    const maxPrice = Number(searchParams.get("maxPrice"));
 
-    const minPrice = minPriceParam ? Number(minPriceParam) : null;
-    const maxPrice = maxPriceParam ? Number(maxPriceParam) : null;
+    const minBeds = Number(searchParams.get("minBeds"));
+    const maxBeds = Number(searchParams.get("maxBeds"));
 
-    // Split free-text into searchable tokens
-    const tokens = textQuery
-      ? textQuery.toLowerCase().split(/\s+/)
-      : [];
+    const dateFrom = searchParams.get("dateFrom");
+    const dateTo = searchParams.get("dateTo");
+
+    const postcode = searchParams.get("postcode");
+
+    const tokens = q.split(/\s+/).filter(Boolean);
 
     const filtered = propertiesData.properties.filter((p) => {
-      /* ================= PRICE ================= */
-      if (minPrice !== null && p.price < minPrice) return false;
-      if (maxPrice !== null && p.price > maxPrice) return false;
+      /* PRICE */
+      if (!isNaN(minPrice) && p.price < minPrice) return false;
+      if (!isNaN(maxPrice) && p.price > maxPrice) return false;
 
-      /* ================= DROPDOWNS (PRIORITY) ================= */
+      /* TYPE */
       if (type && p.type !== type) return false;
 
-      if (bedroomsParam !== null) {
-        const bedrooms = Number(bedroomsParam);
-        if (bedrooms === 5) {
-          if (p.bedrooms < 5) return false;
-        } else {
-          if (p.bedrooms !== bedrooms) return false;
-        }
+      /* BEDROOMS */
+      if (!isNaN(minBeds) && p.bedrooms < minBeds) return false;
+      if (!isNaN(maxBeds) && p.bedrooms > maxBeds) return false;
+
+      /* DATE */
+      const added = new Date(p.dateAdded);
+      if (dateFrom && added < new Date(dateFrom)) return false;
+      if (dateTo && added > new Date(dateTo)) return false;
+
+      /* POSTCODE AREA */
+      if (postcode) {
+        const area = p.postcode?.split(" ")[0];
+        if (area !== postcode) return false;
       }
 
-      /* ================= FREE TEXT SEARCH ================= */
-      if (tokens.length > 0) {
-        const searchableText = `
+      /* FREE TEXT – STRONG MATCH */
+      if (tokens.length) {
+        const haystack = `
           ${p.location}
-          ${p.type}
           ${p.description}
-          ${p.bedrooms} bedroom
-          ${p.bedrooms} bedrooms
+          ${p.type}
+          ${p.price}
+          ${p.bedrooms}
+          ${p.postcode}
         `.toLowerCase();
 
-        // Match if ANY token matches ANY field
-        const tokenMatch = tokens.some(token =>
-          searchableText.includes(token)
-        );
-
-        if (!tokenMatch) return false;
+        const allMatch = tokens.every(t => haystack.includes(t));
+        if (!allMatch) return false;
       }
 
       return true;
