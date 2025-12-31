@@ -61,7 +61,7 @@ export default function Cards({ properties }) {
   const inverseTheme = theme === "light" ? "dark" : "light";
 
   return (
-    <div className="container">
+    <div className="container-fluid">
       <div className="d-flex flex-wrap justify-content-center gap-4">
         {properties.map((property) => {
           const fav = isFavourite(property.id);
