@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import propertiesData from "../data/properties.json";
-
+import SearchBar from "./SearchBar";
 export default function Search() {
   const [searchParams] = useSearchParams();
   const [results, setResults] = useState([]);
@@ -77,7 +77,8 @@ export default function Search() {
   }, [searchParams]);
 
   return (
-    <div className="container py-4">
+    <div className="container-fluid py-4">
+      <SearchBar />
       <h4 className="mt-4">
         Search Results ({results.length})
       </h4>
