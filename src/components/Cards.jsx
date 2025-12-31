@@ -18,7 +18,7 @@ export default function Cards({ properties }) {
             <div className="col-md-4" key={property.id}>
               <div className={`card h-100 border-0 shadow-sm bg-${theme} text-${inverseTheme}`}>
                 <img
-                  src={property.picture}
+                  src={property.pictures?.[0]}
                   className="card-img-top rounded"
                   alt={property.type}
                 />
