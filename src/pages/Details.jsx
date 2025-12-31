@@ -21,103 +21,101 @@ export default function Details() {
 
   return (
     <div className={`container py-4 text-${inverseTheme}`}>
-        <ul className="nav nav-tabs mb-3">
-        <li className="nav-item">
-            <button className="nav-link active">Description</button>
-        </li>
-        <li className="nav-item">
-            <button className="nav-link">Gallery</button>
-        </li>
-        <li className="nav-item">
-            <button className="nav-link">Map</button>
-        </li>
+        <ul className="nav nav-tabs mb-3" role="tablist">
+            <li className="nav-item" role="presentation">
+                <button
+                className="nav-link active"
+                id={`description-tab-${property.id}`}
+                data-bs-toggle="tab"
+                data-bs-target={`#description-${property.id}`}
+                type="button"
+                role="tab"
+                aria-controls={`description-${property.id}`}
+                aria-selected="true"
+                >
+                Description
+                </button>
+            </li>
+
+            <li className="nav-item" role="presentation">
+                <button
+                className="nav-link"
+                id={`gallery-tab-${property.id}`}
+                data-bs-toggle="tab"
+                data-bs-target={`#gallery-${property.id}`}
+                type="button"
+                role="tab"
+                aria-controls={`gallery-${property.id}`}
+                aria-selected="false"
+                >
+                Gallery
+                </button>
+            </li>
+
+            <li className="nav-item" role="presentation">
+                <button
+                className="nav-link"
+                id={`map-tab-${property.id}`}
+                data-bs-toggle="tab"
+                data-bs-target={`#map-${property.id}`}
+                type="button"
+                role="tab"
+                aria-controls={`map-${property.id}`}
+                aria-selected="false"
+                >
+                Map
+                </button>
+            </li>
         </ul>
 
         <div className="tab-content">
-        <div className="tab-pane fade show active">
-            {/* description */}
-        </div>
-
-        <div className="tab-pane fade">
-            {/* CAROUSEL PLACEHOLDER */}
-            <div className="my-4">
-                {/* IMAGE CAROUSEL */}
-                <div
-                id={`propertyCarousel-${property.id}`}
-                className="carousel slide mb-4"
-                data-bs-ride="carousel"
-                >
-                {/* INDICATORS */}
-                <div className="carousel-indicators">
-                    {property.pictures.map((_, index) => (
-                    <button
-                        key={index}
-                        type="button"
-                        data-bs-target={`#propertyCarousel-${property.id}`}
-                        data-bs-slide-to={index}
-                        className={index === 0 ? "active" : ""}
-                        aria-current={index === 0 ? "true" : undefined}
-                    />
-                    ))}
-                </div>
-
-                {/* SLIDES */}
-                <div className="carousel-inner rounded shadow-sm">
-                    {property.pictures.map((img, index) => (
-                    <div
-                        key={index}
-                        className={`carousel-item ${index === 0 ? "active" : ""}`}
-                    >
-                        <img
-                        src={img}
-                        className="d-block w-100"
-                        alt={`Property image ${index + 1}`}
-                        style={{ height: "420px", objectFit: "cover" }}
-                        />
-                    </div>
-                    ))}
-                </div>
-
-                {/* CONTROLS */}
-                <button
-                    className="carousel-control-prev"
-                    type="button"
-                    data-bs-target={`#propertyCarousel-${property.id}`}
-                    data-bs-slide="prev"
-                >
-                    <span className="carousel-control-prev-icon" />
-                </button>
-
-                <button
-                    className="carousel-control-next"
-                    type="button"
-                    data-bs-target={`#propertyCarousel-${property.id}`}
-                    data-bs-slide="next"
-                >
-                    <span className="carousel-control-next-icon" />
-                </button>
-                </div>
-
-
-            </div>
-        </div>
-
-        <div className="tab-pane fade">
-            {/* 👇 MAP GOES HERE */}
-            {/* GOOGLE MAP */}
-            <div className="ratio ratio-16x9 rounded shadow-sm">
-            <iframe
-                title="Property location"
-                src={`https://www.google.com/maps?q=${property.coordinates.lat},${property.coordinates.lng}&z=15&output=embed`}
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-            />
+            {/* DESCRIPTION */}
+            <div
+                className="tab-pane fade show active"
+                id={`description-${property.id}`}
+                role="tabpanel"
+                aria-labelledby={`description-tab-${property.id}`}
+            >
+                <p>{property.description}</p>
+                <ul className="list-unstyled mt-3">
+                <li><strong>Tenure:</strong> {property.tenure}</li>
+                <li>
+                    <strong>Date Added:</strong>{" "}
+                    {property.added.day} {property.added.month} {property.added.year}
+                </li>
+                </ul>
             </div>
 
-        </div>
-        </div>
+            {/* GALLERY */}
+            <div
+                className="tab-pane fade"
+                id={`gallery-${property.id}`}
+                role="tabpanel"
+                aria-labelledby={`gallery-tab-${property.id}`}
+            >
+                {/* 🔁 YOUR CAROUSEL HERE */}
+            </div>
+
+            {/* MAP */}
+            <div
+                className="tab-pane fade"
+                id={`map-${property.id}`}
+                role="tabpanel"
+                aria-labelledby={`map-tab-${property.id}`}
+            >
+                <div className="ratio ratio-16x9 rounded shadow-sm">
+                <iframe
+                    title="Property location"
+                    src={`https://www.google.com/maps?q=${property.coordinates.lat},${property.coordinates.lng}&z=15&output=embed`}
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                />
+                </div>
+            </div>
+            </div>
+
       <h2 className="mb-2">
         £{property.price.toLocaleString()}
       </h2>
