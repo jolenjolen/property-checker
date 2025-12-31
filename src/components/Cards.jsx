@@ -88,7 +88,7 @@ export default function Cards({ properties }) {
                     {property.bedrooms} bedroom {property.type}
                   </p>
 
-                  <p className="text-muted small mb-3">
+                  <p className="text-secondary small mb-3">
                     {property.location}
                   </p>
 
