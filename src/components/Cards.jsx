@@ -59,11 +59,16 @@ export default function Cards({ properties }) {
   const { addFavourite, removeFavourite, isFavourite } = useFavourites();
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
-
+  // ✅ ADD THIS BLOCK
+  const sortedProperties = [...properties].sort((a, b) => {
+    const dateA = new Date(`${a.added.month} ${a.added.day}, ${a.added.year}`);
+    const dateB = new Date(`${b.added.month} ${b.added.day}, ${b.added.year}`);
+    return dateB - dateA; // newest first
+  });
   return (
     <div className="container-fluid">
       <div className="d-flex flex-wrap justify-content-center gap-4">
-        {properties.map((property) => {
+        {sortedProperties.map((property) => {
           const fav = isFavourite(property.id);
 
           return (
