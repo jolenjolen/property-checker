@@ -4,7 +4,10 @@ import { useFavourites } from "../FavouritesContext";
 import { useTheme } from "../ThemeContext";
 export default function Cards({ properties }) {
   const { addFavourite, removeFavourite, isFavourite } = useFavourites();
+  const { theme, toggleTheme } = useTheme();
 
+  const navbarTheme = theme === "light" ? "navbar-light bg-light" : "navbar-dark bg-dark";
+  const inverseTheme = theme === "light" ? "dark" : "light";
   return (
     <div className="container">
       <div className="row g-4">
@@ -13,7 +16,7 @@ export default function Cards({ properties }) {
 
           return (
             <div className="col-md-4" key={property.id}>
-              <div className="card h-100 border-0 shadow-sm">
+              <div className={`card h-100 border-0 shadow-sm bg-${theme} text-${inverseTheme}`}>
                 <img
                   src={property.picture}
                   className="card-img-top"
