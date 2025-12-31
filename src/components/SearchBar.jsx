@@ -192,6 +192,7 @@ export default function SearchBar() {
               {/* DATE ADDED */}
               <div className="extra-search-options d-flex justify-content-center gap-2 m-2 flex-wrap">
                 <input
+                  style={{ maxWidth: "150px" }}
                   type="date"
                   className="form-control rounded p-2 border"
                   value={dateFrom}
@@ -201,6 +202,7 @@ export default function SearchBar() {
                 <span className="text-dark">to</span>
 
                 <input
+                  style={{ maxWidth: "150px" }}
                   type="date"
                   className="form-control rounded p-2 border"
                   value={dateTo}
