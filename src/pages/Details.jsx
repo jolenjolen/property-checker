@@ -94,6 +94,67 @@ export default function Details() {
                 aria-labelledby={`gallery-tab-${property.id}`}
             >
                 {/* 🔁 YOUR CAROUSEL HERE */}
+                {/* CAROUSEL PLACEHOLDER */}
+            <div className="my-4">
+                {/* IMAGE CAROUSEL */}
+                <div
+                id={`propertyCarousel-${property.id}`}
+                className="carousel slide mb-4"
+                data-bs-ride="carousel"
+                >
+                {/* INDICATORS */}
+                <div className="carousel-indicators">
+                    {property.pictures.map((_, index) => (
+                    <button
+                        key={index}
+                        type="button"
+                        data-bs-target={`#propertyCarousel-${property.id}`}
+                        data-bs-slide-to={index}
+                        className={index === 0 ? "active" : ""}
+                        aria-current={index === 0 ? "true" : undefined}
+                    />
+                    ))}
+                </div>
+
+                {/* SLIDES */}
+                <div className="carousel-inner rounded shadow-sm">
+                    {property.pictures.map((img, index) => (
+                    <div
+                        key={index}
+                        className={`carousel-item ${index === 0 ? "active" : ""}`}
+                    >
+                        <img
+                        src={img}
+                        className="d-block w-100"
+                        alt={`Property image ${index + 1}`}
+                        style={{ height: "420px", objectFit: "cover" }}
+                        />
+                    </div>
+                    ))}
+                </div>
+
+                {/* CONTROLS */}
+                <button
+                    className="carousel-control-prev"
+                    type="button"
+                    data-bs-target={`#propertyCarousel-${property.id}`}
+                    data-bs-slide="prev"
+                >
+                    <span className="carousel-control-prev-icon" />
+                </button>
+
+                <button
+                    className="carousel-control-next"
+                    type="button"
+                    data-bs-target={`#propertyCarousel-${property.id}`}
+                    data-bs-slide="next"
+                >
+                    <span className="carousel-control-next-icon" />
+                </button>
+                </div>
+
+
+            </div>
             </div>
 
             {/* MAP */}
