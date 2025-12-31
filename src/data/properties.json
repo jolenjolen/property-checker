@@ -1,35 +1,3104 @@
 {
-	"properties": [
-        {
-            "id":"prop1",
-			"type":"House",
-            "bedrooms":3,
-			"price":750000,
-			"tenure":"Freehold",
-			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
-			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
-			"picture":"images/prop1pic1small.jpg",
-			"url":"properties/prop1.html",
-            "added": {
-                "month":"October",
-                "day":12,
-                "year":2022
-            }
-        },
-		{
-            "id":"prop2",
-			"type":"Flat",
-            "bedrooms":2,
-			"price":399995,
-			"tenure":"Freehold",
-			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
-			"location":"Crofton Road Orpington BR6",
-			"picture":"images/prop2pic1small.jpg",
-			"url":"properties/prop2.html",
-            "added": {
-                "month":"September",
-                "day":14,
-                "year":2022
-            }
-        }
-]}
+  "properties": [
+    {
+      "id": "prop001",
+      "type": "Bungalow",
+      "bedrooms": 4,
+      "price": 487646,
+      "tenure": "Freehold",
+      "description": "4 bedroom bungalow located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/00101.jpg",
+        "images/00102.jpg",
+        "images/00103.jpg",
+        "images/00104.jpg",
+        "images/00105.jpg",
+        "images/00106.jpg",
+        "images/00107.jpg",
+        "images/00108.jpg",
+        "images/00109.jpg",
+        "images/00110.jpg"
+      ],
+      "url": "properties/prop001.html",
+      "coordinates": {
+        "lat": 51.483347,
+        "lng": 0.013685
+      },
+      "added": {
+        "month": "January",
+        "day": 19,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop002",
+      "type": "Bungalow",
+      "bedrooms": 2,
+      "price": 723018,
+      "tenure": "Leasehold",
+      "description": "2 bedroom bungalow located in a popular residential area.",
+      "location": "Manchester M1",
+      "pictures": [
+        "images/00201.jpg",
+        "images/00202.jpg",
+        "images/00203.jpg",
+        "images/00204.jpg",
+        "images/00205.jpg",
+        "images/00206.jpg",
+        "images/00207.jpg",
+        "images/00208.jpg",
+        "images/00209.jpg",
+        "images/00210.jpg"
+      ],
+      "url": "properties/prop002.html",
+      "coordinates": {
+        "lat": 53.483384,
+        "lng": -2.243241
+      },
+      "added": {
+        "month": "January",
+        "day": 15,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop003",
+      "type": "Flat",
+      "bedrooms": 4,
+      "price": 878078,
+      "tenure": "Freehold",
+      "description": "4 bedroom flat located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/00301.jpg",
+        "images/00302.jpg",
+        "images/00303.jpg",
+        "images/00304.jpg",
+        "images/00305.jpg",
+        "images/00306.jpg",
+        "images/00307.jpg",
+        "images/00308.jpg",
+        "images/00309.jpg",
+        "images/00310.jpg"
+      ],
+      "url": "properties/prop003.html",
+      "coordinates": {
+        "lat": 53.807687,
+        "lng": -1.542438
+      },
+      "added": {
+        "month": "January",
+        "day": 15,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop004",
+      "type": "Terraced",
+      "bedrooms": 3,
+      "price": 349638,
+      "tenure": "Freehold",
+      "description": "3 bedroom terraced located in a popular residential area.",
+      "location": "Manchester M1",
+      "pictures": [
+        "images/00401.jpg",
+        "images/00402.jpg",
+        "images/00403.jpg",
+        "images/00404.jpg",
+        "images/00405.jpg",
+        "images/00406.jpg",
+        "images/00407.jpg",
+        "images/00408.jpg",
+        "images/00409.jpg",
+        "images/00410.jpg"
+      ],
+      "url": "properties/prop004.html",
+      "coordinates": {
+        "lat": 53.483912,
+        "lng": -2.236031
+      },
+      "added": {
+        "month": "January",
+        "day": 5,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop005",
+      "type": "Flat",
+      "bedrooms": 1,
+      "price": 495074,
+      "tenure": "Leasehold",
+      "description": "1 bedroom flat located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/00501.jpg",
+        "images/00502.jpg",
+        "images/00503.jpg",
+        "images/00504.jpg",
+        "images/00505.jpg",
+        "images/00506.jpg",
+        "images/00507.jpg",
+        "images/00508.jpg",
+        "images/00509.jpg",
+        "images/00510.jpg"
+      ],
+      "url": "properties/prop005.html",
+      "coordinates": {
+        "lat": 51.388584,
+        "lng": 0.066108
+      },
+      "added": {
+        "month": "January",
+        "day": 11,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop006",
+      "type": "Flat",
+      "bedrooms": 5,
+      "price": 866097,
+      "tenure": "Freehold",
+      "description": "5 bedroom flat located in a popular residential area.",
+      "location": "Birmingham B1",
+      "pictures": [
+        "images/00601.jpg",
+        "images/00602.jpg",
+        "images/00603.jpg",
+        "images/00604.jpg",
+        "images/00605.jpg",
+        "images/00606.jpg",
+        "images/00607.jpg",
+        "images/00608.jpg",
+        "images/00609.jpg",
+        "images/00610.jpg"
+      ],
+      "url": "properties/prop006.html",
+      "coordinates": {
+        "lat": 52.483565,
+        "lng": -1.907468
+      },
+      "added": {
+        "month": "January",
+        "day": 27,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop007",
+      "type": "Semi-detached",
+      "bedrooms": 1,
+      "price": 722829,
+      "tenure": "Freehold",
+      "description": "1 bedroom semi-detached located in a popular residential area.",
+      "location": "Manchester M1",
+      "pictures": [
+        "images/00701.jpg",
+        "images/00702.jpg",
+        "images/00703.jpg",
+        "images/00704.jpg",
+        "images/00705.jpg",
+        "images/00706.jpg",
+        "images/00707.jpg",
+        "images/00708.jpg",
+        "images/00709.jpg",
+        "images/00710.jpg"
+      ],
+      "url": "properties/prop007.html",
+      "coordinates": {
+        "lat": 53.472415,
+        "lng": -2.234211
+      },
+      "added": {
+        "month": "January",
+        "day": 17,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop008",
+      "type": "Detached",
+      "bedrooms": 2,
+      "price": 840967,
+      "tenure": "Freehold",
+      "description": "2 bedroom detached located in a popular residential area.",
+      "location": "Oxford OX1",
+      "pictures": [
+        "images/00801.jpg",
+        "images/00802.jpg",
+        "images/00803.jpg",
+        "images/00804.jpg",
+        "images/00805.jpg",
+        "images/00806.jpg",
+        "images/00807.jpg",
+        "images/00808.jpg",
+        "images/00809.jpg",
+        "images/00810.jpg"
+      ],
+      "url": "properties/prop008.html",
+      "coordinates": {
+        "lat": 51.747037,
+        "lng": -1.250418
+      },
+      "added": {
+        "month": "January",
+        "day": 22,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop009",
+      "type": "Terraced",
+      "bedrooms": 3,
+      "price": 748378,
+      "tenure": "Leasehold",
+      "description": "3 bedroom terraced located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/00901.jpg",
+        "images/00902.jpg",
+        "images/00903.jpg",
+        "images/00904.jpg",
+        "images/00905.jpg",
+        "images/00906.jpg",
+        "images/00907.jpg",
+        "images/00908.jpg",
+        "images/00909.jpg",
+        "images/00910.jpg"
+      ],
+      "url": "properties/prop009.html",
+      "coordinates": {
+        "lat": 51.488881,
+        "lng": 0.000332
+      },
+      "added": {
+        "month": "January",
+        "day": 10,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop010",
+      "type": "Semi-detached",
+      "bedrooms": 4,
+      "price": 351982,
+      "tenure": "Freehold",
+      "description": "4 bedroom semi-detached located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/01001.jpg",
+        "images/01002.jpg",
+        "images/01003.jpg",
+        "images/01004.jpg",
+        "images/01005.jpg",
+        "images/01006.jpg",
+        "images/01007.jpg",
+        "images/01008.jpg",
+        "images/01009.jpg",
+        "images/01010.jpg"
+      ],
+      "url": "properties/prop010.html",
+      "coordinates": {
+        "lat": 51.449001,
+        "lng": -2.593155
+      },
+      "added": {
+        "month": "January",
+        "day": 14,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop011",
+      "type": "Semi-detached",
+      "bedrooms": 3,
+      "price": 805694,
+      "tenure": "Leasehold",
+      "description": "3 bedroom semi-detached located in a popular residential area.",
+      "location": "Manchester M1",
+      "pictures": [
+        "images/01101.jpg",
+        "images/01102.jpg",
+        "images/01103.jpg",
+        "images/01104.jpg",
+        "images/01105.jpg",
+        "images/01106.jpg",
+        "images/01107.jpg",
+        "images/01108.jpg",
+        "images/01109.jpg",
+        "images/01110.jpg"
+      ],
+      "url": "properties/prop011.html",
+      "coordinates": {
+        "lat": 53.488276,
+        "lng": -2.246901
+      },
+      "added": {
+        "month": "January",
+        "day": 14,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop012",
+      "type": "Semi-detached",
+      "bedrooms": 3,
+      "price": 153708,
+      "tenure": "Freehold",
+      "description": "3 bedroom semi-detached located in a popular residential area.",
+      "location": "Birmingham B1",
+      "pictures": [
+        "images/01201.jpg",
+        "images/01202.jpg",
+        "images/01203.jpg",
+        "images/01204.jpg",
+        "images/01205.jpg",
+        "images/01206.jpg",
+        "images/01207.jpg",
+        "images/01208.jpg",
+        "images/01209.jpg",
+        "images/01210.jpg"
+      ],
+      "url": "properties/prop012.html",
+      "coordinates": {
+        "lat": 52.477758,
+        "lng": -1.912539
+      },
+      "added": {
+        "month": "January",
+        "day": 3,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop013",
+      "type": "Semi-detached",
+      "bedrooms": 1,
+      "price": 737009,
+      "tenure": "Freehold",
+      "description": "1 bedroom semi-detached located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/01301.jpg",
+        "images/01302.jpg",
+        "images/01303.jpg",
+        "images/01304.jpg",
+        "images/01305.jpg",
+        "images/01306.jpg",
+        "images/01307.jpg",
+        "images/01308.jpg",
+        "images/01309.jpg",
+        "images/01310.jpg"
+      ],
+      "url": "properties/prop013.html",
+      "coordinates": {
+        "lat": 51.473407,
+        "lng": -0.000683
+      },
+      "added": {
+        "month": "January",
+        "day": 9,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop014",
+      "type": "Detached",
+      "bedrooms": 2,
+      "price": 894502,
+      "tenure": "Freehold",
+      "description": "2 bedroom detached located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/01401.jpg",
+        "images/01402.jpg",
+        "images/01403.jpg",
+        "images/01404.jpg",
+        "images/01405.jpg",
+        "images/01406.jpg",
+        "images/01407.jpg",
+        "images/01408.jpg",
+        "images/01409.jpg",
+        "images/01410.jpg"
+      ],
+      "url": "properties/prop014.html",
+      "coordinates": {
+        "lat": 51.399324,
+        "lng": 0.065547
+      },
+      "added": {
+        "month": "January",
+        "day": 17,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop015",
+      "type": "Flat",
+      "bedrooms": 2,
+      "price": 444271,
+      "tenure": "Freehold",
+      "description": "2 bedroom flat located in a popular residential area.",
+      "location": "Bath BA2",
+      "pictures": [
+        "images/01501.jpg",
+        "images/01502.jpg",
+        "images/01503.jpg",
+        "images/01504.jpg",
+        "images/01505.jpg",
+        "images/01506.jpg",
+        "images/01507.jpg",
+        "images/01508.jpg",
+        "images/01509.jpg",
+        "images/01510.jpg"
+      ],
+      "url": "properties/prop015.html",
+      "coordinates": {
+        "lat": 51.362481,
+        "lng": -2.354757
+      },
+      "added": {
+        "month": "January",
+        "day": 23,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop016",
+      "type": "Detached",
+      "bedrooms": 4,
+      "price": 441393,
+      "tenure": "Leasehold",
+      "description": "4 bedroom detached located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/01601.jpg",
+        "images/01602.jpg",
+        "images/01603.jpg",
+        "images/01604.jpg",
+        "images/01605.jpg",
+        "images/01606.jpg",
+        "images/01607.jpg",
+        "images/01608.jpg",
+        "images/01609.jpg",
+        "images/01610.jpg"
+      ],
+      "url": "properties/prop016.html",
+      "coordinates": {
+        "lat": 51.393102,
+        "lng": 0.065334
+      },
+      "added": {
+        "month": "January",
+        "day": 11,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop017",
+      "type": "Terraced",
+      "bedrooms": 5,
+      "price": 263942,
+      "tenure": "Freehold",
+      "description": "5 bedroom terraced located in a popular residential area.",
+      "location": "Bath BA2",
+      "pictures": [
+        "images/01701.jpg",
+        "images/01702.jpg",
+        "images/01703.jpg",
+        "images/01704.jpg",
+        "images/01705.jpg",
+        "images/01706.jpg",
+        "images/01707.jpg",
+        "images/01708.jpg",
+        "images/01709.jpg",
+        "images/01710.jpg"
+      ],
+      "url": "properties/prop017.html",
+      "coordinates": {
+        "lat": 51.367423,
+        "lng": -2.352482
+      },
+      "added": {
+        "month": "January",
+        "day": 18,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop018",
+      "type": "Detached",
+      "bedrooms": 2,
+      "price": 824927,
+      "tenure": "Freehold",
+      "description": "2 bedroom detached located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/01801.jpg",
+        "images/01802.jpg",
+        "images/01803.jpg",
+        "images/01804.jpg",
+        "images/01805.jpg",
+        "images/01806.jpg",
+        "images/01807.jpg",
+        "images/01808.jpg",
+        "images/01809.jpg",
+        "images/01810.jpg"
+      ],
+      "url": "properties/prop018.html",
+      "coordinates": {
+        "lat": 51.458789,
+        "lng": -0.982594
+      },
+      "added": {
+        "month": "January",
+        "day": 23,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop019",
+      "type": "Terraced",
+      "bedrooms": 3,
+      "price": 914747,
+      "tenure": "Freehold",
+      "description": "3 bedroom terraced located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/01901.jpg",
+        "images/01902.jpg",
+        "images/01903.jpg",
+        "images/01904.jpg",
+        "images/01905.jpg",
+        "images/01906.jpg",
+        "images/01907.jpg",
+        "images/01908.jpg",
+        "images/01909.jpg",
+        "images/01910.jpg"
+      ],
+      "url": "properties/prop019.html",
+      "coordinates": {
+        "lat": 51.4517,
+        "lng": -0.976384
+      },
+      "added": {
+        "month": "January",
+        "day": 6,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop020",
+      "type": "Semi-detached",
+      "bedrooms": 1,
+      "price": 550080,
+      "tenure": "Freehold",
+      "description": "1 bedroom semi-detached located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/02001.jpg",
+        "images/02002.jpg",
+        "images/02003.jpg",
+        "images/02004.jpg",
+        "images/02005.jpg",
+        "images/02006.jpg",
+        "images/02007.jpg",
+        "images/02008.jpg",
+        "images/02009.jpg",
+        "images/02010.jpg"
+      ],
+      "url": "properties/prop020.html",
+      "coordinates": {
+        "lat": 51.394973,
+        "lng": 0.082671
+      },
+      "added": {
+        "month": "January",
+        "day": 18,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop021",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 755047,
+      "tenure": "Freehold",
+      "description": "3 bedroom flat located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/02101.jpg",
+        "images/02102.jpg",
+        "images/02103.jpg",
+        "images/02104.jpg",
+        "images/02105.jpg",
+        "images/02106.jpg",
+        "images/02107.jpg",
+        "images/02108.jpg",
+        "images/02109.jpg",
+        "images/02110.jpg"
+      ],
+      "url": "properties/prop021.html",
+      "coordinates": {
+        "lat": 51.455343,
+        "lng": -2.59053
+      },
+      "added": {
+        "month": "January",
+        "day": 17,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop022",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 906663,
+      "tenure": "Freehold",
+      "description": "3 bedroom flat located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/02201.jpg",
+        "images/02202.jpg",
+        "images/02203.jpg",
+        "images/02204.jpg",
+        "images/02205.jpg",
+        "images/02206.jpg",
+        "images/02207.jpg",
+        "images/02208.jpg",
+        "images/02209.jpg",
+        "images/02210.jpg"
+      ],
+      "url": "properties/prop022.html",
+      "coordinates": {
+        "lat": 51.475376,
+        "lng": -0.001106
+      },
+      "added": {
+        "month": "January",
+        "day": 6,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop023",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 347701,
+      "tenure": "Freehold",
+      "description": "3 bedroom flat located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/02301.jpg",
+        "images/02302.jpg",
+        "images/02303.jpg",
+        "images/02304.jpg",
+        "images/02305.jpg",
+        "images/02306.jpg",
+        "images/02307.jpg",
+        "images/02308.jpg",
+        "images/02309.jpg",
+        "images/02310.jpg"
+      ],
+      "url": "properties/prop023.html",
+      "coordinates": {
+        "lat": 51.384178,
+        "lng": 0.0832
+      },
+      "added": {
+        "month": "January",
+        "day": 6,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop024",
+      "type": "Semi-detached",
+      "bedrooms": 5,
+      "price": 998031,
+      "tenure": "Freehold",
+      "description": "5 bedroom semi-detached located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/02401.jpg",
+        "images/02402.jpg",
+        "images/02403.jpg",
+        "images/02404.jpg",
+        "images/02405.jpg",
+        "images/02406.jpg",
+        "images/02407.jpg",
+        "images/02408.jpg",
+        "images/02409.jpg",
+        "images/02410.jpg"
+      ],
+      "url": "properties/prop024.html",
+      "coordinates": {
+        "lat": 50.830663,
+        "lng": -0.136464
+      },
+      "added": {
+        "month": "January",
+        "day": 26,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop025",
+      "type": "Terraced",
+      "bedrooms": 3,
+      "price": 913797,
+      "tenure": "Freehold",
+      "description": "3 bedroom terraced located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/02501.jpg",
+        "images/02502.jpg",
+        "images/02503.jpg",
+        "images/02504.jpg",
+        "images/02505.jpg",
+        "images/02506.jpg",
+        "images/02507.jpg",
+        "images/02508.jpg",
+        "images/02509.jpg",
+        "images/02510.jpg"
+      ],
+      "url": "properties/prop025.html",
+      "coordinates": {
+        "lat": 50.830396,
+        "lng": -0.145859
+      },
+      "added": {
+        "month": "January",
+        "day": 7,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop026",
+      "type": "Terraced",
+      "bedrooms": 5,
+      "price": 383901,
+      "tenure": "Freehold",
+      "description": "5 bedroom terraced located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/02601.jpg",
+        "images/02602.jpg",
+        "images/02603.jpg",
+        "images/02604.jpg",
+        "images/02605.jpg",
+        "images/02606.jpg",
+        "images/02607.jpg",
+        "images/02608.jpg",
+        "images/02609.jpg",
+        "images/02610.jpg"
+      ],
+      "url": "properties/prop026.html",
+      "coordinates": {
+        "lat": 50.814102,
+        "lng": -0.137702
+      },
+      "added": {
+        "month": "January",
+        "day": 20,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop027",
+      "type": "Detached",
+      "bedrooms": 3,
+      "price": 453766,
+      "tenure": "Freehold",
+      "description": "3 bedroom detached located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/02701.jpg",
+        "images/02702.jpg",
+        "images/02703.jpg",
+        "images/02704.jpg",
+        "images/02705.jpg",
+        "images/02706.jpg",
+        "images/02707.jpg",
+        "images/02708.jpg",
+        "images/02709.jpg",
+        "images/02710.jpg"
+      ],
+      "url": "properties/prop027.html",
+      "coordinates": {
+        "lat": 51.393927,
+        "lng": 0.068233
+      },
+      "added": {
+        "month": "January",
+        "day": 5,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop028",
+      "type": "House",
+      "bedrooms": 1,
+      "price": 657091,
+      "tenure": "Freehold",
+      "description": "1 bedroom house located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/02801.jpg",
+        "images/02802.jpg",
+        "images/02803.jpg",
+        "images/02804.jpg",
+        "images/02805.jpg",
+        "images/02806.jpg",
+        "images/02807.jpg",
+        "images/02808.jpg",
+        "images/02809.jpg",
+        "images/02810.jpg"
+      ],
+      "url": "properties/prop028.html",
+      "coordinates": {
+        "lat": 51.449865,
+        "lng": -0.975521
+      },
+      "added": {
+        "month": "January",
+        "day": 18,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop029",
+      "type": "Semi-detached",
+      "bedrooms": 4,
+      "price": 791684,
+      "tenure": "Freehold",
+      "description": "4 bedroom semi-detached located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/02901.jpg",
+        "images/02902.jpg",
+        "images/02903.jpg",
+        "images/02904.jpg",
+        "images/02905.jpg",
+        "images/02906.jpg",
+        "images/02907.jpg",
+        "images/02908.jpg",
+        "images/02909.jpg",
+        "images/02910.jpg"
+      ],
+      "url": "properties/prop029.html",
+      "coordinates": {
+        "lat": 53.800112,
+        "lng": -1.539218
+      },
+      "added": {
+        "month": "January",
+        "day": 13,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop030",
+      "type": "Flat",
+      "bedrooms": 1,
+      "price": 637710,
+      "tenure": "Freehold",
+      "description": "1 bedroom flat located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/03001.jpg",
+        "images/03002.jpg",
+        "images/03003.jpg",
+        "images/03004.jpg",
+        "images/03005.jpg",
+        "images/03006.jpg",
+        "images/03007.jpg",
+        "images/03008.jpg",
+        "images/03009.jpg",
+        "images/03010.jpg"
+      ],
+      "url": "properties/prop030.html",
+      "coordinates": {
+        "lat": 51.486788,
+        "lng": 0.007091
+      },
+      "added": {
+        "month": "January",
+        "day": 2,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop031",
+      "type": "Semi-detached",
+      "bedrooms": 5,
+      "price": 867446,
+      "tenure": "Freehold",
+      "description": "5 bedroom semi-detached located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/03101.jpg",
+        "images/03102.jpg",
+        "images/03103.jpg",
+        "images/03104.jpg",
+        "images/03105.jpg",
+        "images/03106.jpg",
+        "images/03107.jpg",
+        "images/03108.jpg",
+        "images/03109.jpg",
+        "images/03110.jpg"
+      ],
+      "url": "properties/prop031.html",
+      "coordinates": {
+        "lat": 53.797804,
+        "lng": -1.543303
+      },
+      "added": {
+        "month": "January",
+        "day": 17,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop032",
+      "type": "Flat",
+      "bedrooms": 5,
+      "price": 270053,
+      "tenure": "Freehold",
+      "description": "5 bedroom flat located in a popular residential area.",
+      "location": "Oxford OX1",
+      "pictures": [
+        "images/03201.jpg",
+        "images/03202.jpg",
+        "images/03203.jpg",
+        "images/03204.jpg",
+        "images/03205.jpg",
+        "images/03206.jpg",
+        "images/03207.jpg",
+        "images/03208.jpg",
+        "images/03209.jpg",
+        "images/03210.jpg"
+      ],
+      "url": "properties/prop032.html",
+      "coordinates": {
+        "lat": 51.757995,
+        "lng": -1.260256
+      },
+      "added": {
+        "month": "January",
+        "day": 14,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop033",
+      "type": "Semi-detached",
+      "bedrooms": 1,
+      "price": 769439,
+      "tenure": "Freehold",
+      "description": "1 bedroom semi-detached located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/03301.jpg",
+        "images/03302.jpg",
+        "images/03303.jpg",
+        "images/03304.jpg",
+        "images/03305.jpg",
+        "images/03306.jpg",
+        "images/03307.jpg",
+        "images/03308.jpg",
+        "images/03309.jpg",
+        "images/03310.jpg"
+      ],
+      "url": "properties/prop033.html",
+      "coordinates": {
+        "lat": 51.455616,
+        "lng": -2.590132
+      },
+      "added": {
+        "month": "January",
+        "day": 2,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop034",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 824678,
+      "tenure": "Leasehold",
+      "description": "3 bedroom flat located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/03401.jpg",
+        "images/03402.jpg",
+        "images/03403.jpg",
+        "images/03404.jpg",
+        "images/03405.jpg",
+        "images/03406.jpg",
+        "images/03407.jpg",
+        "images/03408.jpg",
+        "images/03409.jpg",
+        "images/03410.jpg"
+      ],
+      "url": "properties/prop034.html",
+      "coordinates": {
+        "lat": 51.44652,
+        "lng": -0.979921
+      },
+      "added": {
+        "month": "January",
+        "day": 5,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop035",
+      "type": "Detached",
+      "bedrooms": 2,
+      "price": 245422,
+      "tenure": "Freehold",
+      "description": "2 bedroom detached located in a popular residential area.",
+      "location": "Birmingham B1",
+      "pictures": [
+        "images/03501.jpg",
+        "images/03502.jpg",
+        "images/03503.jpg",
+        "images/03504.jpg",
+        "images/03505.jpg",
+        "images/03506.jpg",
+        "images/03507.jpg",
+        "images/03508.jpg",
+        "images/03509.jpg",
+        "images/03510.jpg"
+      ],
+      "url": "properties/prop035.html",
+      "coordinates": {
+        "lat": 52.480946,
+        "lng": -1.908303
+      },
+      "added": {
+        "month": "January",
+        "day": 11,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop036",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 372975,
+      "tenure": "Freehold",
+      "description": "3 bedroom flat located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/03601.jpg",
+        "images/03602.jpg",
+        "images/03603.jpg",
+        "images/03604.jpg",
+        "images/03605.jpg",
+        "images/03606.jpg",
+        "images/03607.jpg",
+        "images/03608.jpg",
+        "images/03609.jpg",
+        "images/03610.jpg"
+      ],
+      "url": "properties/prop036.html",
+      "coordinates": {
+        "lat": 53.794072,
+        "lng": -1.556216
+      },
+      "added": {
+        "month": "January",
+        "day": 27,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop037",
+      "type": "Semi-detached",
+      "bedrooms": 2,
+      "price": 904264,
+      "tenure": "Freehold",
+      "description": "2 bedroom semi-detached located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/03701.jpg",
+        "images/03702.jpg",
+        "images/03703.jpg",
+        "images/03704.jpg",
+        "images/03705.jpg",
+        "images/03706.jpg",
+        "images/03707.jpg",
+        "images/03708.jpg",
+        "images/03709.jpg",
+        "images/03710.jpg"
+      ],
+      "url": "properties/prop037.html",
+      "coordinates": {
+        "lat": 53.802919,
+        "lng": -1.551002
+      },
+      "added": {
+        "month": "January",
+        "day": 22,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop038",
+      "type": "House",
+      "bedrooms": 3,
+      "price": 339963,
+      "tenure": "Freehold",
+      "description": "3 bedroom house located in a popular residential area.",
+      "location": "Birmingham B1",
+      "pictures": [
+        "images/03801.jpg",
+        "images/03802.jpg",
+        "images/03803.jpg",
+        "images/03804.jpg",
+        "images/03805.jpg",
+        "images/03806.jpg",
+        "images/03807.jpg",
+        "images/03808.jpg",
+        "images/03809.jpg",
+        "images/03810.jpg"
+      ],
+      "url": "properties/prop038.html",
+      "coordinates": {
+        "lat": 52.474787,
+        "lng": -1.908302
+      },
+      "added": {
+        "month": "January",
+        "day": 14,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop039",
+      "type": "Terraced",
+      "bedrooms": 1,
+      "price": 681109,
+      "tenure": "Freehold",
+      "description": "1 bedroom terraced located in a popular residential area.",
+      "location": "Bath BA2",
+      "pictures": [
+        "images/03901.jpg",
+        "images/03902.jpg",
+        "images/03903.jpg",
+        "images/03904.jpg",
+        "images/03905.jpg",
+        "images/03906.jpg",
+        "images/03907.jpg",
+        "images/03908.jpg",
+        "images/03909.jpg",
+        "images/03910.jpg"
+      ],
+      "url": "properties/prop039.html",
+      "coordinates": {
+        "lat": 51.378675,
+        "lng": -2.353221
+      },
+      "added": {
+        "month": "January",
+        "day": 1,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop040",
+      "type": "Semi-detached",
+      "bedrooms": 5,
+      "price": 355584,
+      "tenure": "Leasehold",
+      "description": "5 bedroom semi-detached located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/04001.jpg",
+        "images/04002.jpg",
+        "images/04003.jpg",
+        "images/04004.jpg",
+        "images/04005.jpg",
+        "images/04006.jpg",
+        "images/04007.jpg",
+        "images/04008.jpg",
+        "images/04009.jpg",
+        "images/04010.jpg"
+      ],
+      "url": "properties/prop040.html",
+      "coordinates": {
+        "lat": 51.478071,
+        "lng": 0.017632
+      },
+      "added": {
+        "month": "January",
+        "day": 3,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop041",
+      "type": "Bungalow",
+      "bedrooms": 1,
+      "price": 208691,
+      "tenure": "Leasehold",
+      "description": "1 bedroom bungalow located in a popular residential area.",
+      "location": "Manchester M1",
+      "pictures": [
+        "images/04101.jpg",
+        "images/04102.jpg",
+        "images/04103.jpg",
+        "images/04104.jpg",
+        "images/04105.jpg",
+        "images/04106.jpg",
+        "images/04107.jpg",
+        "images/04108.jpg",
+        "images/04109.jpg",
+        "images/04110.jpg"
+      ],
+      "url": "properties/prop041.html",
+      "coordinates": {
+        "lat": 53.480804,
+        "lng": -2.251229
+      },
+      "added": {
+        "month": "January",
+        "day": 22,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop042",
+      "type": "Terraced",
+      "bedrooms": 4,
+      "price": 298532,
+      "tenure": "Freehold",
+      "description": "4 bedroom terraced located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/04201.jpg",
+        "images/04202.jpg",
+        "images/04203.jpg",
+        "images/04204.jpg",
+        "images/04205.jpg",
+        "images/04206.jpg",
+        "images/04207.jpg",
+        "images/04208.jpg",
+        "images/04209.jpg",
+        "images/04210.jpg"
+      ],
+      "url": "properties/prop042.html",
+      "coordinates": {
+        "lat": 51.474597,
+        "lng": 0.000026
+      },
+      "added": {
+        "month": "January",
+        "day": 10,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop043",
+      "type": "Semi-detached",
+      "bedrooms": 1,
+      "price": 815566,
+      "tenure": "Freehold",
+      "description": "1 bedroom semi-detached located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/04301.jpg",
+        "images/04302.jpg",
+        "images/04303.jpg",
+        "images/04304.jpg",
+        "images/04305.jpg",
+        "images/04306.jpg",
+        "images/04307.jpg",
+        "images/04308.jpg",
+        "images/04309.jpg",
+        "images/04310.jpg"
+      ],
+      "url": "properties/prop043.html",
+      "coordinates": {
+        "lat": 53.800588,
+        "lng": -1.543024
+      },
+      "added": {
+        "month": "January",
+        "day": 6,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop044",
+      "type": "Flat",
+      "bedrooms": 2,
+      "price": 433399,
+      "tenure": "Leasehold",
+      "description": "2 bedroom flat located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/04401.jpg",
+        "images/04402.jpg",
+        "images/04403.jpg",
+        "images/04404.jpg",
+        "images/04405.jpg",
+        "images/04406.jpg",
+        "images/04407.jpg",
+        "images/04408.jpg",
+        "images/04409.jpg",
+        "images/04410.jpg"
+      ],
+      "url": "properties/prop044.html",
+      "coordinates": {
+        "lat": 51.445316,
+        "lng": -2.586792
+      },
+      "added": {
+        "month": "January",
+        "day": 14,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop045",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 292500,
+      "tenure": "Freehold",
+      "description": "3 bedroom flat located in a popular residential area.",
+      "location": "Birmingham B1",
+      "pictures": [
+        "images/04501.jpg",
+        "images/04502.jpg",
+        "images/04503.jpg",
+        "images/04504.jpg",
+        "images/04505.jpg",
+        "images/04506.jpg",
+        "images/04507.jpg",
+        "images/04508.jpg",
+        "images/04509.jpg",
+        "images/04510.jpg"
+      ],
+      "url": "properties/prop045.html",
+      "coordinates": {
+        "lat": 52.484059,
+        "lng": -1.908658
+      },
+      "added": {
+        "month": "January",
+        "day": 17,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop046",
+      "type": "Bungalow",
+      "bedrooms": 2,
+      "price": 347872,
+      "tenure": "Freehold",
+      "description": "2 bedroom bungalow located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/04601.jpg",
+        "images/04602.jpg",
+        "images/04603.jpg",
+        "images/04604.jpg",
+        "images/04605.jpg",
+        "images/04606.jpg",
+        "images/04607.jpg",
+        "images/04608.jpg",
+        "images/04609.jpg",
+        "images/04610.jpg"
+      ],
+      "url": "properties/prop046.html",
+      "coordinates": {
+        "lat": 50.825008,
+        "lng": -0.139579
+      },
+      "added": {
+        "month": "January",
+        "day": 17,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop047",
+      "type": "Semi-detached",
+      "bedrooms": 5,
+      "price": 809914,
+      "tenure": "Freehold",
+      "description": "5 bedroom semi-detached located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/04701.jpg",
+        "images/04702.jpg",
+        "images/04703.jpg",
+        "images/04704.jpg",
+        "images/04705.jpg",
+        "images/04706.jpg",
+        "images/04707.jpg",
+        "images/04708.jpg",
+        "images/04709.jpg",
+        "images/04710.jpg"
+      ],
+      "url": "properties/prop047.html",
+      "coordinates": {
+        "lat": 51.389988,
+        "lng": 0.071241
+      },
+      "added": {
+        "month": "January",
+        "day": 15,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop048",
+      "type": "Detached",
+      "bedrooms": 1,
+      "price": 323695,
+      "tenure": "Leasehold",
+      "description": "1 bedroom detached located in a popular residential area.",
+      "location": "Birmingham B1",
+      "pictures": [
+        "images/04801.jpg",
+        "images/04802.jpg",
+        "images/04803.jpg",
+        "images/04804.jpg",
+        "images/04805.jpg",
+        "images/04806.jpg",
+        "images/04807.jpg",
+        "images/04808.jpg",
+        "images/04809.jpg",
+        "images/04810.jpg"
+      ],
+      "url": "properties/prop048.html",
+      "coordinates": {
+        "lat": 52.476728,
+        "lng": -1.900622
+      },
+      "added": {
+        "month": "January",
+        "day": 23,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop049",
+      "type": "Semi-detached",
+      "bedrooms": 5,
+      "price": 984193,
+      "tenure": "Freehold",
+      "description": "5 bedroom semi-detached located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/04901.jpg",
+        "images/04902.jpg",
+        "images/04903.jpg",
+        "images/04904.jpg",
+        "images/04905.jpg",
+        "images/04906.jpg",
+        "images/04907.jpg",
+        "images/04908.jpg",
+        "images/04909.jpg",
+        "images/04910.jpg"
+      ],
+      "url": "properties/prop049.html",
+      "coordinates": {
+        "lat": 51.464284,
+        "lng": -0.987789
+      },
+      "added": {
+        "month": "January",
+        "day": 4,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop050",
+      "type": "Flat",
+      "bedrooms": 4,
+      "price": 331262,
+      "tenure": "Freehold",
+      "description": "4 bedroom flat located in a popular residential area.",
+      "location": "Oxford OX1",
+      "pictures": [
+        "images/05001.jpg",
+        "images/05002.jpg",
+        "images/05003.jpg",
+        "images/05004.jpg",
+        "images/05005.jpg",
+        "images/05006.jpg",
+        "images/05007.jpg",
+        "images/05008.jpg",
+        "images/05009.jpg",
+        "images/05010.jpg"
+      ],
+      "url": "properties/prop050.html",
+      "coordinates": {
+        "lat": 51.748014,
+        "lng": -1.261162
+      },
+      "added": {
+        "month": "January",
+        "day": 5,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop051",
+      "type": "Detached",
+      "bedrooms": 5,
+      "price": 663695,
+      "tenure": "Freehold",
+      "description": "5 bedroom detached located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/05101.jpg",
+        "images/05102.jpg",
+        "images/05103.jpg",
+        "images/05104.jpg",
+        "images/05105.jpg",
+        "images/05106.jpg",
+        "images/05107.jpg",
+        "images/05108.jpg",
+        "images/05109.jpg",
+        "images/05110.jpg"
+      ],
+      "url": "properties/prop051.html",
+      "coordinates": {
+        "lat": 51.479877,
+        "lng": -0.001131
+      },
+      "added": {
+        "month": "January",
+        "day": 16,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop052",
+      "type": "Detached",
+      "bedrooms": 3,
+      "price": 784736,
+      "tenure": "Freehold",
+      "description": "3 bedroom detached located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/05201.jpg",
+        "images/05202.jpg",
+        "images/05203.jpg",
+        "images/05204.jpg",
+        "images/05205.jpg",
+        "images/05206.jpg",
+        "images/05207.jpg",
+        "images/05208.jpg",
+        "images/05209.jpg",
+        "images/05210.jpg"
+      ],
+      "url": "properties/prop052.html",
+      "coordinates": {
+        "lat": 51.489033,
+        "lng": -0.001866
+      },
+      "added": {
+        "month": "January",
+        "day": 25,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop053",
+      "type": "Detached",
+      "bedrooms": 1,
+      "price": 333611,
+      "tenure": "Freehold",
+      "description": "1 bedroom detached located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/05301.jpg",
+        "images/05302.jpg",
+        "images/05303.jpg",
+        "images/05304.jpg",
+        "images/05305.jpg",
+        "images/05306.jpg",
+        "images/05307.jpg",
+        "images/05308.jpg",
+        "images/05309.jpg",
+        "images/05310.jpg"
+      ],
+      "url": "properties/prop053.html",
+      "coordinates": {
+        "lat": 50.812979,
+        "lng": -0.145968
+      },
+      "added": {
+        "month": "January",
+        "day": 7,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop054",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 317306,
+      "tenure": "Leasehold",
+      "description": "3 bedroom flat located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/05401.jpg",
+        "images/05402.jpg",
+        "images/05403.jpg",
+        "images/05404.jpg",
+        "images/05405.jpg",
+        "images/05406.jpg",
+        "images/05407.jpg",
+        "images/05408.jpg",
+        "images/05409.jpg",
+        "images/05410.jpg"
+      ],
+      "url": "properties/prop054.html",
+      "coordinates": {
+        "lat": 51.388729,
+        "lng": 0.07477
+      },
+      "added": {
+        "month": "January",
+        "day": 27,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop055",
+      "type": "Flat",
+      "bedrooms": 2,
+      "price": 915912,
+      "tenure": "Freehold",
+      "description": "2 bedroom flat located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/05501.jpg",
+        "images/05502.jpg",
+        "images/05503.jpg",
+        "images/05504.jpg",
+        "images/05505.jpg",
+        "images/05506.jpg",
+        "images/05507.jpg",
+        "images/05508.jpg",
+        "images/05509.jpg",
+        "images/05510.jpg"
+      ],
+      "url": "properties/prop055.html",
+      "coordinates": {
+        "lat": 51.483079,
+        "lng": 0.003534
+      },
+      "added": {
+        "month": "January",
+        "day": 25,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop056",
+      "type": "Detached",
+      "bedrooms": 2,
+      "price": 383747,
+      "tenure": "Freehold",
+      "description": "2 bedroom detached located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/05601.jpg",
+        "images/05602.jpg",
+        "images/05603.jpg",
+        "images/05604.jpg",
+        "images/05605.jpg",
+        "images/05606.jpg",
+        "images/05607.jpg",
+        "images/05608.jpg",
+        "images/05609.jpg",
+        "images/05610.jpg"
+      ],
+      "url": "properties/prop056.html",
+      "coordinates": {
+        "lat": 53.797009,
+        "lng": -1.541554
+      },
+      "added": {
+        "month": "January",
+        "day": 18,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop057",
+      "type": "Semi-detached",
+      "bedrooms": 3,
+      "price": 921764,
+      "tenure": "Leasehold",
+      "description": "3 bedroom semi-detached located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/05701.jpg",
+        "images/05702.jpg",
+        "images/05703.jpg",
+        "images/05704.jpg",
+        "images/05705.jpg",
+        "images/05706.jpg",
+        "images/05707.jpg",
+        "images/05708.jpg",
+        "images/05709.jpg",
+        "images/05710.jpg"
+      ],
+      "url": "properties/prop057.html",
+      "coordinates": {
+        "lat": 51.460018,
+        "lng": -2.579447
+      },
+      "added": {
+        "month": "January",
+        "day": 9,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop058",
+      "type": "House",
+      "bedrooms": 3,
+      "price": 425831,
+      "tenure": "Leasehold",
+      "description": "3 bedroom house located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/05801.jpg",
+        "images/05802.jpg",
+        "images/05803.jpg",
+        "images/05804.jpg",
+        "images/05805.jpg",
+        "images/05806.jpg",
+        "images/05807.jpg",
+        "images/05808.jpg",
+        "images/05809.jpg",
+        "images/05810.jpg"
+      ],
+      "url": "properties/prop058.html",
+      "coordinates": {
+        "lat": 51.453695,
+        "lng": -2.589186
+      },
+      "added": {
+        "month": "January",
+        "day": 22,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop059",
+      "type": "Detached",
+      "bedrooms": 3,
+      "price": 447520,
+      "tenure": "Freehold",
+      "description": "3 bedroom detached located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/05901.jpg",
+        "images/05902.jpg",
+        "images/05903.jpg",
+        "images/05904.jpg",
+        "images/05905.jpg",
+        "images/05906.jpg",
+        "images/05907.jpg",
+        "images/05908.jpg",
+        "images/05909.jpg",
+        "images/05910.jpg"
+      ],
+      "url": "properties/prop059.html",
+      "coordinates": {
+        "lat": 51.461221,
+        "lng": -2.591585
+      },
+      "added": {
+        "month": "January",
+        "day": 4,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop060",
+      "type": "Semi-detached",
+      "bedrooms": 2,
+      "price": 947537,
+      "tenure": "Freehold",
+      "description": "2 bedroom semi-detached located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/06001.jpg",
+        "images/06002.jpg",
+        "images/06003.jpg",
+        "images/06004.jpg",
+        "images/06005.jpg",
+        "images/06006.jpg",
+        "images/06007.jpg",
+        "images/06008.jpg",
+        "images/06009.jpg",
+        "images/06010.jpg"
+      ],
+      "url": "properties/prop060.html",
+      "coordinates": {
+        "lat": 50.812706,
+        "lng": -0.133415
+      },
+      "added": {
+        "month": "January",
+        "day": 21,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop061",
+      "type": "Bungalow",
+      "bedrooms": 1,
+      "price": 177357,
+      "tenure": "Freehold",
+      "description": "1 bedroom bungalow located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/06101.jpg",
+        "images/06102.jpg",
+        "images/06103.jpg",
+        "images/06104.jpg",
+        "images/06105.jpg",
+        "images/06106.jpg",
+        "images/06107.jpg",
+        "images/06108.jpg",
+        "images/06109.jpg",
+        "images/06110.jpg"
+      ],
+      "url": "properties/prop061.html",
+      "coordinates": {
+        "lat": 51.399477,
+        "lng": 0.068792
+      },
+      "added": {
+        "month": "January",
+        "day": 21,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop062",
+      "type": "Semi-detached",
+      "bedrooms": 3,
+      "price": 510923,
+      "tenure": "Leasehold",
+      "description": "3 bedroom semi-detached located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/06201.jpg",
+        "images/06202.jpg",
+        "images/06203.jpg",
+        "images/06204.jpg",
+        "images/06205.jpg",
+        "images/06206.jpg",
+        "images/06207.jpg",
+        "images/06208.jpg",
+        "images/06209.jpg",
+        "images/06210.jpg"
+      ],
+      "url": "properties/prop062.html",
+      "coordinates": {
+        "lat": 51.446842,
+        "lng": -0.972033
+      },
+      "added": {
+        "month": "January",
+        "day": 19,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop063",
+      "type": "Bungalow",
+      "bedrooms": 1,
+      "price": 231822,
+      "tenure": "Freehold",
+      "description": "1 bedroom bungalow located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/06301.jpg",
+        "images/06302.jpg",
+        "images/06303.jpg",
+        "images/06304.jpg",
+        "images/06305.jpg",
+        "images/06306.jpg",
+        "images/06307.jpg",
+        "images/06308.jpg",
+        "images/06309.jpg",
+        "images/06310.jpg"
+      ],
+      "url": "properties/prop063.html",
+      "coordinates": {
+        "lat": 51.444486,
+        "lng": -0.968128
+      },
+      "added": {
+        "month": "January",
+        "day": 4,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop064",
+      "type": "Flat",
+      "bedrooms": 2,
+      "price": 457683,
+      "tenure": "Leasehold",
+      "description": "2 bedroom flat located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/06401.jpg",
+        "images/06402.jpg",
+        "images/06403.jpg",
+        "images/06404.jpg",
+        "images/06405.jpg",
+        "images/06406.jpg",
+        "images/06407.jpg",
+        "images/06408.jpg",
+        "images/06409.jpg",
+        "images/06410.jpg"
+      ],
+      "url": "properties/prop064.html",
+      "coordinates": {
+        "lat": 51.473694,
+        "lng": 0.014875
+      },
+      "added": {
+        "month": "January",
+        "day": 3,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop065",
+      "type": "Bungalow",
+      "bedrooms": 3,
+      "price": 735597,
+      "tenure": "Freehold",
+      "description": "3 bedroom bungalow located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/06501.jpg",
+        "images/06502.jpg",
+        "images/06503.jpg",
+        "images/06504.jpg",
+        "images/06505.jpg",
+        "images/06506.jpg",
+        "images/06507.jpg",
+        "images/06508.jpg",
+        "images/06509.jpg",
+        "images/06510.jpg"
+      ],
+      "url": "properties/prop065.html",
+      "coordinates": {
+        "lat": 50.829147,
+        "lng": -0.14378
+      },
+      "added": {
+        "month": "January",
+        "day": 25,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop066",
+      "type": "House",
+      "bedrooms": 4,
+      "price": 224525,
+      "tenure": "Leasehold",
+      "description": "4 bedroom house located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/06601.jpg",
+        "images/06602.jpg",
+        "images/06603.jpg",
+        "images/06604.jpg",
+        "images/06605.jpg",
+        "images/06606.jpg",
+        "images/06607.jpg",
+        "images/06608.jpg",
+        "images/06609.jpg",
+        "images/06610.jpg"
+      ],
+      "url": "properties/prop066.html",
+      "coordinates": {
+        "lat": 51.456845,
+        "lng": -2.589892
+      },
+      "added": {
+        "month": "January",
+        "day": 12,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop067",
+      "type": "Flat",
+      "bedrooms": 2,
+      "price": 235360,
+      "tenure": "Leasehold",
+      "description": "2 bedroom flat located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/06701.jpg",
+        "images/06702.jpg",
+        "images/06703.jpg",
+        "images/06704.jpg",
+        "images/06705.jpg",
+        "images/06706.jpg",
+        "images/06707.jpg",
+        "images/06708.jpg",
+        "images/06709.jpg",
+        "images/06710.jpg"
+      ],
+      "url": "properties/prop067.html",
+      "coordinates": {
+        "lat": 51.383567,
+        "lng": 0.08344
+      },
+      "added": {
+        "month": "January",
+        "day": 7,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop068",
+      "type": "Flat",
+      "bedrooms": 4,
+      "price": 670496,
+      "tenure": "Leasehold",
+      "description": "4 bedroom flat located in a popular residential area.",
+      "location": "Birmingham B1",
+      "pictures": [
+        "images/06801.jpg",
+        "images/06802.jpg",
+        "images/06803.jpg",
+        "images/06804.jpg",
+        "images/06805.jpg",
+        "images/06806.jpg",
+        "images/06807.jpg",
+        "images/06808.jpg",
+        "images/06809.jpg",
+        "images/06810.jpg"
+      ],
+      "url": "properties/prop068.html",
+      "coordinates": {
+        "lat": 52.483658,
+        "lng": -1.897727
+      },
+      "added": {
+        "month": "January",
+        "day": 2,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop069",
+      "type": "Terraced",
+      "bedrooms": 3,
+      "price": 755392,
+      "tenure": "Freehold",
+      "description": "3 bedroom terraced located in a popular residential area.",
+      "location": "Birmingham B1",
+      "pictures": [
+        "images/06901.jpg",
+        "images/06902.jpg",
+        "images/06903.jpg",
+        "images/06904.jpg",
+        "images/06905.jpg",
+        "images/06906.jpg",
+        "images/06907.jpg",
+        "images/06908.jpg",
+        "images/06909.jpg",
+        "images/06910.jpg"
+      ],
+      "url": "properties/prop069.html",
+      "coordinates": {
+        "lat": 52.473533,
+        "lng": -1.90106
+      },
+      "added": {
+        "month": "January",
+        "day": 23,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop070",
+      "type": "Bungalow",
+      "bedrooms": 1,
+      "price": 885091,
+      "tenure": "Freehold",
+      "description": "1 bedroom bungalow located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/07001.jpg",
+        "images/07002.jpg",
+        "images/07003.jpg",
+        "images/07004.jpg",
+        "images/07005.jpg",
+        "images/07006.jpg",
+        "images/07007.jpg",
+        "images/07008.jpg",
+        "images/07009.jpg",
+        "images/07010.jpg"
+      ],
+      "url": "properties/prop070.html",
+      "coordinates": {
+        "lat": 51.458592,
+        "lng": -0.96977
+      },
+      "added": {
+        "month": "January",
+        "day": 15,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop071",
+      "type": "Detached",
+      "bedrooms": 3,
+      "price": 448138,
+      "tenure": "Freehold",
+      "description": "3 bedroom detached located in a popular residential area.",
+      "location": "Oxford OX1",
+      "pictures": [
+        "images/07101.jpg",
+        "images/07102.jpg",
+        "images/07103.jpg",
+        "images/07104.jpg",
+        "images/07105.jpg",
+        "images/07106.jpg",
+        "images/07107.jpg",
+        "images/07108.jpg",
+        "images/07109.jpg",
+        "images/07110.jpg"
+      ],
+      "url": "properties/prop071.html",
+      "coordinates": {
+        "lat": 51.76078,
+        "lng": -1.254522
+      },
+      "added": {
+        "month": "January",
+        "day": 14,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop072",
+      "type": "Flat",
+      "bedrooms": 1,
+      "price": 216970,
+      "tenure": "Leasehold",
+      "description": "1 bedroom flat located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/07201.jpg",
+        "images/07202.jpg",
+        "images/07203.jpg",
+        "images/07204.jpg",
+        "images/07205.jpg",
+        "images/07206.jpg",
+        "images/07207.jpg",
+        "images/07208.jpg",
+        "images/07209.jpg",
+        "images/07210.jpg"
+      ],
+      "url": "properties/prop072.html",
+      "coordinates": {
+        "lat": 50.826853,
+        "lng": -0.140419
+      },
+      "added": {
+        "month": "January",
+        "day": 9,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop073",
+      "type": "Semi-detached",
+      "bedrooms": 2,
+      "price": 200939,
+      "tenure": "Freehold",
+      "description": "2 bedroom semi-detached located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/07301.jpg",
+        "images/07302.jpg",
+        "images/07303.jpg",
+        "images/07304.jpg",
+        "images/07305.jpg",
+        "images/07306.jpg",
+        "images/07307.jpg",
+        "images/07308.jpg",
+        "images/07309.jpg",
+        "images/07310.jpg"
+      ],
+      "url": "properties/prop073.html",
+      "coordinates": {
+        "lat": 51.450625,
+        "lng": -2.597564
+      },
+      "added": {
+        "month": "January",
+        "day": 11,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop074",
+      "type": "House",
+      "bedrooms": 4,
+      "price": 633225,
+      "tenure": "Leasehold",
+      "description": "4 bedroom house located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/07401.jpg",
+        "images/07402.jpg",
+        "images/07403.jpg",
+        "images/07404.jpg",
+        "images/07405.jpg",
+        "images/07406.jpg",
+        "images/07407.jpg",
+        "images/07408.jpg",
+        "images/07409.jpg",
+        "images/07410.jpg"
+      ],
+      "url": "properties/prop074.html",
+      "coordinates": {
+        "lat": 53.806204,
+        "lng": -1.558705
+      },
+      "added": {
+        "month": "January",
+        "day": 26,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop075",
+      "type": "Detached",
+      "bedrooms": 5,
+      "price": 555533,
+      "tenure": "Freehold",
+      "description": "5 bedroom detached located in a popular residential area.",
+      "location": "Bath BA2",
+      "pictures": [
+        "images/07501.jpg",
+        "images/07502.jpg",
+        "images/07503.jpg",
+        "images/07504.jpg",
+        "images/07505.jpg",
+        "images/07506.jpg",
+        "images/07507.jpg",
+        "images/07508.jpg",
+        "images/07509.jpg",
+        "images/07510.jpg"
+      ],
+      "url": "properties/prop075.html",
+      "coordinates": {
+        "lat": 51.377057,
+        "lng": -2.352468
+      },
+      "added": {
+        "month": "January",
+        "day": 10,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop076",
+      "type": "Flat",
+      "bedrooms": 5,
+      "price": 681425,
+      "tenure": "Leasehold",
+      "description": "5 bedroom flat located in a popular residential area.",
+      "location": "Oxford OX1",
+      "pictures": [
+        "images/07601.jpg",
+        "images/07602.jpg",
+        "images/07603.jpg",
+        "images/07604.jpg",
+        "images/07605.jpg",
+        "images/07606.jpg",
+        "images/07607.jpg",
+        "images/07608.jpg",
+        "images/07609.jpg",
+        "images/07610.jpg"
+      ],
+      "url": "properties/prop076.html",
+      "coordinates": {
+        "lat": 51.755467,
+        "lng": -1.258457
+      },
+      "added": {
+        "month": "January",
+        "day": 22,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop077",
+      "type": "Semi-detached",
+      "bedrooms": 2,
+      "price": 828458,
+      "tenure": "Freehold",
+      "description": "2 bedroom semi-detached located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/07701.jpg",
+        "images/07702.jpg",
+        "images/07703.jpg",
+        "images/07704.jpg",
+        "images/07705.jpg",
+        "images/07706.jpg",
+        "images/07707.jpg",
+        "images/07708.jpg",
+        "images/07709.jpg",
+        "images/07710.jpg"
+      ],
+      "url": "properties/prop077.html",
+      "coordinates": {
+        "lat": 50.821826,
+        "lng": -0.139746
+      },
+      "added": {
+        "month": "January",
+        "day": 1,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop078",
+      "type": "House",
+      "bedrooms": 4,
+      "price": 788125,
+      "tenure": "Freehold",
+      "description": "4 bedroom house located in a popular residential area.",
+      "location": "Birmingham B1",
+      "pictures": [
+        "images/07801.jpg",
+        "images/07802.jpg",
+        "images/07803.jpg",
+        "images/07804.jpg",
+        "images/07805.jpg",
+        "images/07806.jpg",
+        "images/07807.jpg",
+        "images/07808.jpg",
+        "images/07809.jpg",
+        "images/07810.jpg"
+      ],
+      "url": "properties/prop078.html",
+      "coordinates": {
+        "lat": 52.482048,
+        "lng": -1.909564
+      },
+      "added": {
+        "month": "January",
+        "day": 3,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop079",
+      "type": "Bungalow",
+      "bedrooms": 1,
+      "price": 427433,
+      "tenure": "Freehold",
+      "description": "1 bedroom bungalow located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/07901.jpg",
+        "images/07902.jpg",
+        "images/07903.jpg",
+        "images/07904.jpg",
+        "images/07905.jpg",
+        "images/07906.jpg",
+        "images/07907.jpg",
+        "images/07908.jpg",
+        "images/07909.jpg",
+        "images/07910.jpg"
+      ],
+      "url": "properties/prop079.html",
+      "coordinates": {
+        "lat": 51.450998,
+        "lng": -0.97977
+      },
+      "added": {
+        "month": "January",
+        "day": 26,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop080",
+      "type": "Detached",
+      "bedrooms": 2,
+      "price": 298822,
+      "tenure": "Leasehold",
+      "description": "2 bedroom detached located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/08001.jpg",
+        "images/08002.jpg",
+        "images/08003.jpg",
+        "images/08004.jpg",
+        "images/08005.jpg",
+        "images/08006.jpg",
+        "images/08007.jpg",
+        "images/08008.jpg",
+        "images/08009.jpg",
+        "images/08010.jpg"
+      ],
+      "url": "properties/prop080.html",
+      "coordinates": {
+        "lat": 51.463799,
+        "lng": -2.587226
+      },
+      "added": {
+        "month": "January",
+        "day": 1,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop081",
+      "type": "House",
+      "bedrooms": 3,
+      "price": 496426,
+      "tenure": "Freehold",
+      "description": "3 bedroom house located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/08101.jpg",
+        "images/08102.jpg",
+        "images/08103.jpg",
+        "images/08104.jpg",
+        "images/08105.jpg",
+        "images/08106.jpg",
+        "images/08107.jpg",
+        "images/08108.jpg",
+        "images/08109.jpg",
+        "images/08110.jpg"
+      ],
+      "url": "properties/prop081.html",
+      "coordinates": {
+        "lat": 51.460584,
+        "lng": -0.975416
+      },
+      "added": {
+        "month": "January",
+        "day": 19,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop082",
+      "type": "Flat",
+      "bedrooms": 5,
+      "price": 193179,
+      "tenure": "Leasehold",
+      "description": "5 bedroom flat located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/08201.jpg",
+        "images/08202.jpg",
+        "images/08203.jpg",
+        "images/08204.jpg",
+        "images/08205.jpg",
+        "images/08206.jpg",
+        "images/08207.jpg",
+        "images/08208.jpg",
+        "images/08209.jpg",
+        "images/08210.jpg"
+      ],
+      "url": "properties/prop082.html",
+      "coordinates": {
+        "lat": 50.821348,
+        "lng": -0.133988
+      },
+      "added": {
+        "month": "January",
+        "day": 3,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop083",
+      "type": "Flat",
+      "bedrooms": 3,
+      "price": 516335,
+      "tenure": "Freehold",
+      "description": "3 bedroom flat located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/08301.jpg",
+        "images/08302.jpg",
+        "images/08303.jpg",
+        "images/08304.jpg",
+        "images/08305.jpg",
+        "images/08306.jpg",
+        "images/08307.jpg",
+        "images/08308.jpg",
+        "images/08309.jpg",
+        "images/08310.jpg"
+      ],
+      "url": "properties/prop083.html",
+      "coordinates": {
+        "lat": 50.830847,
+        "lng": -0.137111
+      },
+      "added": {
+        "month": "January",
+        "day": 22,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop084",
+      "type": "House",
+      "bedrooms": 3,
+      "price": 942894,
+      "tenure": "Leasehold",
+      "description": "3 bedroom house located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/08401.jpg",
+        "images/08402.jpg",
+        "images/08403.jpg",
+        "images/08404.jpg",
+        "images/08405.jpg",
+        "images/08406.jpg",
+        "images/08407.jpg",
+        "images/08408.jpg",
+        "images/08409.jpg",
+        "images/08410.jpg"
+      ],
+      "url": "properties/prop084.html",
+      "coordinates": {
+        "lat": 51.455487,
+        "lng": -2.594945
+      },
+      "added": {
+        "month": "January",
+        "day": 2,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop085",
+      "type": "Detached",
+      "bedrooms": 5,
+      "price": 577679,
+      "tenure": "Freehold",
+      "description": "5 bedroom detached located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/08501.jpg",
+        "images/08502.jpg",
+        "images/08503.jpg",
+        "images/08504.jpg",
+        "images/08505.jpg",
+        "images/08506.jpg",
+        "images/08507.jpg",
+        "images/08508.jpg",
+        "images/08509.jpg",
+        "images/08510.jpg"
+      ],
+      "url": "properties/prop085.html",
+      "coordinates": {
+        "lat": 51.46018,
+        "lng": -2.590713
+      },
+      "added": {
+        "month": "January",
+        "day": 17,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop086",
+      "type": "Bungalow",
+      "bedrooms": 3,
+      "price": 237988,
+      "tenure": "Freehold",
+      "description": "3 bedroom bungalow located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/08601.jpg",
+        "images/08602.jpg",
+        "images/08603.jpg",
+        "images/08604.jpg",
+        "images/08605.jpg",
+        "images/08606.jpg",
+        "images/08607.jpg",
+        "images/08608.jpg",
+        "images/08609.jpg",
+        "images/08610.jpg"
+      ],
+      "url": "properties/prop086.html",
+      "coordinates": {
+        "lat": 51.447463,
+        "lng": -0.976698
+      },
+      "added": {
+        "month": "January",
+        "day": 13,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop087",
+      "type": "Terraced",
+      "bedrooms": 4,
+      "price": 424276,
+      "tenure": "Freehold",
+      "description": "4 bedroom terraced located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/08701.jpg",
+        "images/08702.jpg",
+        "images/08703.jpg",
+        "images/08704.jpg",
+        "images/08705.jpg",
+        "images/08706.jpg",
+        "images/08707.jpg",
+        "images/08708.jpg",
+        "images/08709.jpg",
+        "images/08710.jpg"
+      ],
+      "url": "properties/prop087.html",
+      "coordinates": {
+        "lat": 51.452665,
+        "lng": -2.585982
+      },
+      "added": {
+        "month": "January",
+        "day": 1,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop088",
+      "type": "Detached",
+      "bedrooms": 2,
+      "price": 703240,
+      "tenure": "Freehold",
+      "description": "2 bedroom detached located in a popular residential area.",
+      "location": "Reading RG1",
+      "pictures": [
+        "images/08801.jpg",
+        "images/08802.jpg",
+        "images/08803.jpg",
+        "images/08804.jpg",
+        "images/08805.jpg",
+        "images/08806.jpg",
+        "images/08807.jpg",
+        "images/08808.jpg",
+        "images/08809.jpg",
+        "images/08810.jpg"
+      ],
+      "url": "properties/prop088.html",
+      "coordinates": {
+        "lat": 51.448032,
+        "lng": -0.984477
+      },
+      "added": {
+        "month": "January",
+        "day": 16,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop089",
+      "type": "House",
+      "bedrooms": 4,
+      "price": 549202,
+      "tenure": "Leasehold",
+      "description": "4 bedroom house located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/08901.jpg",
+        "images/08902.jpg",
+        "images/08903.jpg",
+        "images/08904.jpg",
+        "images/08905.jpg",
+        "images/08906.jpg",
+        "images/08907.jpg",
+        "images/08908.jpg",
+        "images/08909.jpg",
+        "images/08910.jpg"
+      ],
+      "url": "properties/prop089.html",
+      "coordinates": {
+        "lat": 53.797988,
+        "lng": -1.546801
+      },
+      "added": {
+        "month": "January",
+        "day": 18,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop090",
+      "type": "Bungalow",
+      "bedrooms": 2,
+      "price": 977791,
+      "tenure": "Freehold",
+      "description": "2 bedroom bungalow located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/09001.jpg",
+        "images/09002.jpg",
+        "images/09003.jpg",
+        "images/09004.jpg",
+        "images/09005.jpg",
+        "images/09006.jpg",
+        "images/09007.jpg",
+        "images/09008.jpg",
+        "images/09009.jpg",
+        "images/09010.jpg"
+      ],
+      "url": "properties/prop090.html",
+      "coordinates": {
+        "lat": 53.795831,
+        "lng": -1.543581
+      },
+      "added": {
+        "month": "January",
+        "day": 20,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop091",
+      "type": "Flat",
+      "bedrooms": 5,
+      "price": 925694,
+      "tenure": "Freehold",
+      "description": "5 bedroom flat located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/09101.jpg",
+        "images/09102.jpg",
+        "images/09103.jpg",
+        "images/09104.jpg",
+        "images/09105.jpg",
+        "images/09106.jpg",
+        "images/09107.jpg",
+        "images/09108.jpg",
+        "images/09109.jpg",
+        "images/09110.jpg"
+      ],
+      "url": "properties/prop091.html",
+      "coordinates": {
+        "lat": 51.449134,
+        "lng": -2.586041
+      },
+      "added": {
+        "month": "January",
+        "day": 9,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop092",
+      "type": "Detached",
+      "bedrooms": 3,
+      "price": 644901,
+      "tenure": "Freehold",
+      "description": "3 bedroom detached located in a popular residential area.",
+      "location": "Bath BA2",
+      "pictures": [
+        "images/09201.jpg",
+        "images/09202.jpg",
+        "images/09203.jpg",
+        "images/09204.jpg",
+        "images/09205.jpg",
+        "images/09206.jpg",
+        "images/09207.jpg",
+        "images/09208.jpg",
+        "images/09209.jpg",
+        "images/09210.jpg"
+      ],
+      "url": "properties/prop092.html",
+      "coordinates": {
+        "lat": 51.380034,
+        "lng": -2.35804
+      },
+      "added": {
+        "month": "January",
+        "day": 24,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop093",
+      "type": "House",
+      "bedrooms": 1,
+      "price": 383265,
+      "tenure": "Leasehold",
+      "description": "1 bedroom house located in a popular residential area.",
+      "location": "Leeds LS1",
+      "pictures": [
+        "images/09301.jpg",
+        "images/09302.jpg",
+        "images/09303.jpg",
+        "images/09304.jpg",
+        "images/09305.jpg",
+        "images/09306.jpg",
+        "images/09307.jpg",
+        "images/09308.jpg",
+        "images/09309.jpg",
+        "images/09310.jpg"
+      ],
+      "url": "properties/prop093.html",
+      "coordinates": {
+        "lat": 53.792121,
+        "lng": -1.547899
+      },
+      "added": {
+        "month": "January",
+        "day": 12,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop094",
+      "type": "Flat",
+      "bedrooms": 1,
+      "price": 766605,
+      "tenure": "Freehold",
+      "description": "1 bedroom flat located in a popular residential area.",
+      "location": "Bath BA2",
+      "pictures": [
+        "images/09401.jpg",
+        "images/09402.jpg",
+        "images/09403.jpg",
+        "images/09404.jpg",
+        "images/09405.jpg",
+        "images/09406.jpg",
+        "images/09407.jpg",
+        "images/09408.jpg",
+        "images/09409.jpg",
+        "images/09410.jpg"
+      ],
+      "url": "properties/prop094.html",
+      "coordinates": {
+        "lat": 51.375784,
+        "lng": -2.364269
+      },
+      "added": {
+        "month": "January",
+        "day": 1,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop095",
+      "type": "Detached",
+      "bedrooms": 3,
+      "price": 233142,
+      "tenure": "Freehold",
+      "description": "3 bedroom detached located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/09501.jpg",
+        "images/09502.jpg",
+        "images/09503.jpg",
+        "images/09504.jpg",
+        "images/09505.jpg",
+        "images/09506.jpg",
+        "images/09507.jpg",
+        "images/09508.jpg",
+        "images/09509.jpg",
+        "images/09510.jpg"
+      ],
+      "url": "properties/prop095.html",
+      "coordinates": {
+        "lat": 51.390882,
+        "lng": 0.072345
+      },
+      "added": {
+        "month": "January",
+        "day": 18,
+        "year": 2024
+      }
+    },
+    {
+      "id": "prop096",
+      "type": "Detached",
+      "bedrooms": 5,
+      "price": 421660,
+      "tenure": "Leasehold",
+      "description": "5 bedroom detached located in a popular residential area.",
+      "location": "Bristol BS1",
+      "pictures": [
+        "images/09601.jpg",
+        "images/09602.jpg",
+        "images/09603.jpg",
+        "images/09604.jpg",
+        "images/09605.jpg",
+        "images/09606.jpg",
+        "images/09607.jpg",
+        "images/09608.jpg",
+        "images/09609.jpg",
+        "images/09610.jpg"
+      ],
+      "url": "properties/prop096.html",
+      "coordinates": {
+        "lat": 51.448826,
+        "lng": -2.578337
+      },
+      "added": {
+        "month": "January",
+        "day": 20,
+        "year": 2022
+      }
+    },
+    {
+      "id": "prop097",
+      "type": "Flat",
+      "bedrooms": 1,
+      "price": 614741,
+      "tenure": "Leasehold",
+      "description": "1 bedroom flat located in a popular residential area.",
+      "location": "Brighton BN1",
+      "pictures": [
+        "images/09701.jpg",
+        "images/09702.jpg",
+        "images/09703.jpg",
+        "images/09704.jpg",
+        "images/09705.jpg",
+        "images/09706.jpg",
+        "images/09707.jpg",
+        "images/09708.jpg",
+        "images/09709.jpg",
+        "images/09710.jpg"
+      ],
+      "url": "properties/prop097.html",
+      "coordinates": {
+        "lat": 50.822468,
+        "lng": -0.141562
+      },
+      "added": {
+        "month": "January",
+        "day": 25,
+        "year": 2021
+      }
+    },
+    {
+      "id": "prop098",
+      "type": "Semi-detached",
+      "bedrooms": 1,
+      "price": 337877,
+      "tenure": "Freehold",
+      "description": "1 bedroom semi-detached located in a popular residential area.",
+      "location": "Orpington BR5",
+      "pictures": [
+        "images/09801.jpg",
+        "images/09802.jpg",
+        "images/09803.jpg",
+        "images/09804.jpg",
+        "images/09805.jpg",
+        "images/09806.jpg",
+        "images/09807.jpg",
+        "images/09808.jpg",
+        "images/09809.jpg",
+        "images/09810.jpg"
+      ],
+      "url": "properties/prop098.html",
+      "coordinates": {
+        "lat": 51.3962,
+        "lng": 0.077149
+      },
+      "added": {
+        "month": "January",
+        "day": 20,
+        "year": 2023
+      }
+    },
+    {
+      "id": "prop099",
+      "type": "Bungalow",
+      "bedrooms": 4,
+      "price": 201688,
+      "tenure": "Leasehold",
+      "description": "4 bedroom bungalow located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/09901.jpg",
+        "images/09902.jpg",
+        "images/09903.jpg",
+        "images/09904.jpg",
+        "images/09905.jpg",
+        "images/09906.jpg",
+        "images/09907.jpg",
+        "images/09908.jpg",
+        "images/09909.jpg",
+        "images/09910.jpg"
+      ],
+      "url": "properties/prop099.html",
+      "coordinates": {
+        "lat": 51.483478,
+        "lng": 0.011962
+      },
+      "added": {
+        "month": "January",
+        "day": 14,
+        "year": 2020
+      }
+    },
+    {
+      "id": "prop100",
+      "type": "Flat",
+      "bedrooms": 2,
+      "price": 501875,
+      "tenure": "Freehold",
+      "description": "2 bedroom flat located in a popular residential area.",
+      "location": "London SE10",
+      "pictures": [
+        "images/10001.jpg",
+        "images/10002.jpg",
+        "images/10003.jpg",
+        "images/10004.jpg",
+        "images/10005.jpg",
+        "images/10006.jpg",
+        "images/10007.jpg",
+        "images/10008.jpg",
+        "images/10009.jpg",
+        "images/10010.jpg"
+      ],
+      "url": "properties/prop100.html",
+      "coordinates": {
+        "lat": 51.488451,
+        "lng": 0.014101
+      },
+      "added": {
+        "month": "January",
+        "day": 19,
+        "year": 2020
+      }
+    }
+  ]
+}
