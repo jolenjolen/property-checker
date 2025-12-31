@@ -54,7 +54,7 @@ export default function Nav() {
             <button
               data-bs-toggle="offcanvas"
               data-bs-target="#menuCanvas"
-              className={`menuToggle mx-2 d-flex d-md-none justify-content-center align-items-center rounded-pill btn btn-${inverseTheme}`}
+              className={`menuToggle mx-2 d-flex d-md-none justify-content-center align-items-center rounded-pill btn btn-outline-${inverseTheme}`}
               title="Open the Hamburger menu"
             >
               <span className="material-symbols-rounded">
