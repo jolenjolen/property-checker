@@ -7,26 +7,45 @@ export default function SearchBar() {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
   const navigate = useNavigate();
-  // Controlled form values
+
+  // Controlled state
   const [location, setLocation] = useState("");
-  const [radius, setRadius] = useState(null);
   const [propertyType, setPropertyType] = useState(null);
   const [bedrooms, setBedrooms] = useState(null);
   const [minPrice, setMinPrice] = useState(null);
   const [maxPrice, setMaxPrice] = useState(null);
+  const [isExpanded, setIsExpanded] = useState(false);
 
-  // Dropdown options
-  const RADIUS_OPTIONS = ["1 mile", "3 miles", "5 miles", "10 miles", "15+ miles"];
-  const PROPERTY_OPTIONS = ["House", "Flat / Apartment", "Bungalow", "Terraced", "Semi-detached", "Detached"];
-  const BEDROOM_OPTIONS = ["Studio", "1 Bedroom", "2 Bedrooms", "3 Bedrooms", "4 Bedrooms", "5+ Bedrooms"];
+  /* ========= DROPDOWN OPTIONS (LABEL vs VALUE) ========= */
+
+  const PROPERTY_OPTIONS = [
+    { label: "House", value: "House" },
+    { label: "Flat / Apartment", value: "Flat" },
+    { label: "Bungalow", value: "Bungalow" },
+    { label: "Terraced", value: "Terraced" },
+    { label: "Semi-detached", value: "Semi-detached" },
+    { label: "Detached", value: "Detached" }
+  ];
+
+  const BEDROOM_OPTIONS = [
+    { label: "Studio", value: 0 },
+    { label: "1 Bedroom", value: 1 },
+    { label: "2 Bedrooms", value: 2 },
+    { label: "3 Bedrooms", value: 3 },
+    { label: "4 Bedrooms", value: 4 },
+    { label: "5+ Bedrooms", value: 5 }
+  ];
+
   const PRICE_OPTIONS = [
     50000, 75000, 100000, 150000, 200000,
     250000, 300000, 350000, 400000, 450000, 500000
   ];
+
   const filteredMaxOptions = minPrice
-    ? PRICE_OPTIONS.filter(price => price > minPrice)
+    ? PRICE_OPTIONS.filter(p => p > minPrice)
     : PRICE_OPTIONS;
-    const [isExpanded, setIsExpanded] = useState(false);
+
+  /* ========= SUBMIT ========= */
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -34,147 +53,113 @@ export default function SearchBar() {
     const params = new URLSearchParams();
 
     if (location) params.set("location", location);
-    if (propertyType) params.set("type", propertyType);
-    if (bedrooms) params.set("bedrooms", bedrooms);
+    if (propertyType) params.set("type", propertyType.value);
+    if (bedrooms) params.set("bedrooms", bedrooms.value);
     if (minPrice) params.set("minPrice", minPrice);
     if (maxPrice) params.set("maxPrice", maxPrice);
 
     navigate(`/search?${params.toString()}`);
   };
 
-  const selectOption = (setter, value) => {
-    setter(value);
-  };
-
   return (
-    <>
-      <div className={`hero hero-${theme} m-2 d-flex flex-column justify-content-center align-items-center`}>
-        <h1 className={`hero-text-heading text-${inverseTheme}`}>
-          <span className="heroFirstText">Find</span> Your Next Home
-        </h1>
+    <div className={`hero hero-${theme} m-2`}>
+      <h1 className={`text-${inverseTheme}`}>Find Your Next Home</h1>
 
-        <p className={`hero-text-slogan text-${inverseTheme}`}>
-          Believe in finding it with the UK's largest choice of homes
-        </p>
+      <form onSubmit={handleSubmit} className="search-form shadow-sm rounded-4 p-3">
+        {/* MAIN BAR */}
+        <div className="input-group">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="e.g. Orpington, BR6"
+            value={location}
+            onChange={(e) => setLocation(e.target.value)}
+          />
 
-        <form onSubmit={handleSubmit} className={`${isExpanded ? "rounded-4" : "rounded-pill"} hero-searchbar-group search-form shadow-sm`}>
-          <div className="d-flex flex-column justify-content-center">
+          <button type="submit" className="btn btn-primary">
+            Search
+          </button>
 
-            {/* MAIN SEARCH BAR */}
-            <div className="input-group">
-              <span className="m-1 input-group-text material-symbols-rounded">cottage</span>
+          <button
+            type="button"
+            className="btn btn-outline-secondary"
+            onClick={() => setIsExpanded(prev => !prev)}
+          >
+            Filters
+          </button>
+        </div>
 
-              <input
-                type="text"
-                className="m-1 form-control"
-                placeholder="e.g. Bath, UB3, or Leeds"
-                value={location}
-                onChange={(e) => setLocation(e.target.value)}
+        {/* EXPANDED FILTERS */}
+        {isExpanded && (
+          <>
+            <div className="d-flex gap-2 mt-3 flex-wrap">
+              <Dropdown
+                label="Property Type"
+                selected={propertyType?.label}
+                options={PROPERTY_OPTIONS}
+                onSelect={setPropertyType}
               />
 
-              <button
-                type="submit"
-                className="m-1 rounded-pill btn search-btn d-flex justify-content-center align-items-center"
-              >
-                <span className="material-symbols-rounded">search</span>
-              </button>
-
-              <button
-                type="button"
-                className="open-map rounded-pill m-1 d-flex justify-content-center align-items-center"
-              >
-                <span className="material-symbols-rounded">map</span>
-              </button>
-
-              <button
-                onClick={() => setIsExpanded((prev) => !prev)}
-                type="button"
-                className="m-1 rounded-pill d-flex justify-content-center align-items-center expand-search-bar"
-                data-bs-toggle="collapse"
-                data-bs-target="#expand-search-bar"
-              >
-                <span className="material-symbols-rounded">
-                  {isExpanded ? "keyboard_arrow_up" : "keyboard_arrow_down"}
-                </span>
-              </button>
+              <Dropdown
+                label="Bedrooms"
+                selected={bedrooms?.label}
+                options={BEDROOM_OPTIONS}
+                onSelect={setBedrooms}
+              />
             </div>
 
-            {/* DROPDOWN SECTION */}
-            <div id="expand-search-bar" className={`collapse ${/*isExpanded ? "show" : ""*/""}`}>
-              
-              <div className="extra-search-options d-flex justify-content-center gap-2 mt-2 flex-wrap">
+            <div className="d-flex gap-2 mt-3 flex-wrap">
+              <Dropdown
+                label="Min Price"
+                selected={minPrice ? `£${minPrice.toLocaleString()}` : null}
+                options={PRICE_OPTIONS.map(p => ({
+                  label: `£${p.toLocaleString()}`,
+                  value: p
+                }))}
+                onSelect={(opt) => {
+                  setMinPrice(opt.value);
+                  setMaxPrice(null);
+                }}
+              />
 
-                {/* RADIUS */}
-                <Dropdown label="Search Radius" selected={radius} options={RADIUS_OPTIONS}
-                  onSelect={(value) => selectOption(setRadius, value)} />
-
-                {/* PROPERTY TYPE */}
-                <Dropdown label="Property Types" selected={propertyType} options={PROPERTY_OPTIONS}
-                  onSelect={(value) => selectOption(setPropertyType, value)} />
-
-                {/* BEDROOMS */}
-                <Dropdown label="Bedrooms" selected={bedrooms} options={BEDROOM_OPTIONS}
-                  onSelect={(value) => selectOption(setBedrooms, value)} />
-
-              </div>
-
-              {/* PRICE RANGE */}
-              <div className="extra-search-options d-flex justify-content-center align-items-center gap-2 m-2 flex-wrap">
-
-                <Dropdown
-                  label="Minimum"
-                  selected={minPrice ? `£${minPrice.toLocaleString()}` : null}
-                  options={PRICE_OPTIONS.map(p => `£${p.toLocaleString()}`)}
-                  onSelect={(value) => {
-                    const numeric = Number(value.replace(/[£,]/g, ""));
-                    setMinPrice(numeric);
-                    setMaxPrice(null); // reset max if min changes
-                  }}
-                />
-
-                <span className="text-dark">-</span>
-
-                <Dropdown
-                  label="Maximum"
-                  selected={maxPrice ? `£${maxPrice.toLocaleString()}` : null}
-                  options={filteredMaxOptions.map(p => `£${p.toLocaleString()}`)}
-                  onSelect={(value) => {
-                    const numeric = Number(value.replace(/[£,]/g, ""));
-                    setMaxPrice(numeric);
-                  }}
-                />
-
-
-              </div>
+              <Dropdown
+                label="Max Price"
+                selected={maxPrice ? `£${maxPrice.toLocaleString()}` : null}
+                options={filteredMaxOptions.map(p => ({
+                  label: `£${p.toLocaleString()}`,
+                  value: p
+                }))}
+                onSelect={(opt) => setMaxPrice(opt.value)}
+              />
             </div>
-          </div>
-        </form>
-      </div>
-    </>
+          </>
+        )}
+      </form>
+    </div>
   );
 }
 
+/* ========= REUSABLE DROPDOWN ========= */
 
-/* REUSABLE DROPDOWN COMPONENT */
 function Dropdown({ label, selected, options, onSelect }) {
   return (
     <div className="dropdown">
-      <button className="btn btn-light rounded p-2 dropdown-toggle" data-bs-toggle="dropdown">
+      <button
+        className="btn btn-light dropdown-toggle"
+        data-bs-toggle="dropdown"
+      >
         {selected || label}
       </button>
 
       <ul className="dropdown-menu">
-        {options.map((item) => (
-          <li key={item}>
+        {options.map(opt => (
+          <li key={opt.value}>
             <button
               className="dropdown-item"
               type="button"
-              onClick={(e) => {
-                e.preventDefault();
-                onSelect(item);
-              }}
+              onClick={() => onSelect(opt)}
             >
-              {item}
+              {opt.label}
             </button>
           </li>
         ))}
