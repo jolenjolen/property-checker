@@ -37,7 +37,7 @@ export default function Cards({ properties }) {
                   <div className="mt-auto d-flex justify-content-between align-items-center">
                     <a
                       href={property.url}
-                      className={`btn btn-${inverseTheme}`}
+                      className={`btn btn-outline-${inverseTheme}`}
                     >
                       View More
                     </a>
