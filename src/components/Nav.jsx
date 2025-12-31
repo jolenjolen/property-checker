@@ -75,7 +75,7 @@ export default function Nav() {
 
           {/* DELETE DROP ZONE */}
           <div
-            className="fav-delete-zone mb-3 d-flex justify-content-center align-items-center"
+            className="sticky-top fav-delete-zone mb-3 d-flex justify-content-center align-items-center"
             onDragOver={(e) => e.preventDefault()}
             onDrop={(e) => {
               const id = e.dataTransfer.getData("propertyId");
