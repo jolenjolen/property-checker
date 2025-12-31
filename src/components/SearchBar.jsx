@@ -7,16 +7,22 @@ export default function SearchBar() {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
   const navigate = useNavigate();
+
   // Controlled form values
   const [location, setLocation] = useState("");
   const [radius, setRadius] = useState(null);
+
+  // IMPORTANT: store VALUES, not labels
   const [propertyType, setPropertyType] = useState(null);
   const [bedrooms, setBedrooms] = useState(null);
   const [minPrice, setMinPrice] = useState(null);
   const [maxPrice, setMaxPrice] = useState(null);
 
-  // Dropdown options
+  /* ================= OPTIONS ================= */
+
   const RADIUS_OPTIONS = ["1 mile", "3 miles", "5 miles", "10 miles", "15+ miles"];
+
+  // label shown in UI → value stored / sent
   const PROPERTY_OPTIONS = [
     { label: "House", value: "House" },
     { label: "Flat / Apartment", value: "Flat" },
@@ -25,6 +31,7 @@ export default function SearchBar() {
     { label: "Semi-detached", value: "Semi-detached" },
     { label: "Detached", value: "Detached" }
   ];
+
   const BEDROOM_OPTIONS = [
     { label: "Studio", value: 0 },
     { label: "1 Bedroom", value: 1 },
@@ -33,14 +40,19 @@ export default function SearchBar() {
     { label: "4 Bedrooms", value: 4 },
     { label: "5+ Bedrooms", value: 5 }
   ];
+
   const PRICE_OPTIONS = [
     50000, 75000, 100000, 150000, 200000,
     250000, 300000, 350000, 400000, 450000, 500000
   ];
+
   const filteredMaxOptions = minPrice
     ? PRICE_OPTIONS.filter(price => price > minPrice)
     : PRICE_OPTIONS;
-    const [isExpanded, setIsExpanded] = useState(false);
+
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  /* ================= SUBMIT ================= */
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -48,16 +60,12 @@ export default function SearchBar() {
     const params = new URLSearchParams();
 
     if (location) params.set("location", location);
-    if (propertyType) params.set("type", propertyType.value);
-    if (bedrooms) params.set("bedrooms", bedrooms.value);
+    if (propertyType) params.set("type", propertyType);
+    if (bedrooms !== null) params.set("bedrooms", bedrooms);
     if (minPrice) params.set("minPrice", minPrice);
     if (maxPrice) params.set("maxPrice", maxPrice);
 
     navigate(`/search?${params.toString()}`);
-  };
-
-  const selectOption = (setter, value) => {
-    setter(value);
   };
 
   return (
@@ -71,12 +79,17 @@ export default function SearchBar() {
           Believe in finding it with the UK's largest choice of homes
         </p>
 
-        <form onSubmit={handleSubmit} className={`${isExpanded ? "rounded-4" : "rounded-pill"} hero-searchbar-group search-form shadow-sm`}>
+        <form
+          onSubmit={handleSubmit}
+          className={`${isExpanded ? "rounded-4" : "rounded-pill"} hero-searchbar-group search-form shadow-sm`}
+        >
           <div className="d-flex flex-column justify-content-center">
 
             {/* MAIN SEARCH BAR */}
             <div className="input-group">
-              <span className="m-1 input-group-text material-symbols-rounded">cottage</span>
+              <span className="m-1 input-group-text material-symbols-rounded">
+                cottage
+              </span>
 
               <input
                 type="text"
@@ -113,23 +126,44 @@ export default function SearchBar() {
               </button>
             </div>
 
-            {/* DROPDOWN SECTION */}
-            <div id="expand-search-bar" className={`collapse ${/*isExpanded ? "show" : ""*/""}`}>
-              
+            {/* DROPDOWNS */}
+            <div id="expand-search-bar" className="collapse">
+
               <div className="extra-search-options d-flex justify-content-center gap-2 mt-2 flex-wrap">
 
-                {/* RADIUS */}
-                <Dropdown label="Search Radius" selected={radius} options={RADIUS_OPTIONS}
-                  onSelect={(value) => selectOption(setRadius, value)} />
+                {/* RADIUS (UI ONLY, NOT FILTERED YET) */}
+                <Dropdown
+                  label="Search Radius"
+                  selected={radius}
+                  options={RADIUS_OPTIONS}
+                  onSelect={(value) => setRadius(value)}
+                />
 
                 {/* PROPERTY TYPE */}
-                <Dropdown label="Property Types" selected={propertyType?.label} options={PROPERTY_OPTIONS}
-                  onSelect={(option) => setPropertyType(option)} />
+                <Dropdown
+                  label="Property Types"
+                  selected={
+                    PROPERTY_OPTIONS.find(o => o.value === propertyType)?.label
+                  }
+                  options={PROPERTY_OPTIONS.map(o => o.label)}
+                  onSelect={(label) => {
+                    const match = PROPERTY_OPTIONS.find(o => o.label === label);
+                    setPropertyType(match.value);
+                  }}
+                />
 
                 {/* BEDROOMS */}
-                <Dropdown label="Bedrooms" selected={bedrooms} options={BEDROOM_OPTIONS}
-                  onSelect={(value) => selectOption(setBedrooms, value)} />
-
+                <Dropdown
+                  label="Bedrooms"
+                  selected={
+                    BEDROOM_OPTIONS.find(o => o.value === bedrooms)?.label
+                  }
+                  options={BEDROOM_OPTIONS.map(o => o.label)}
+                  onSelect={(label) => {
+                    const match = BEDROOM_OPTIONS.find(o => o.label === label);
+                    setBedrooms(match.value);
+                  }}
+                />
               </div>
 
               {/* PRICE RANGE */}
@@ -142,7 +176,7 @@ export default function SearchBar() {
                   onSelect={(value) => {
                     const numeric = Number(value.replace(/[£,]/g, ""));
                     setMinPrice(numeric);
-                    setMaxPrice(null); // reset max if min changes
+                    setMaxPrice(null);
                   }}
                 />
 
@@ -157,8 +191,6 @@ export default function SearchBar() {
                     setMaxPrice(numeric);
                   }}
                 />
-
-
               </div>
             </div>
           </div>
@@ -168,24 +200,29 @@ export default function SearchBar() {
   );
 }
 
-
-/* REUSABLE DROPDOWN COMPONENT */
+/* ========= DROPDOWN (UNCHANGED UI) ========= */
 function Dropdown({ label, selected, options, onSelect }) {
   return (
     <div className="dropdown">
-      <button className="btn btn-light rounded p-2 dropdown-toggle" data-bs-toggle="dropdown">
+      <button
+        className="btn btn-light rounded p-2 dropdown-toggle"
+        data-bs-toggle="dropdown"
+      >
         {selected || label}
       </button>
 
       <ul className="dropdown-menu">
         {options.map((item) => (
-          <li key={item.value}>
+          <li key={item}>
             <button
               className="dropdown-item"
               type="button"
-              onClick={() => onSelect(item)}
+              onClick={(e) => {
+                e.preventDefault();
+                onSelect(item);
+              }}
             >
-              {item.label}
+              {item}
             </button>
           </li>
         ))}
