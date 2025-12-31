@@ -69,6 +69,7 @@ export default function Search() {
       <h4 className="mt-4">
         Search Results ({results.length})
       </h4>
+      <hr />
       <Cards properties={results} />
     </div>
   );
