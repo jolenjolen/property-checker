@@ -2,7 +2,7 @@ import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import propertiesData from "../data/properties.json";
-import SearchBar from "./SearchBar";
+import SearchBar from "../components/SearchBar";
 export default function Search() {
   const [searchParams] = useSearchParams();
   const [results, setResults] = useState([]);
