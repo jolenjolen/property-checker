@@ -8,78 +8,54 @@ export default function Search() {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    const q = searchParams.get("q");
+    const textQuery = searchParams.get("location");
     const type = searchParams.get("type");
-    const postcode = searchParams.get("postcode");
+    const bedroomsParam = searchParams.get("bedrooms");
 
-    const minPrice = searchParams.get("minPrice")
-      ? Number(searchParams.get("minPrice"))
-      : null;
+    const minPriceParam = searchParams.get("minPrice");
+    const maxPriceParam = searchParams.get("maxPrice");
 
-    const maxPrice = searchParams.get("maxPrice")
-      ? Number(searchParams.get("maxPrice"))
-      : null;
+    const minPrice = minPriceParam ? Number(minPriceParam) : null;
+    const maxPrice = maxPriceParam ? Number(maxPriceParam) : null;
 
-    const minBedrooms = searchParams.get("minBedrooms")
-      ? Number(searchParams.get("minBedrooms"))
-      : null;
-
-    const maxBedrooms = searchParams.get("maxBedrooms")
-      ? Number(searchParams.get("maxBedrooms"))
-      : null;
-
-    const dateFrom = searchParams.get("dateFrom")
-      ? new Date(searchParams.get("dateFrom"))
-      : null;
-
-    const dateTo = searchParams.get("dateTo")
-      ? new Date(searchParams.get("dateTo"))
-      : null;
-
-    const tokens = q ? q.toLowerCase().split(/\s+/) : [];
+    // Split free-text into searchable tokens
+    const tokens = textQuery
+      ? textQuery.toLowerCase().split(/\s+/)
+      : [];
 
     const filtered = propertiesData.properties.filter((p) => {
-
-      /* ===== FREE TEXT ===== */
-      if (tokens.length > 0) {
-        const searchable = `
-          ${p.location}
-          ${p.type}
-          ${p.description}
-        `.toLowerCase();
-
-        if (!tokens.some(token => searchable.includes(token))) {
-          return false;
-        }
-      }
-
-      /* ===== TYPE ===== */
-      if (type && p.type !== type) return false;
-
-      /* ===== POSTCODE AREA ===== */
-      if (postcode) {
-        const propertyPostcode = p.location.split(" ")[0].toUpperCase();
-        if (!propertyPostcode.startsWith(postcode)) return false;
-      }
-
-      /* ===== PRICE ===== */
+      /* ================= PRICE ================= */
       if (minPrice !== null && p.price < minPrice) return false;
       if (maxPrice !== null && p.price > maxPrice) return false;
 
-      /* ===== BEDROOMS ===== */
-      if (minBedrooms !== null && p.bedrooms < minBedrooms) return false;
-      if (maxBedrooms !== null && p.bedrooms > maxBedrooms) return false;
+      /* ================= DROPDOWNS (PRIORITY) ================= */
+      if (type && p.type !== type) return false;
 
-      /* ===== DATE ADDED ===== */
-      if (dateFrom || dateTo) {
-        const addedDate = new Date(
-          p.added.year,
-          p.added.month - 1,
-          p.added.day
+      if (bedroomsParam !== null) {
+        const bedrooms = Number(bedroomsParam);
+        if (bedrooms === 5) {
+          if (p.bedrooms < 5) return false;
+        } else {
+          if (p.bedrooms !== bedrooms) return false;
+        }
+      }
+
+      /* ================= FREE TEXT SEARCH ================= */
+      if (tokens.length > 0) {
+        const searchableText = `
+          ${p.location}
+          ${p.type}
+          ${p.description}
+          ${p.bedrooms} bedroom
+          ${p.bedrooms} bedrooms
+        `.toLowerCase();
+
+        // Match if ANY token matches ANY field
+        const tokenMatch = tokens.some(token =>
+          searchableText.includes(token)
         );
 
-        if (dateFrom && addedDate < dateFrom) return false;
-        if (dateTo && addedDate > dateTo) return false;
+        if (!tokenMatch) return false;
       }
 
       return true;
