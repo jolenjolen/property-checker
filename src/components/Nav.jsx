@@ -82,7 +82,11 @@ export default function Nav() {
               if (id) removeFavourite(id);
             }}
           >
-            🗑 Drag here to remove
+            <span className="material-symbols-rounded">
+              delete
+            </span>
+            &nbsp;
+            Drag here to remove
           </div>
 
           {favProperties.length === 0 && (
@@ -121,11 +125,13 @@ export default function Nav() {
 
               {/* MOBILE / ACCESSIBLE REMOVE */}
               <button
-                className="btn btn-sm btn-outline-danger ms-2"
+                className="btn closeMenu btn-outline-danger ms-2 rounded-pill d-flex justify-content-center align-items-center"
                 onClick={() => removeFavourite(property.id)}
                 aria-label="Remove favourite"
               >
-                ✕
+                <span className="material-symbols-rounded">
+                  close_small
+                </span>
               </button>
             </div>
           ))}
