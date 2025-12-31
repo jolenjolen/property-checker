@@ -102,7 +102,7 @@ export default function Nav() {
               }}
             >
               <img
-                src={property.picture}
+                src={property.pictures?.[0]}
                 width="60"
                 height="60"
                 className="rounded me-2 object-fit-cover"
