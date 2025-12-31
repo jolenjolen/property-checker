@@ -1,5 +1,6 @@
 import "../App.css";
-import { useFavourites } from "../useFavourites";
+import { useFavourites } from "../FavouritesContext";
+
 import { useTheme } from "../ThemeContext";
 export default function Cards({ properties }) {
   const { addFavourite, removeFavourite, isFavourite } = useFavourites();

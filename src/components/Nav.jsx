@@ -3,7 +3,8 @@ import appLogo from "/logo.png";
 import "../App.css";
 import { useTheme } from "../ThemeContext";
 import propertiesData from "../data/properties.json";
-import { useFavourites } from "../useFavourites";
+import { useFavourites } from "../FavouritesContext";
+
 
 export default function Nav() {
   const { favourites, removeFavourite } = useFavourites();
