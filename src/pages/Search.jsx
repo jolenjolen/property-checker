@@ -92,7 +92,7 @@ export default function Search() {
   return (
     <div className="container py-4 d-flex flex-column align-items-center">
       <div className="" style={{ maxWidth: "450px" }}>
-        <SearchBar />
+        <SearchBar className="border" />
       </div>
       <div>
         <h4 className="mt-4">
