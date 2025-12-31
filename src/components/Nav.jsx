@@ -118,7 +118,7 @@ export default function Nav() {
                 <div className="fw-semibold text-truncate">
                   £{property.price.toLocaleString()}
                 </div>
-                <small className="text-muted text-truncate d-block">
+                <small className="text-secondary text-truncate d-block">
                   {property.location}
                 </small>
               </div>
