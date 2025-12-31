@@ -37,14 +37,14 @@ export default function Cards({ properties }) {
                   <div className="mt-auto d-flex justify-content-between align-items-center">
                     <a
                       href={property.url}
-                      className="btn btn-primary btn-sm"
+                      className={`btn btn-${inverseTheme}`}
                     >
                       View More
                     </a>
 
                     <button
                       className={`btn btn-sm ${
-                        fav ? "btn-danger" : "btn-outline-danger"
+                        fav ? "text-danger" : "text-secondary"
                       }`}
                       onClick={() =>
                         fav
