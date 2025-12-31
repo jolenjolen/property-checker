@@ -43,7 +43,7 @@ export default function Cards({ properties }) {
                     </a>
 
                     <button
-                      className={`favouriteBtn btn btn-sm d-flex justify-content-center align-items center rounded-pill ${
+                      className={`favouriteBtn btn btn-sm d-flex justify-content-center align-items-center rounded-pill ${
                         fav ? "text-danger" : "text-secondary"
                       }`}
                       onClick={() =>
