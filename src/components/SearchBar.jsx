@@ -10,18 +10,16 @@ export default function SearchBar() {
 
   // Controlled form values
   const [location, setLocation] = useState("");
-  const [radius, setRadius] = useState(null);
 
   // IMPORTANT: store VALUES, not labels
   const [propertyType, setPropertyType] = useState(null);
   const [bedrooms, setBedrooms] = useState(null);
   const [minPrice, setMinPrice] = useState(null);
   const [maxPrice, setMaxPrice] = useState(null);
-
+  const [postcode, setPostcode] = useState("");
   /* ================= OPTIONS ================= */
 
-  const RADIUS_OPTIONS = ["1 mile", "3 miles", "5 miles", "10 miles", "15+ miles"];
-
+  
   // label shown in UI → value stored / sent
   const PROPERTY_OPTIONS = [
     { label: "House", value: "House" },
@@ -64,7 +62,7 @@ export default function SearchBar() {
     if (bedrooms !== null) params.set("bedrooms", bedrooms);
     if (minPrice) params.set("minPrice", minPrice);
     if (maxPrice) params.set("maxPrice", maxPrice);
-
+    if (postcode) params.set("postcode", postcode);
     navigate(`/search?${params.toString()}`);
   };
 
@@ -123,12 +121,13 @@ export default function SearchBar() {
 
               <div className="extra-search-options d-flex justify-content-center gap-2 mt-2 flex-wrap">
 
-                {/* RADIUS (UI ONLY, NOT FILTERED YET) */}
-                <Dropdown
-                  label="Search Radius"
-                  selected={radius}
-                  options={RADIUS_OPTIONS}
-                  onSelect={(value) => setRadius(value)}
+                {/* POSTCODE AREA */}
+                <input
+                  type="text"
+                  className="form-control rounded p-2"
+                  placeholder="Postcode area (e.g. BR1, NW1)"
+                  value={postcode}
+                  onChange={(e) => setPostcode(e.target.value.toUpperCase())}
                 />
 
                 {/* PROPERTY TYPE */}

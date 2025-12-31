@@ -11,6 +11,7 @@ export default function Search() {
     const textQuery = searchParams.get("location");
     const type = searchParams.get("type");
     const bedroomsParam = searchParams.get("bedrooms");
+    const postcodeParam = searchParams.get("postcode");
 
     const minPriceParam = searchParams.get("minPrice");
     const maxPriceParam = searchParams.get("maxPrice");
@@ -18,7 +19,6 @@ export default function Search() {
     const minPrice = minPriceParam ? Number(minPriceParam) : null;
     const maxPrice = maxPriceParam ? Number(maxPriceParam) : null;
 
-    // Split free-text into searchable tokens
     const tokens = textQuery
       ? textQuery.toLowerCase().split(/\s+/)
       : [];
@@ -28,9 +28,10 @@ export default function Search() {
       if (minPrice !== null && p.price < minPrice) return false;
       if (maxPrice !== null && p.price > maxPrice) return false;
 
-      /* ================= DROPDOWNS (PRIORITY) ================= */
+      /* ================= TYPE ================= */
       if (type && p.type !== type) return false;
 
+      /* ================= BEDROOMS ================= */
       if (bedroomsParam !== null) {
         const bedrooms = Number(bedroomsParam);
         if (bedrooms === 5) {
@@ -40,7 +41,15 @@ export default function Search() {
         }
       }
 
-      /* ================= FREE TEXT SEARCH ================= */
+      /* ================= POSTCODE AREA ================= */
+      if (postcodeParam) {
+        const propertyPostcodeArea = p.location.split(" ")[0].toUpperCase();
+        if (!propertyPostcodeArea.startsWith(postcodeParam.toUpperCase())) {
+          return false;
+        }
+      }
+
+      /* ================= FREE TEXT ================= */
       if (tokens.length > 0) {
         const searchableText = `
           ${p.location}
@@ -50,7 +59,6 @@ export default function Search() {
           ${p.bedrooms} bedrooms
         `.toLowerCase();
 
-        // Match if ANY token matches ANY field
         const tokenMatch = tokens.some(token =>
           searchableText.includes(token)
         );
