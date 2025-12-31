@@ -43,7 +43,11 @@ export default function Search() {
 
       /* ================= POSTCODE AREA ================= */
       if (postcodeParam) {
-        const propertyPostcodeArea = p.location.split(" ")[0].toUpperCase();
+        const propertyPostcodeArea = p.location
+          .trim()
+          .split(" ")
+          .slice(-1)[0]
+          .toUpperCase();
         if (!propertyPostcodeArea.startsWith(postcodeParam.toUpperCase())) {
           return false;
         }
