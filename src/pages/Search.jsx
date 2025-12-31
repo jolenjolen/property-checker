@@ -78,7 +78,9 @@ export default function Search() {
 
   return (
     <div className="container-fluid py-4">
-      <SearchBar />
+      <div className="container">
+        <SearchBar />
+      </div>
       <h4 className="mt-4">
         Search Results ({results.length})
       </h4>
