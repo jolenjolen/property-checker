@@ -190,7 +190,7 @@ export default function SearchBar() {
                 />
               </div>
               {/* DATE ADDED */}
-              <div className="extra-search-options d-flex justify-content-center gap-2 m-2 flex-wrap">
+              <div className="extra-search-options d-flex justify-content-center align-items-center gap-2 m-2 flex-wrap">
                 <input
                   placeholder="Date Added From"
                   style={{ maxWidth: "150px" }}
@@ -200,7 +200,7 @@ export default function SearchBar() {
                   onChange={(e) => setDateFrom(e.target.value)}
                 />
 
-                <span className="text-dark">to</span>
+                <span className="text-dark">-</span>
 
                 <input
                   placeholder="Date Added To"
