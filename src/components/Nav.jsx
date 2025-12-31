@@ -41,7 +41,7 @@ export default function Nav() {
             </li>
           </ul>
           <div className="d-flex justify-content-end">
-            <button data-bs-toggle="offcanvas" data-bs-target="#favourites" className={`favouriteBtn mx-2 d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
+            <button data-bs-toggle="offcanvas" data-bs-target="#favourites" className={`favouriteBtn d-flex justify-content-center align-items-center rounded-pill btn btn-danger`} title="View Your Favourites">
               <span className="material-symbols-rounded">
                 favorite
               </span>
