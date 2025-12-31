@@ -77,7 +77,7 @@ export default function Search() {
   }, [searchParams]);
 
   return (
-    <div className="container-fluid py-4">
+    <div className="container py-4">
       <div className="container">
         <SearchBar />
       </div>
