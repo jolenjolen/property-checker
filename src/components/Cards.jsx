@@ -19,7 +19,7 @@ export default function Cards({ properties }) {
               <div className={`card h-100 border-0 shadow-sm bg-${theme} text-${inverseTheme}`}>
                 <img
                   src={property.picture}
-                  className="card-img-top"
+                  className="card-img-top rounded"
                   alt={property.type}
                 />
 
