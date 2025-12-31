@@ -123,8 +123,9 @@ export default function SearchBar() {
 
                 {/* POSTCODE AREA */}
                 <input
+                  style={{ maxWidth: "150px" }}
                   type="text"
-                  className="form-control rounded p-2"
+                  className="form-control rounded p-2 border"
                   placeholder="Postcode area (e.g. BR1, NW1)"
                   value={postcode}
                   onChange={(e) => setPostcode(e.target.value.toUpperCase())}
