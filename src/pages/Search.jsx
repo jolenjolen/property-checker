@@ -9,9 +9,10 @@ export default function Search() {
   const [results, setResults] = useState([]);
 
   useEffect(() => {
-    /* ================= RAW PARAMS ================= */
-    const textQuery = searchParams.get("location");
-    const type = searchParams.get("type");
+    const rawQuery = searchParams.get("location")?.toLowerCase() || "";
+
+    /* ================= EXPLICIT FILTERS ================= */
+    const typeParam = searchParams.get("type");
     const bedroomsParam = searchParams.get("bedrooms");
     const postcodeParam = searchParams.get("postcode");
 
@@ -21,127 +22,109 @@ export default function Search() {
     const dateFromParam = searchParams.get("dateFrom");
     const dateToParam = searchParams.get("dateTo");
 
-    /* ================= NORMALISED VALUES ================= */
-    const minPrice = minPriceParam ? Number(minPriceParam) : null;
-    const maxPrice = maxPriceParam ? Number(maxPriceParam) : null;
+    let minPrice = minPriceParam ? Number(minPriceParam) : null;
+    let maxPrice = maxPriceParam ? Number(maxPriceParam) : null;
+    let bedrooms = bedroomsParam ? Number(bedroomsParam) : null;
+    let inferredType = typeParam;
 
-    const dateFrom = dateFromParam ? new Date(dateFromParam) : null;
-    const dateTo = dateToParam ? new Date(dateToParam) : null;
+    /* ================= SMART FREE TEXT PARSING ================= */
 
-    const tokens = textQuery
-      ? textQuery.toLowerCase().split(/\s+/)
-      : [];
+    // Bedrooms: "3 bed", "3 bedroom", "3 bedrooms"
+    const bedroomMatch = rawQuery.match(/(\d+)\s*(bed|bedroom|bedrooms)/);
+    if (!bedrooms && bedroomMatch) {
+      bedrooms = Number(bedroomMatch[1]);
+    }
 
-    /* ================= INFERRED VALUES (ONLY IF DROPDOWNS EMPTY) ================= */
+    // Property types
+    const TYPE_KEYWORDS = [
+      "flat",
+      "apartment",
+      "house",
+      "bungalow",
+      "detached",
+      "semi-detached",
+      "terraced"
+    ];
 
-    const inferredBedrooms =
-      !bedroomsParam
-        ? tokens.find((t) => /^\d+$/.test(t))
-        : null;
+    if (!inferredType) {
+      const foundType = TYPE_KEYWORDS.find(t =>
+        rawQuery.includes(t)
+      );
+      if (foundType) {
+        inferredType =
+          foundType === "apartment" ? "Flat" :
+          foundType.charAt(0).toUpperCase() + foundType.slice(1);
+      }
+    }
 
-    const inferredType =
-      !type
-        ? [
-            "flat",
-            "house",
-            "bungalow",
-            "detached",
-            "semi-detached",
-            "terraced",
-          ].find((t) => tokens.includes(t))
-        : null;
+    // Price: under / below
+    const underMatch = rawQuery.match(/(under|below)\s*£?(\d+[kK]?)/);
+    if (!maxPrice && underMatch) {
+      maxPrice = Number(underMatch[2].replace("k", "000"));
+    }
 
-    const inferredTenure = tokens.includes("leasehold")
-      ? "Leasehold"
-      : tokens.includes("freehold")
-      ? "Freehold"
-      : null;
+    // Price: above / over
+    const overMatch = rawQuery.match(/(over|above)\s*£?(\d+[kK]?)/);
+    if (!minPrice && overMatch) {
+      minPrice = Number(overMatch[2].replace("k", "000"));
+    }
 
-    const inferredMaxPrice =
-      !maxPrice
-        ? (() => {
-            const underIndex = tokens.indexOf("under");
-            if (underIndex !== -1 && tokens[underIndex + 1]) {
-              const num = Number(tokens[underIndex + 1]);
-              return isNaN(num) ? null : num;
-            }
-            return null;
-          })()
-        : null;
+    // Price: between X and Y
+    const betweenMatch = rawQuery.match(
+      /between\s*£?(\d+[kK]?)\s*and\s*£?(\d+[kK]?)/
+    );
+    if (!minPrice && !maxPrice && betweenMatch) {
+      minPrice = Number(betweenMatch[1].replace("k", "000"));
+      maxPrice = Number(betweenMatch[2].replace("k", "000"));
+    }
 
-    /* ================= FILTERING ================= */
-    const filtered = propertiesData.properties.filter((p) => {
-      /* ---------- PRICE ---------- */
-      const maxPriceToCheck = maxPrice ?? inferredMaxPrice;
+    // Location inference (city names)
+    const LOCATION_WORDS = rawQuery
+      .replace(/(bed|bedroom|flat|house|under|over|above|below|\d+)/g, "")
+      .split(/\s+/)
+      .filter(w => w.length > 2);
+
+    /* ================= FILTER PROPERTIES ================= */
+
+    const filtered = propertiesData.properties.filter(p => {
+      /* PRICE */
       if (minPrice !== null && p.price < minPrice) return false;
-      if (maxPriceToCheck !== null && p.price > maxPriceToCheck) return false;
+      if (maxPrice !== null && p.price > maxPrice) return false;
 
-      /* ---------- TYPE ---------- */
-      const typeToCheck = type || inferredType;
-      if (
-        typeToCheck &&
-        p.type.toLowerCase() !== typeToCheck.toLowerCase()
-      )
-        return false;
+      /* TYPE */
+      if (inferredType && p.type !== inferredType) return false;
 
-      /* ---------- BEDROOMS ---------- */
-      const bedroomsToCheck = bedroomsParam
-        ? Number(bedroomsParam)
-        : inferredBedrooms
-        ? Number(inferredBedrooms)
-        : null;
+      /* BEDROOMS */
+      if (bedrooms !== null) {
+        if (bedrooms >= 5 && p.bedrooms < 5) return false;
+        if (bedrooms < 5 && p.bedrooms !== bedrooms) return false;
+      }
 
-      if (bedroomsToCheck !== null) {
-        if (bedroomsToCheck === 5) {
-          if (p.bedrooms < 5) return false;
-        } else {
-          if (p.bedrooms !== bedroomsToCheck) return false;
+      /* POSTCODE */
+      if (postcodeParam) {
+        const propertyPostcode = p.location.split(" ").slice(-1)[0].toUpperCase();
+        if (!propertyPostcode.startsWith(postcodeParam.toUpperCase())) {
+          return false;
         }
       }
 
-      /* ---------- POSTCODE ---------- */
-      if (postcodeParam) {
-        const propertyPostcodeArea = p.location
-          .trim()
-          .split(" ")
-          .slice(-1)[0]
-          .toUpperCase();
-
-        if (
-          !propertyPostcodeArea.startsWith(postcodeParam.toUpperCase())
-        )
-          return false;
-      }
-
-      /* ---------- DATE ADDED ---------- */
-      if (dateFrom || dateTo) {
+      /* DATE */
+      if (dateFromParam || dateToParam) {
         const propertyDate = new Date(
           `${p.added.month} ${p.added.day}, ${p.added.year}`
         );
 
-        if (dateFrom && propertyDate < dateFrom) return false;
-        if (dateTo && propertyDate > dateTo) return false;
+        if (dateFromParam && propertyDate < new Date(dateFromParam)) return false;
+        if (dateToParam && propertyDate > new Date(dateToParam)) return false;
       }
 
-      /* ---------- TENURE (INFERRED) ---------- */
-      if (inferredTenure && p.tenure !== inferredTenure) return false;
-
-      /* ---------- FREE TEXT MATCH ---------- */
-      if (tokens.length > 0) {
-        const searchableText = `
-          ${p.location}
-          ${p.type}
-          ${p.description}
-          ${p.bedrooms} bedroom
-          ${p.bedrooms} bedrooms
-          ${p.tenure}
-        `.toLowerCase();
-
-        const tokenMatch = tokens.some((token) =>
-          searchableText.includes(token)
+      /* LOCATION WORD MATCH */
+      if (LOCATION_WORDS.length > 0) {
+        const locationText = p.location.toLowerCase();
+        const locationMatch = LOCATION_WORDS.some(word =>
+          locationText.includes(word)
         );
-
-        if (!tokenMatch) return false;
+        if (!locationMatch) return false;
       }
 
       return true;
@@ -156,7 +139,7 @@ export default function Search() {
         <SearchBar />
       </div>
 
-      <div className="w-100">
+      <div>
         <h4 className="mt-5">
           Search Results ({results.length})
         </h4>
