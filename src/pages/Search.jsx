@@ -16,6 +16,7 @@ export default function Search() {
 
   return (
     <div className="container py-4">
+      <SearchBar />
       <h4>Search Results ({results.length})</h4>
       <Cards properties={results} />
     </div>

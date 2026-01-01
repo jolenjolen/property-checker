@@ -40,21 +40,11 @@ export default function PropertiesMap({ properties, onClose }) {
   }, [properties]);
 
   return (
-    <div
-      className="position-fixed top-0 start-0 w-100 h-100 bg-white"
-      style={{ zIndex: 1050 }}
-    >
-      <button
-        className="btn btn-dark position-absolute top-0 end-0 m-3"
-        onClick={onClose}
-      >
-        Close Map
-      </button>
-
-      <div
+    <div style={{ width: "100%", height: "calc(100vh - 180px)" }}>
+        <div
         id="properties-map"
         style={{ width: "100%", height: "100%" }}
-      />
+        />
     </div>
-  );
+    );
 }

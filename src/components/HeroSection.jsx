@@ -2,14 +2,10 @@
 import "../App.css";
 import { useTheme } from "../ThemeContext";
 import SearchBar from "./SearchBar";
-import PropertiesMap from "./PropertiesMap";
-import { useState } from "react";
-import propertiesData from "../data/properties.json";
 
 export default function HeroSection() {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
-  const [showMap, setShowMap] = useState(false);
 
   return (
     <div
@@ -23,14 +19,7 @@ export default function HeroSection() {
         Believe in finding it with the UK's largest choice of homes
       </p>
 
-      <SearchBar onOpenMap={() => setShowMap(true)} />
-
-      {showMap && (
-        <PropertiesMap
-          properties={propertiesData.properties}
-          onClose={() => setShowMap(false)}
-        />
-      )}
+      <SearchBar />
     </div>
   );
 }
