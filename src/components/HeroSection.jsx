@@ -2,11 +2,11 @@
 import "../App.css";
 import { useTheme } from "../ThemeContext";
 import SearchBar from "./SearchBar";
-
+import PropertiesMap from "../components/PropertiesMap";
 export default function HeroSection() {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
-
+  const [showMap, setShowMap] = useState(false);
   return (
     <div
       className={`hero hero-${theme} m-2 d-flex flex-column justify-content-center align-items-center`}
