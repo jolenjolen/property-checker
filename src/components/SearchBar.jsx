@@ -3,7 +3,7 @@ import { useTheme } from "../ThemeContext";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function SearchBar({ onOpenMap }) {
+export default function SearchBar() {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
   const navigate = useNavigate();
@@ -53,10 +53,7 @@ export default function SearchBar({ onOpenMap }) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   /* ================= SUBMIT ================= */
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
+  const buildSearchParams = () => {
     const params = new URLSearchParams();
 
     if (location) params.set("location", location);
@@ -68,9 +65,17 @@ export default function SearchBar({ onOpenMap }) {
     if (dateFrom) params.set("dateFrom", dateFrom);
     if (dateTo) params.set("dateTo", dateTo);
 
-    navigate(`/search?${params.toString()}`);
+    return params;
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    navigate(`/search?${buildSearchParams().toString()}`);
+  };
+  const handleMap = () => {
+    navigate(`/map?${buildSearchParams().toString()}`);
+  };
   return (
     <>
       
@@ -103,7 +108,7 @@ export default function SearchBar({ onOpenMap }) {
 
               <button
                 type="button"
-                onClick={onOpenMap}
+                onClick={handleMap}
                 className="open-map rounded-pill m-1 d-flex justify-content-center align-items-center"
               >
                 <span className="material-symbols-rounded">map</span>
