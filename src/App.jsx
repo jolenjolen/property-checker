@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
+import MapPage from "./pages/Map";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
           <Route path="/search" element={<Search />} />
           <Route path="*" element={<NotFound />} />
           <Route path="/properties/:id" element={<Details />} />
+          <Route path="/map" element={<MapPage />} />
         </Routes>
         <Footer />
     </ThemeProvider>
