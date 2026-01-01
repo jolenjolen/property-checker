@@ -20,6 +20,12 @@ export default function HeroSection() {
       </p>
 
       <SearchBar onOpenMap={() => setShowMap(true)}/>
+      {showMap && (
+        <PropertiesMap
+          properties={results}
+          onClose={() => setShowMap(false)}
+        />
+      )}
     </div>
   );
 }
