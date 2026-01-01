@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import propertiesData from "../data/properties.json";
 import Cards from "../components/Cards";
 import { FilterProperties } from "../utils/FilterProperties";
+import SearchBar from "../components/SearchBar";
 
 export default function Search() {
   const [searchParams] = useSearchParams();
