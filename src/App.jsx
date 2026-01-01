@@ -10,6 +10,7 @@ import Agent from "./pages/Agent";
 import Contact from "./pages/Contact";
 import Search from "./pages/Search";
 import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -27,7 +28,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/properties/:id" element={<Details />} />
         </Routes>
-
+        <Footer />
     </ThemeProvider>
   );
 }
