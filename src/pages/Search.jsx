@@ -10,7 +10,7 @@ export default function Search() {
 
   useEffect(() => {
     setResults(
-      filterProperties(propertiesData.properties, searchParams)
+      FilterProperties(propertiesData.properties, searchParams)
     );
   }, [searchParams]);
 
