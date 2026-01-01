@@ -20,6 +20,7 @@ export default function Search() {
       <SearchBar />
       <br />
       <h4>Search Results ({results.length})</h4>
+      <hr />
       <Cards properties={results} />
     </div>
   );
