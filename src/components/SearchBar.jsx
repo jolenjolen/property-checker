@@ -3,7 +3,7 @@ import { useTheme } from "../ThemeContext";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-export default function SearchBar() {
+export default function SearchBar({ onOpenMap }) {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
   const navigate = useNavigate();
@@ -103,6 +103,7 @@ export default function SearchBar() {
 
               <button
                 type="button"
+                onClick={onOpenMap}
                 className="open-map rounded-pill m-1 d-flex justify-content-center align-items-center"
               >
                 <span className="material-symbols-rounded">map</span>

@@ -19,7 +19,7 @@ export default function HeroSection() {
         Believe in finding it with the UK's largest choice of homes
       </p>
 
-      <SearchBar />
+      <SearchBar onOpenMap={() => setShowMap(true)}/>
     </div>
   );
 }

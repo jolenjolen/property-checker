@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import propertiesData from "../data/properties.json";
 import SearchBar from "../components/SearchBar";
+import { useState } from "react";
+import PropertiesMap from "../components/PropertiesMap";
 
 export default function Search() {
   const [searchParams] = useSearchParams();
   const [results, setResults] = useState([]);
+  const [showMap, setShowMap] = useState(false);
 
   useEffect(() => {
     /* ================= RAW PARAMS ================= */
@@ -153,7 +156,7 @@ export default function Search() {
   return (
     <div className="container py-4 d-flex flex-column align-items-center">
       <div style={{ maxWidth: "450px" }}>
-        <SearchBar />
+        <SearchBar onOpenMap={() => setShowMap(true)} />
       </div>
 
       <div className="w-100">
@@ -163,6 +166,12 @@ export default function Search() {
         <hr />
         <Cards properties={results} />
       </div>
+      {showMap && (
+        <PropertiesMap
+          properties={results}
+          onClose={() => setShowMap(false)}
+        />
+      )}
     </div>
   );
 }
