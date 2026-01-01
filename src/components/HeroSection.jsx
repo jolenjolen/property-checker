@@ -2,11 +2,15 @@
 import "../App.css";
 import { useTheme } from "../ThemeContext";
 import SearchBar from "./SearchBar";
-import PropertiesMap from "../components/PropertiesMap";
+import PropertiesMap from "./PropertiesMap";
+import { useState } from "react";
+import propertiesData from "../data/properties.json";
+
 export default function HeroSection() {
   const { theme } = useTheme();
   const inverseTheme = theme === "light" ? "dark" : "light";
   const [showMap, setShowMap] = useState(false);
+
   return (
     <div
       className={`hero hero-${theme} m-2 d-flex flex-column justify-content-center align-items-center`}
@@ -19,10 +23,11 @@ export default function HeroSection() {
         Believe in finding it with the UK's largest choice of homes
       </p>
 
-      <SearchBar onOpenMap={() => setShowMap(true)}/>
+      <SearchBar onOpenMap={() => setShowMap(true)} />
+
       {showMap && (
         <PropertiesMap
-          properties={results}
+          properties={propertiesData.properties}
           onClose={() => setShowMap(false)}
         />
       )}
