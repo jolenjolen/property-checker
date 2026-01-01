@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Cards from "../components/Cards";
 import propertiesData from "../data/properties.json";
 import SearchBar from "../components/SearchBar";
-import { useState } from "react";
+
 import PropertiesMap from "../components/PropertiesMap";
 
 export default function Search() {
