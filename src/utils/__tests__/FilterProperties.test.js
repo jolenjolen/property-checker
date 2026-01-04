@@ -1,5 +1,5 @@
 const { FilterProperties } = require("../FilterProperties");
-
+ 
 const mockProperties = [
   {
     id: "1",
