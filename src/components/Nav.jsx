@@ -147,16 +147,16 @@ export default function Nav() {
         <div className="offcanvas-body">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/buy" data-bs-dismiss="offcanvas">Buy</Link>
+              <Link className="nav-link" to="/buy" >Buy</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/rent" data-bs-dismiss="offcanvas">Rent</Link>
+              <Link className="nav-link" to="/rent" >Rent</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/agent" data-bs-dismiss="offcanvas">Agent</Link>
+              <Link className="nav-link" to="/agent" >Agent</Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/contact" data-bs-dismiss="offcanvas">Contact</Link>
+              <Link className="nav-link" to="/contact" >Contact</Link>
             </li>
           </ul>
         </div>
